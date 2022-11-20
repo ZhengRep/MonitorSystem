@@ -15,54 +15,78 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="drawing\Bitmap.h">
+    <ClInclude Include="AnsiStringStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\Brush.h">
+    <ClInclude Include="Command.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\Icon.h">
+    <ClInclude Include="CommandLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\Pen.h">
+    <ClInclude Include="CommandLineArgs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\SolidBrush.h">
+    <ClInclude Include="CommonHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\BitmapGraphics.h">
+    <ClInclude Include="StringParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\Graphics.h">
+    <ClInclude Include="StringStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawing\DeviceContext.h">
+    <ClInclude Include="StringTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Unicode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnicodeStringStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utf8StringStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winhdr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="drawing\Bitmap.cpp">
+    <ClCompile Include="AnsiStringStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\Brush.cpp">
+    <ClCompile Include="Command.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\Icon.cpp">
+    <ClCompile Include="CommandLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\Pen.cpp">
+    <ClCompile Include="CommandLineArgs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\SolidBrush.cpp">
+    <ClCompile Include="StringParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\BitmapGraphics.cpp">
+    <ClCompile Include="StringStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\Graphics.cpp">
+    <ClCompile Include="StringTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drawing\DeviceContext.cpp">
+    <ClCompile Include="Unicode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UnicodeStringStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utf8StringStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
