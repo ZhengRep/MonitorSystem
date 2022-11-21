@@ -1,9 +1,9 @@
 #include "StringStorage.h"
 #include "CommonHeader.h"
 #include "Exception.h"
+#include<algorithm>
 #include<stdlib.h>
 #include<crtdbg.h>
-#include<algorithm>
 
 StringStorage::StringStorage()
 {
@@ -51,7 +51,7 @@ size_t StringStorage::getSize() const
 
 bool StringStorage::isEmpty() const
 {
-    return getLength == 0;
+    return getLength() == 0;
 }
 
 bool StringStorage::endsWith(TCHAR postfix) const
@@ -75,8 +75,8 @@ bool StringStorage::beginsWith(TCHAR prefix) const
 void StringStorage::getSubString(StringStorage* substr, size_t startIndex, size_t endIndex) const
 {
     endIndex++;
-    startIndex = std::min(startIndex, getLength());
-    endIndex = std::min(endIndex, getLength());
+    startIndex = min(startIndex, getLength()); //this is macro
+    endIndex = min(endIndex, getLength());
     if (endIndex < startIndex) {
         endIndex = startIndex;
     }
@@ -271,7 +271,7 @@ void StringStorage::remove(size_t startIndex, size_t count)
 
 void StringStorage::truncate(size_t count)
 {
-    count = std::min(getLength(), count);
+    count = min(getLength(), count);
     remove(getLength() - count, count);
 }
 
