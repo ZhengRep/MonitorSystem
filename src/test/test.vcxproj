@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1fe0e8f1-8374-4305-839b-e58433ba3a33}</ProjectGuid>
-    <RootNamespace>Utils</RootNamespace>
+    <ProjectGuid>{73be0ddf-fa8d-46a1-a5c9-96f56ecbdf7c}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -127,32 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AnsiStringStorage.h" />
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="CommandLine.h" />
-    <ClInclude Include="CommandLineArgs.h" />
-    <ClInclude Include="CommonHeader.h" />
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="StringParser.h" />
-    <ClInclude Include="StringStorage.h" />
-    <ClInclude Include="StringTable.h" />
-    <ClInclude Include="Unicode.h" />
-    <ClInclude Include="UnicodeStringStorage.h" />
-    <ClInclude Include="Utf8StringStorage.h" />
-    <ClInclude Include="winhdr.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AnsiStringStorage.cpp" />
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="CommandLine.cpp" />
-    <ClCompile Include="CommandLineArgs.cpp" />
-    <ClCompile Include="Exception.cpp" />
-    <ClCompile Include="StringParser.cpp" />
-    <ClCompile Include="StringStorage.cpp" />
-    <ClCompile Include="StringTable.cpp" />
-    <ClCompile Include="Unicode.cpp" />
-    <ClCompile Include="UnicodeStringStorage.cpp" />
-    <ClCompile Include="Utf8StringStorage.cpp" />
+    <ClCompile Include="UtilsTest\TestStringStorage.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
