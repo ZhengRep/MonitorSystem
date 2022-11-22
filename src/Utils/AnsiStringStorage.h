@@ -10,16 +10,9 @@ public:
 	AnsiStringStorage(const AnsiStringStorage& stringBuffer);
 	~AnsiStringStorage();
 
-	// Fills internal buffer by the string.
 	virtual void setString(const char* string);
-
-	// Returns pointer to the first symbol.
 	const char* getString() const;
-
-	// Returns length of string (in characters, not including terminating null character).
 	size_t getLength() const;
-
-	// Returns size of string in bytes, including terminating null character.
 	size_t getSize() const;
 
 	// Checks if string is empty.

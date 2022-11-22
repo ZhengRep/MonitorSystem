@@ -1,4 +1,4 @@
-#include "../../Utils/StringStorage.h"
+#include "Utils/StringStorage.h"
 
 int main()
 {
