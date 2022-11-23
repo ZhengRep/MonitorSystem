@@ -125,7 +125,9 @@ bool StringStorage::isEqualTo(const TCHAR* other) const
     if (getString() == 0 && other != 0) {
         return false;
     }
-    return _tcscmp(getString(), other) == 0;
+    if (getString() != 0 && other != 0) {
+        return _tcscmp(getString(), other) == 0;
+    }
 }
 
 bool StringStorage::isEqualTo(const StringStorage* other) const

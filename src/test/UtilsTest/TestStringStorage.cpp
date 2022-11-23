@@ -1,10 +1,14 @@
-#include "Utils/AnsiStringStorage.h"
+#include "Utils/UnicodeStringStorage.h"
+#include<wchar.h>
 #include<iostream>
 
 int main()
 {
-	AnsiStringStorage ansiStrFormat(_T("Hello World. I am Zheng!"));
-	ansiStrFormat.appendString(_T("HOHOHO"));
-	std::cout << ansiStrFormat.getString() << std::endl;
+	StringStorage stringStorage(_T("Zheng"));
+	size_t length = stringStorage.getLength(); //length is used to characters
+	size_t size = stringStorage.getSize(); //size is used to bytes
+	/*UnicodeStringStorage unicodeStringStorage(L"Hello, these are unicode");
+	unicodeStringStorage.toStringStorage(&stringStorage);*/
+
 	return 0;
 }
