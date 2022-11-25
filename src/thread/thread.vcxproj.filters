@@ -18,9 +18,18 @@
     <ClInclude Include="LocalMutex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Lockable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LocalMutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
