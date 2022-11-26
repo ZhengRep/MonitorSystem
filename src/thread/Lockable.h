@@ -2,10 +2,10 @@
 class Lockable
 {
 public:
-	virtual ~Lockable(){ };
+	virtual ~Lockable(){}
 
 	//locks object
-	virtual void Lock() = 0;
-	virtual void UnLock() = 0;
+	virtual void lock() = 0;
+	virtual void unlock() = 0;
 };
 

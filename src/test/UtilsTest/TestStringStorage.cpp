@@ -1,14 +1,13 @@
-#include "Utils/UnicodeStringStorage.h"
+#include "Utils/StringParser.h"
 #include<wchar.h>
 #include<iostream>
 
 int main()
 {
-	StringStorage stringStorage(_T("Zheng"));
-	size_t length = stringStorage.getLength(); //length is used to characters
-	size_t size = stringStorage.getSize(); //size is used to bytes
-	/*UnicodeStringStorage unicodeStringStorage(L"Hello, these are unicode");
-	unicodeStringStorage.toStringStorage(&stringStorage);*/
+	StringParser stringParser;
+	const TCHAR str[30] = _T("30");
+	unsigned char out[2];
+	stringParser.parseByte(str, out);
 
 	return 0;
 }

@@ -21,7 +21,7 @@ public:
 
 	virtual ~Singleton() {
 		AutoLock l(&m_instanceMutex);
-		s_isntance = NULL:
+		s_instance = NULL;
 	}
 
 	static T* getInstance() {
@@ -29,7 +29,7 @@ public:
 		if (s_instance == 0) {
 			_ASSERT(false);
 		}
-		return s_instance;
+		return (T*)s_instance;
 	}
 
 private:
