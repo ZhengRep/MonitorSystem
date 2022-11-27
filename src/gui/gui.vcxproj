@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -104,10 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);Utils.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseWindow.h" />
     <ClInclude Include="drawing\Bitmap.h" />
     <ClInclude Include="drawing\BitmapGraphics.h" />
     <ClInclude Include="drawing\Brush.h" />
@@ -135,8 +139,10 @@
     <ClInclude Include="drawing\Icon.h" />
     <ClInclude Include="drawing\Pen.h" />
     <ClInclude Include="drawing\SolidBrush.h" />
+    <ClInclude Include="PaintWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseWindow.cpp" />
     <ClCompile Include="drawing\Bitmap.cpp" />
     <ClCompile Include="drawing\BitmapGraphics.cpp" />
     <ClCompile Include="drawing\Brush.cpp" />
@@ -145,6 +151,7 @@
     <ClCompile Include="drawing\Icon.cpp" />
     <ClCompile Include="drawing\Pen.cpp" />
     <ClCompile Include="drawing\SolidBrush.cpp" />
+    <ClCompile Include="PaintWindow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

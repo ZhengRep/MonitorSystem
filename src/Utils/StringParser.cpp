@@ -70,6 +70,7 @@ bool StringParser::parseHex(const TCHAR* str, unsigned int* out)
     return true;
 }
 
+//byte denotes data width is char
 bool StringParser::parseByte(const TCHAR* str, unsigned char* out)
 {
     TCHAR c;

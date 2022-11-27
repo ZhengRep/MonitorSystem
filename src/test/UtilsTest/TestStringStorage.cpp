@@ -5,9 +5,9 @@
 int main()
 {
 	StringParser stringParser;
-	const TCHAR str[30] = _T("30");
-	unsigned char out[2];
-	stringParser.parseByte(str, out);
+	const TCHAR str[30] = _T("A0");
+	unsigned char out;
+	stringParser.parseByteHex(str, &out);
 
 	return 0;
 }
