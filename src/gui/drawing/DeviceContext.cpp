@@ -15,6 +15,12 @@ DeviceContext::DeviceContext(DeviceContext* compatibleDevice)
 
 DeviceContext::~DeviceContext()
 {
+    if (m_wnd) {
+        ReleaseDC(m_wnd, m_dc);
+    }
+    if (m_hasOwnDC) {
+        DeleteDC(m_dc);
+    }
 }
 
 DeviceContext::DeviceContext(PaintWindow* pntWnd)
@@ -25,5 +31,5 @@ DeviceContext::DeviceContext(PaintWindow* pntWnd)
 
 HGDIOBJ DeviceContext::selectObject(HGDIOBJ object)
 {
-    return HGDIOBJ();
+    return SelectObject(m_dc, object);
 }

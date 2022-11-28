@@ -225,7 +225,7 @@ bool BaseWindow::wndProc(UINT message, WPARAM wParam, LPARAM lParam)
     case WM_COMMAND:
         return onCommand(wParam, lParam);
     case WM_NOTIFY:
-        return onNotify(wParam, (LPNMHDR)lParam);
+        return onNotify((int)wParam, (LPNMHDR)lParam);
     case WM_SYSCOMMAND:
         return onSysCommand(wParam, lParam);
     case WM_LBUTTONDOWN:
@@ -258,11 +258,24 @@ bool BaseWindow::wndProc(UINT message, WPARAM wParam, LPARAM lParam)
                 wheelSpeed = -wheelSignedSpeed / WHEEL_DELTA;
             }
             else {
+                mouseButtons |= MOUSE_WUP;
+                wheelSpeed = wheelSignedSpeed / WHEEL_DELTA;
+            }
 
+            //In some cases wheelSignedSpeed can be smaller than the WHEEL_DELTA, then wheelSpeed set to 1, but not 0
+            if (wheelSpeed == 0) {
+                wheelSpeed = 1;
+            }
+
+            if (!ScreenToClient(getHWnd(), &point)) {
+                point.x = -1;
+                point.y = -1;
             }
         }
+        return onMouse(mouseButtons, wheelSpeed, point);
     }
     }
+    return onMessage(message, wParam, lParam);
 }
 
 bool BaseWindow::onCommand(WPARAM wParam, LPARAM lParam)

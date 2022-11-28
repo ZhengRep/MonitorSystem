@@ -130,7 +130,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseDialog.h" />
     <ClInclude Include="BaseWindow.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="drawing\Bitmap.h" />
     <ClInclude Include="drawing\BitmapGraphics.h" />
     <ClInclude Include="drawing\Brush.h" />
@@ -142,7 +144,9 @@
     <ClInclude Include="PaintWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseWindow.cpp" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="drawing\Bitmap.cpp" />
     <ClCompile Include="drawing\BitmapGraphics.cpp" />
     <ClCompile Include="drawing\Brush.cpp" />
