@@ -11,6 +11,7 @@ enum VerticalAlignment
 //Base class to control windows control
 class Control
 {
+public:
 	Control();
 	Control(HWND hwnd);
 	virtual ~Control();
