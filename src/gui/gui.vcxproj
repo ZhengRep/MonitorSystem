@@ -142,6 +142,8 @@
     <ClInclude Include="drawing\Pen.h" />
     <ClInclude Include="drawing\SolidBrush.h" />
     <ClInclude Include="PaintWindow.h" />
+    <ClInclude Include="WindowMessageHandler.h" />
+    <ClInclude Include="WindowProcHolder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseDialog.cpp" />
@@ -156,6 +158,7 @@
     <ClCompile Include="drawing\Pen.cpp" />
     <ClCompile Include="drawing\SolidBrush.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
+    <ClCompile Include="WindowProcHolder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
