@@ -15,7 +15,7 @@ LRESULT WindowProcHolder::defWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPA
 		return DefWindowProc(hWnd, uMsg, wParam, lParam);
 	}
 
-	bool useDefWndProc = false;
+	BOOL useDefWndProc = FALSE;
 	LRESULT r = wph->windowProc(hWnd, uMsg, wParam, lParam, &useDefWndProc);
 	if (r) {
 		return DefWindowProc(hWnd, uMsg, wParam, lParam);

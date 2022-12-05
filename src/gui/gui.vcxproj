@@ -130,9 +130,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BalloonTip.h" />
     <ClInclude Include="BaseDialog.h" />
     <ClInclude Include="BaseWindow.h" />
+    <ClInclude Include="CheckBox.h" />
+    <ClInclude Include="ComboBox.h" />
+    <ClInclude Include="CommonControlsEx.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="DibFrameBuffer.h" />
     <ClInclude Include="drawing\Bitmap.h" />
     <ClInclude Include="drawing\BitmapGraphics.h" />
     <ClInclude Include="drawing\Brush.h" />
@@ -142,13 +147,21 @@
     <ClInclude Include="drawing\Pen.h" />
     <ClInclude Include="drawing\SolidBrush.h" />
     <ClInclude Include="PaintWindow.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="Tooltip.h" />
+    <ClInclude Include="WindowFinder.h" />
     <ClInclude Include="WindowMessageHandler.h" />
     <ClInclude Include="WindowProcHolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BalloonTip.cpp" />
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseWindow.cpp" />
+    <ClCompile Include="CheckBox.cpp" />
+    <ClCompile Include="ComboBox.cpp" />
+    <ClCompile Include="CommonControlsEx.cpp" />
     <ClCompile Include="Control.cpp" />
+    <ClCompile Include="DibFrameBuffer.cpp" />
     <ClCompile Include="drawing\Bitmap.cpp" />
     <ClCompile Include="drawing\BitmapGraphics.cpp" />
     <ClCompile Include="drawing\Brush.cpp" />
@@ -158,6 +171,9 @@
     <ClCompile Include="drawing\Pen.cpp" />
     <ClCompile Include="drawing\SolidBrush.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="Tooltip.cpp" />
+    <ClCompile Include="WindowFinder.cpp" />
     <ClCompile Include="WindowProcHolder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
