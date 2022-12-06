@@ -1,6 +1,7 @@
 #pragma once
 #include "Utils/CommonHeader.h"
 #include<Uxtheme.h>
+#include<vssym32.h>
 
 //Define type for api functions
 
