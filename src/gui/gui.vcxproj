@@ -149,6 +149,7 @@
     <ClInclude Include="FilteredTextBox.h" />
     <ClInclude Include="ImageButton.h" />
     <ClInclude Include="ListBox.h" />
+    <ClInclude Include="ListView.h" />
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="TextBox.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="FilteredTextBox.cpp" />
     <ClCompile Include="ImageButton.cpp" />
     <ClCompile Include="ListBox.cpp" />
+    <ClCompile Include="ListView.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="TextBox.cpp" />

@@ -96,6 +96,9 @@
     <ClInclude Include="ListBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="drawing\Bitmap.cpp">
@@ -174,6 +177,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
