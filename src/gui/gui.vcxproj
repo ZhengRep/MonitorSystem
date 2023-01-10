@@ -153,6 +153,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ScrollBar.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
@@ -185,6 +186,7 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="ScrollBar.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />

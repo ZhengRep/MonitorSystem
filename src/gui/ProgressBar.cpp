@@ -17,3 +17,4 @@ void ProgressBar::setPos(WORD pos)
 {
 	SendMessage(m_hwnd, PBM_SETPOS, (WPARAM)pos, 0);
 }
+
