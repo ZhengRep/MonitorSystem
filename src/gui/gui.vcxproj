@@ -152,6 +152,7 @@
     <ClInclude Include="ListView.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="PaintWindow.h" />
+    <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="ListView.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />
