@@ -156,6 +156,8 @@
     <ClInclude Include="ScrollBar.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="Tab.h" />
+    <ClInclude Include="TabContainer.h" />
+    <ClInclude Include="TabControl.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
     <ClInclude Include="Tooltip.h" />
@@ -190,6 +192,7 @@
     <ClCompile Include="ScrollBar.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="Tab.cpp" />
+    <ClCompile Include="TabControl.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />
     <ClCompile Include="Tooltip.cpp" />
