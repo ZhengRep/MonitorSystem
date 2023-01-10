@@ -155,6 +155,7 @@
     <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="ScrollBar.h" />
     <ClInclude Include="StringFilter.h" />
+    <ClInclude Include="Tab.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
     <ClInclude Include="Tooltip.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ScrollBar.cpp" />
     <ClCompile Include="StringFilter.cpp" />
+    <ClCompile Include="Tab.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />
     <ClCompile Include="Tooltip.cpp" />
