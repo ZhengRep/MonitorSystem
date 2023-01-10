@@ -151,6 +151,7 @@
     <ClInclude Include="ListBox.h" />
     <ClInclude Include="ListView.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="MessageWindow.h" />
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="ScrollBar.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="ListBox.cpp" />
     <ClCompile Include="ListView.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MessageWindow.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ScrollBar.cpp" />
