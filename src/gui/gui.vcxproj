@@ -150,6 +150,7 @@
     <ClInclude Include="ImageButton.h" />
     <ClInclude Include="ListBox.h" />
     <ClInclude Include="ListView.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="TextBox.h" />
@@ -180,6 +181,7 @@
     <ClCompile Include="ImageButton.cpp" />
     <ClCompile Include="ListBox.cpp" />
     <ClCompile Include="ListView.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="TextBox.cpp" />
