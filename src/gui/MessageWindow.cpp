@@ -28,7 +28,21 @@ MessageWindow::~MessageWindow(void)
 
 bool MessageWindow::createWindow(WindowMessageHandler* messageHandler)
 {
-    return false;
+    if (messageHandler != 0) {
+        m_messageHandler = messageHandler;
+    }
+    if (regClass(m_hinst, m_windowClassName) == 0) {
+        return false;
+    }
+
+    m_hwnd = ::CreateWindow(m_windowClassName, _T("MessageWindow"), WS_OVERLAPPEDWINDOW,
+        0, 0, 1, 1, 0, NULL, m_hinst, this);
+    if (m_hwnd == 0) {
+        return false;
+    }
+
+    SetWindowLongPtr(m_hwnd, GWLP_USERDATA, (LONG_PTR)this);
+    return true;
 }
 
 void MessageWindow::destroyWindow()
@@ -41,20 +55,49 @@ void MessageWindow::destroyWindow()
 
 HWND MessageWindow::getHWND() const
 {
-    return HWND();
+    return m_hwnd;
 }
 
 bool MessageWindow::wndProc(UINT message, WPARAM wParam, LPARAM lParam)
 {
-    return false;
+    return true;
 }
 
 ATOM MessageWindow::regClass(HINSTANCE hinst, TCHAR* windowClassName)
 {
-    return ATOM();
+    WNDCLASS wcWindowClass = { 0 };
+    wcWindowClass.lpfnWndProc = staticWndProc;
+    wcWindowClass.style = NULL;
+    wcWindowClass.hInstance = m_hinst;
+    wcWindowClass.hCursor = NULL;
+    wcWindowClass.lpszClassName = windowClassName;
+    wcWindowClass.hbrBackground = (HBRUSH)COLOR_WINDOW;
+
+    return RegisterClass(&wcWindowClass);
 }
 
 LRESULT MessageWindow::staticWndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    return LRESULT();
+    MessageWindow* _this;
+    if (message == WM_CREATE) {
+        _this = (MessageWindow*)((CREATESTRUCT*)lParam)->lpCreateParams;
+        wParam = (WPARAM)hwnd;
+    }
+    else {
+        _this = (MessageWindow*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
+    }
+
+    if (_this != NULL) {
+        bool result;
+        if (_this->m_messageHandler != 0) {
+            result = _this->m_messageHandler->processMessage(message, wParam, lParam);
+        }
+        else {
+            result = _this->wndProc(message, wParam, lParam);
+        }
+        if (result) {
+            return 0;
+        }
+    }
+    return DefWindowProc(hwnd, message, wParam, lParam);
 }
