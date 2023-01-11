@@ -162,6 +162,7 @@
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
     <ClInclude Include="Tooltip.h" />
+    <ClInclude Include="TrackBar.h" />
     <ClInclude Include="WindowFinder.h" />
     <ClInclude Include="WindowMessageHandler.h" />
     <ClInclude Include="WindowProcHolder.h" />
@@ -198,6 +199,7 @@
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />
     <ClCompile Include="Tooltip.cpp" />
+    <ClCompile Include="TrackBar.cpp" />
     <ClCompile Include="WindowFinder.cpp" />
     <ClCompile Include="WindowProcHolder.cpp" />
   </ItemGroup>
