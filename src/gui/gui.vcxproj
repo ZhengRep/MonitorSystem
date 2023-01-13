@@ -152,6 +152,7 @@
     <ClInclude Include="ListView.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MessageWindow.h" />
+    <ClInclude Include="NotifyIcon.h" />
     <ClInclude Include="NotifyIconWindow.h" />
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="ProgressBar.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="ListView.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MessageWindow.cpp" />
+    <ClCompile Include="NotifyIcon.cpp" />
     <ClCompile Include="NotifyIconWindow.cpp" />
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
