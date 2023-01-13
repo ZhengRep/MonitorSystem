@@ -157,6 +157,7 @@
     <ClInclude Include="PaintWindow.h" />
     <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="ScrollBar.h" />
+    <ClInclude Include="SpinControl.h" />
     <ClInclude Include="StringFilter.h" />
     <ClInclude Include="Tab.h" />
     <ClInclude Include="TabContainer.h" />
@@ -197,6 +198,7 @@
     <ClCompile Include="PaintWindow.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ScrollBar.cpp" />
+    <ClCompile Include="SpinControl.cpp" />
     <ClCompile Include="StringFilter.cpp" />
     <ClCompile Include="Tab.cpp" />
     <ClCompile Include="TabControl.cpp" />
