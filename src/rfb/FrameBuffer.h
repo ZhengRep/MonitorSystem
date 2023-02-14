@@ -15,7 +15,7 @@ public:
 
 	virtual bool isEqualTo(const FrameBuffer* frameBuffer);
 
-	virtual bool copyFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer);
+	virtual bool copyFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY);
 	virtual bool copyFrom(const FrameBuffer* srcFrameBuffer, int srcX, int srcY);
 
 	virtual bool copyFromRotated90(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY);
@@ -23,6 +23,10 @@ public:
 	virtual bool copyFromRotated270(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY);
 
 	virtual bool overlay(const Rect* detRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask);
+
+	template<class PIXEL_T>
+	bool overLayT(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask);
+
 	virtual void move(const Rect* dstRect, const int srcX, const int srcY);
 
 	virtual bool cmpFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, const int srcX, const int Y);
@@ -67,9 +71,3 @@ private:
 	PixelFormat m_pixelFormat;
 	void* m_buffer;
 };
-
-template<class PIXEL_T>
-inline bool FrameBuffer::overlayT(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask)
-{
-	return false;
-}

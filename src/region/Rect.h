@@ -120,7 +120,7 @@ public:
     inline int getWidth()  const { return right - left; }
     inline int getHeight() const { return bottom - top; }
 
-    void rotateOn90InsideDemension(int  dimHeight)
+    void rotateOn90InsideDimension(int  dimHeight)
     {
         Rect localCopy(this);
         setWidth(localCopy.getHeight());
