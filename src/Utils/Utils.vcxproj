@@ -140,7 +140,9 @@
     <ClInclude Include="CommandLine.h" />
     <ClInclude Include="CommandLineArgs.h" />
     <ClInclude Include="CommonHeader.h" />
+    <ClInclude Include="DateTime.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="CharDefs.h" />
     <ClInclude Include="inttypes.h" />
     <ClInclude Include="ResourceLoader.h" />
     <ClInclude Include="Singleton.h" />
@@ -158,6 +160,7 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="CommandLine.cpp" />
     <ClCompile Include="CommandLineArgs.cpp" />
+    <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="ResourceLoader.cpp" />
     <ClCompile Include="StringParser.cpp" />

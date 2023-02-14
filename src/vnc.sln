@@ -13,11 +13,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thread", "thread\thread.vcxproj", "{1DAD190B-9DD9-4D51-B856-BF9945CC6B64}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winSystem", "winSystem\winSystem.vcxproj", "{19D37BBA-AE7F-4576-9870-683DB697E6EA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win_system", "winSystem\winSystem.vcxproj", "{19D37BBA-AE7F-4576-9870-683DB697E6EA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rfb", "rfb\rfb.vcxproj", "{8C5A6104-F1C1-4E15-8BE0-F4AA9DD933F4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "region", "region\region.vcxproj", "{4B27C051-0568-4CD7-AA92-08E0F7467C80}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log_writer", "log_writer\log_writer.vcxproj", "{22F8A160-4D8F-4BD3-A758-5808579598BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,14 @@ Global
 		{4B27C051-0568-4CD7-AA92-08E0F7467C80}.Release|x64.Build.0 = Release|x64
 		{4B27C051-0568-4CD7-AA92-08E0F7467C80}.Release|x86.ActiveCfg = Release|Win32
 		{4B27C051-0568-4CD7-AA92-08E0F7467C80}.Release|x86.Build.0 = Release|Win32
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Debug|x64.ActiveCfg = Debug|x64
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Debug|x64.Build.0 = Debug|x64
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Debug|x86.Build.0 = Debug|Win32
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Release|x64.ActiveCfg = Release|x64
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Release|x64.Build.0 = Release|x64
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Release|x86.ActiveCfg = Release|Win32
+		{22F8A160-4D8F-4BD3-A758-5808579598BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
