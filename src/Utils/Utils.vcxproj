@@ -143,6 +143,7 @@
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="CharDefs.h" />
+    <ClInclude Include="GetCPUTime.h" />
     <ClInclude Include="inttypes.h" />
     <ClInclude Include="ResourceLoader.h" />
     <ClInclude Include="Singleton.h" />
@@ -162,6 +163,7 @@
     <ClCompile Include="CommandLineArgs.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="GetCPUTime.cpp" />
     <ClCompile Include="ResourceLoader.cpp" />
     <ClCompile Include="StringParser.cpp" />
     <ClCompile Include="StringStorage.cpp" />
