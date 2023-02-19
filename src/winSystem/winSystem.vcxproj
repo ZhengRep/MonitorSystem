@@ -129,11 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CtrlAltDlSimulator.h" />
     <ClInclude Include="DibSection.h" />
     <ClInclude Include="Enviroment.h" />
     <ClInclude Include="Screen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CtrlAltDlSimulator.cpp" />
     <ClCompile Include="DibSection.cpp" />
     <ClCompile Include="Enviroment.cpp" />
     <ClCompile Include="Screen.cpp" />
