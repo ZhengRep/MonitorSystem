@@ -129,16 +129,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CtrlAltDlSimulator.h" />
+    <ClInclude Include="AutoImpersonator.h" />
+    <ClInclude Include="CtrlAltDelSimulator.h" />
     <ClInclude Include="DibSection.h" />
+    <ClInclude Include="DynamicLibrary.h" />
     <ClInclude Include="Enviroment.h" />
+    <ClInclude Include="Impersonator.h" />
+    <ClInclude Include="PipeImpersonatedThread.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="SystemException.h" />
+    <ClInclude Include="WindowsEvent.h" />
+    <ClInclude Include="WTS.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CtrlAltDlSimulator.cpp" />
+    <ClCompile Include="AutoImpersonator.cpp" />
+    <ClCompile Include="CtrlAltDelSimulator.cpp" />
     <ClCompile Include="DibSection.cpp" />
+    <ClCompile Include="DynamicLibrary.cpp" />
     <ClCompile Include="Enviroment.cpp" />
+    <ClCompile Include="Impersonator.cpp" />
+    <ClCompile Include="PipeImpersonatedThread.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="SystemException.cpp" />
+    <ClCompile Include="WindowsEvent.cpp" />
+    <ClCompile Include="WTS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

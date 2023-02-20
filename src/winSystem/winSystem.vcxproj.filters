@@ -24,7 +24,28 @@
     <ClInclude Include="Enviroment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CtrlAltDlSimulator.h">
+    <ClInclude Include="CtrlAltDelSimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoImpersonator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Impersonator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeImpersonatedThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +59,28 @@
     <ClCompile Include="Enviroment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CtrlAltDlSimulator.cpp">
+    <ClCompile Include="CtrlAltDelSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoImpersonator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Impersonator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeImpersonatedThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

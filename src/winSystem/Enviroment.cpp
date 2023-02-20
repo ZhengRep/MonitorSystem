@@ -1,4 +1,8 @@
 #include "Enviroment.h"
+#include "CtrlAltDelSimulator.h"
+#include<ShlObj.h>
+#include<crtdbg.h>
+#include ""
 
 Environment::Environment()
 {
