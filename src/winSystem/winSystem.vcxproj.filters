@@ -21,7 +21,7 @@
     <ClInclude Include="Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Enviroment.h">
+    <ClInclude Include="Environment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CtrlAltDelSimulator.h">
@@ -48,6 +48,9 @@
     <ClInclude Include="WindowsEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ProcessHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DibSection.cpp">
@@ -56,7 +59,7 @@
     <ClCompile Include="Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Enviroment.cpp">
+    <ClCompile Include="Environment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CtrlAltDelSimulator.cpp">
@@ -81,6 +84,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WindowsEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessHandle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

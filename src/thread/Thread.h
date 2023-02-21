@@ -31,7 +31,7 @@ public:
 
 protected:
 	bool isTerminating();
-	virtual void OnTerminate();
+	virtual void onTerminate();
 	virtual void execute() = 0;
 
 private:

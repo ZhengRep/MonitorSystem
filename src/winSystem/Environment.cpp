@@ -1,8 +1,10 @@
-#include "Enviroment.h"
+#include "Environment.h"
 #include "CtrlAltDelSimulator.h"
 #include<ShlObj.h>
 #include<crtdbg.h>
-#include ""
+#include "AutoImpersonator.h"
+#include "WTS.h"
+#include "ProcessHandle.h"
 
 Environment::Environment()
 {

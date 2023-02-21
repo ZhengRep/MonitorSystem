@@ -38,7 +38,7 @@ bool Thread::resume()
 void Thread::terminate()
 {
     m_terminated= true;
-    OnTerminate();
+    onTerminate();
 }
 
 bool Thread::isActive() const
@@ -100,7 +100,7 @@ bool Thread::isTerminating()
     return m_terminated;
 }
 
-void Thread::OnTerminate()
+void Thread::onTerminate()
 {
 }
 
