@@ -1,6 +1,6 @@
 #include "Screen.h"
 #include "Utils/Exception.h"
-#include ""
+#include "Environment.h"
 
 Screen::Screen()
 {
@@ -78,18 +78,60 @@ void Screen::getBMI(BMI* bmi, HDC dc)
 
 size_t Screen::getVisibleMonitorCount()
 {
-	return size_t();
+	return GetSystemMetrics(SM_CMONITORS);
 }
 
 void Screen::fillPixelFormat(const BMI* bmi)
 {
+	memset(&m_pixelFormat, 0, sizeof(PixelFormat)); //Todo what is this?
+
+	m_pixelFormat.initBigEndianByNative();
+
+	m_pixelFormat.bitsPerPixel = bmi->bmiHeader.biBitCount;
+
+	if (bmi->bmiHeader.biCompression == BI_BITFIELDS) {
+		m_pixelFormat.redShift = findFirstBit(bmi->red);
+		m_pixelFormat.greenShift = findFirstBit(bmi->green);
+		m_pixelFormat.blueShift = findFirstBit(bmi->blue);
+
+		m_pixelFormat.redMax = bmi->red >> m_pixelFormat.redShift;
+		m_pixelFormat.greenMax = bmi->green >> m_pixelFormat.greenShift;
+		m_pixelFormat.blueMax = bmi->blue >> m_pixelFormat.blueShift;
+
+	}
+	else {
+		m_pixelFormat.bitsPerPixel = 32;
+		m_pixelFormat.colorDepth = 24;
+		m_pixelFormat.redMax = m_pixelFormat.greenMax = m_pixelFormat.blueMax = 0xff;
+		m_pixelFormat.redShift = 16;
+		m_pixelFormat.greenShift = 8;
+		m_pixelFormat.blueShift = 0;
+	}
+
+	if (m_pixelFormat.bitsPerPixel == 32) {
+		m_pixelFormat.colorDepth = 24;
+	}
+	else {
+		m_pixelFormat.colorDepth = 16;
+	}
 }
 
 inline int Screen::findFirstBit(const UINT32 bits)
 {
-	return 0;
+	UINT32 b = bits;
+	int shift;
+
+	for (shift = 0; (shift < 32) && ((b & 1) == 0); shift++) {
+		b >>= 1;
+	}
+
+	return shift;
 }
 
 void Screen::fillScreenRect()
 {
+	m_virtDesktopRect.left = GetSystemMetrics(SM_XVIRTUALSCREEN);
+	m_virtDesktopRect.top = GetSystemMetrics(SM_YVIRTUALSCREEN);
+	m_virtDesktopRect.setWidth(GetSystemMetrics(SM_CXVIRTUALSCREEN));
+	m_virtDesktopRect.setHeight(GetSystemMetrics(SM_CYVIRTUALSCREEN));
 }
