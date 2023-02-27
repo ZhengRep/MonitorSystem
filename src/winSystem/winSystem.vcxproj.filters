@@ -51,6 +51,9 @@
     <ClInclude Include="ProcessHandle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Shell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DibSection.cpp">
@@ -87,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ProcessHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

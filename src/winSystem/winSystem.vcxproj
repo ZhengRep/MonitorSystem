@@ -138,6 +138,7 @@
     <ClInclude Include="PipeImpersonatedThread.h" />
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="Shell.h" />
     <ClInclude Include="SystemException.h" />
     <ClInclude Include="WindowsEvent.h" />
     <ClInclude Include="WTS.h" />
@@ -152,6 +153,7 @@
     <ClCompile Include="PipeImpersonatedThread.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="Shell.cpp" />
     <ClCompile Include="SystemException.cpp" />
     <ClCompile Include="WindowsEvent.cpp" />
     <ClCompile Include="WTS.cpp" />

@@ -8,6 +8,7 @@
 //get info for a window desktop
 class Screen
 {
+public:
 	Screen();
 	~Screen();
 
