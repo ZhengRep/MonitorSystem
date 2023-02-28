@@ -29,7 +29,9 @@ void TabControl::addTab(BaseDialog* dialog, const TCHAR* caption)
     TCITEM tcitem = { 0 };
     tcitem.mask = TCIF_TEXT;
     TCHAR fixedCaption[255];
-    _tcscpy(&fixedCaption[0], tab->getCaption());
+    StringStorage caption(tab->getCaption());
+    _tcscpy_s(&fixedCaption[0], &caption);
+    _tcscpy_s()
     tcitem.pszText = fixedCaption;
     TabCtrl_InsertItem(getWindow(), m_tabContainer.size() - 1, &tcitem);
 }
