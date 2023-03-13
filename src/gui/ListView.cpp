@@ -169,13 +169,14 @@ unsigned int ListView::getSelectedItemsCount()
     return ListView_GetSelectedCount(m_hwnd);
 }
 
-unsigned int ListView::getSelectedItemsIndexes(int* indexes)
+void ListView::getSelectedItemsIndexes(int* indexes)
 {
     int i = -1;
     for (unsigned int j = 0; j < getSelectedItemsCount(); j++) {
         i = ListView_GetNextItem(m_hwnd, i, LVNI_SELECTED);
         indexes[j] = i;
     }
+
 }
 
 void ListView::setExStyle(DWORD style)

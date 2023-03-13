@@ -164,6 +164,7 @@
     <ClInclude Include="TabControl.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThemeLib.h" />
+    <ClInclude Include="ToolBar.h" />
     <ClInclude Include="Tooltip.h" />
     <ClInclude Include="TrackBar.h" />
     <ClInclude Include="WindowFinder.h" />
@@ -204,6 +205,7 @@
     <ClCompile Include="TabControl.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThemeLib.cpp" />
+    <ClCompile Include="ToolBar.cpp" />
     <ClCompile Include="Tooltip.cpp" />
     <ClCompile Include="TrackBar.cpp" />
     <ClCompile Include="WindowFinder.cpp" />

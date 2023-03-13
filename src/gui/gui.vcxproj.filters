@@ -132,6 +132,9 @@
     <ClInclude Include="SpinControl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="drawing\Bitmap.cpp">
@@ -243,6 +246,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SpinControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

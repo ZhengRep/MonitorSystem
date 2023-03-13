@@ -32,7 +32,7 @@ class ListView: public Control
 	void setFullRowSelectStyle(bool fullRowSelect);
 	void allowMultiSelection(bool allow);
 	unsigned int getSelectedItemsCount();
-	unsigned int getSelectedItemsIndexes(int* indexes);
+	void getSelectedItemsIndexes(int* indexes);
 
 protected:
 	void setExStyle(DWORD style);

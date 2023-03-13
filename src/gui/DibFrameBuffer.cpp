@@ -61,11 +61,6 @@ inline PixelFormat DibFrameBuffer::getPixelFormat() const
   throw Exception(_T("Wrong: You shouln't use the DibFrameBuffer::getPixelFormat() function."));
 }
 
-void DibFrameBuffer::setProperties(const Dimension* newDim, const PixelFormat* pixelFormat, HWND compatibleWindow)
-{
-  throw Exception(_T("Wrong: You shouln't use the DibFrameBuffer::setProperties() function."));
-}
-
 void DibFrameBuffer::setTargetDC(HDC targetDC)
 {
   checkDibValid();
