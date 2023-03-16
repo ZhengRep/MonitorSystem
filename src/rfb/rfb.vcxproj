@@ -132,10 +132,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CursorShape.h" />
     <ClInclude Include="FrameBuffer.h" />
     <ClInclude Include="PixelFormat.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CursorShape.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
     <ClCompile Include="PixelFormat.cpp" />
   </ItemGroup>

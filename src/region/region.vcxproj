@@ -134,7 +134,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dimension.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="Rect.h" />
+    <ClInclude Include="Region.h" />
+    <ClInclude Include="x11region.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Region.cpp" />
+    <ClCompile Include="x11region.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
