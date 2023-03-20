@@ -128,20 +128,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbnormDeskTermListener.h" />
     <ClInclude Include="ApplicationDesktopFactory.h" />
     <ClInclude Include="ClipboardListener.h" />
+    <ClInclude Include="Desktop.h" />
     <ClInclude Include="DesktopFactory.h" />
     <ClInclude Include="UpdateContainer.h" />
+    <ClInclude Include="UpdateKeeper.h" />
     <ClInclude Include="UpdateListener.h" />
     <ClInclude Include="UpdateSendingListener.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationDesktopFactory.cpp" />
     <ClCompile Include="ClipboardListener.cpp" />
-    <ClCompile Include="DesktopFactory.cpp" />
     <ClCompile Include="UpdateContainer.cpp" />
-    <ClCompile Include="UpdateListener.cpp" />
-    <ClCompile Include="UpdateSendingListener.cpp" />
+    <ClCompile Include="UpdateKeeper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

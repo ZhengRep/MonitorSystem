@@ -4,8 +4,8 @@
 class UpdateListener
 {
 public:
-  UpdateListener();
-  ~UpdateListener();
+  UpdateListener() {};
+  ~UpdateListener() {};
 
   virtual void onUpdate() = 0;
 };
