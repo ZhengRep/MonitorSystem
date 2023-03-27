@@ -5,3 +5,7 @@
 #include "rfb/PixelFormat.h"
 #include "rfb/FrameBuffer.h"
 #include ""
+
+class Desktop {
+
+};
