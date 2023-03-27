@@ -70,7 +70,7 @@ void Region::add(const Region& other)
   miUnion(&m_reg, &m_reg, (RegionPtr)&other.m_reg);
 }
 
-void Region::substract(const Region* other)
+void Region::subtract(const Region* other)
 {
   miSubtract(&m_reg, &m_reg, (RegionPtr)&other->m_reg);
 }

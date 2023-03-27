@@ -21,7 +21,7 @@ public:
   void translate(int dx, int dy);
   void add(const Region* other);
   void add(const Region& other);
-  void substract(const Region* other);
+  void subtract(const Region* other);
   void intersect(const Region* other);
   void crop(const Rect* rect);
   bool isEmpty() const;
