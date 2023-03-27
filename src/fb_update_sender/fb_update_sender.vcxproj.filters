@@ -18,9 +18,24 @@
     <ClInclude Include="UpdateSender.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UpdateRequestListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewPortState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UpdateSender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewPortState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

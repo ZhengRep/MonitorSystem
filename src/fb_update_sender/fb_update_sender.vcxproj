@@ -19,10 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="UpdateRequestListener.h" />
     <ClInclude Include="UpdateSender.h" />
+    <ClInclude Include="ViewPort.h" />
+    <ClInclude Include="ViewPortState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UpdateSender.cpp" />
+    <ClCompile Include="ViewPort.cpp" />
+    <ClCompile Include="ViewPortState.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
