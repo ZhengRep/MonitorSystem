@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{74943783-0303-47f9-82f1-c4ce14d3e8b4}</ProjectGuid>
-    <RootNamespace>iolib</RootNamespace>
+    <ProjectGuid>{109d35e3-e689-48db-ad4e-f9688e7a5c9c}</ProjectGuid>
+    <RootNamespace>network</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,18 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Channel.h" />
-    <ClInclude Include="DateOutputStream.h" />
-    <ClInclude Include="InputStream.h" />
-    <ClInclude Include="IOException.h" />
-    <ClInclude Include="OutputStream.h" />
+    <ClInclude Include="RfbOutputGate.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Channel.cpp" />
-    <ClCompile Include="DateOutputStream.cpp" />
-    <ClCompile Include="InputStream.cpp" />
-    <ClCompile Include="IOException.cpp" />
-    <ClCompile Include="OutputStream.cpp" />
+    <ClCompile Include="RfbOutputGate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

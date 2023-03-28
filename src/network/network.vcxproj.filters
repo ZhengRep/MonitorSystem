@@ -15,36 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Channel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputStream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IOException.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OutputStream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DateOutputStream.h">
+    <ClInclude Include="RfbOutputGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Channel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputStream.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IOException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OutputStream.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DateOutputStream.cpp">
+    <ClCompile Include="RfbOutputGate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
