@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AnsiStringStorage.h" />
+    <ClInclude Include="BrokenHandleException.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandLine.h" />
     <ClInclude Include="CommandLineArgs.h" />

@@ -21,11 +21,11 @@ class ViewPort
   void changedState(const ViewPortState* newState);
 
 private:
-  ViewPort(const ViewPort&);
+  ViewPort(const ViewPort&); //Can't used outside
   ViewPort& operator =(const ViewPort&);
   void resolveWindowName();
 
-  static const int RESOLVE_PERIOD = 3000;
+  static const int RESOLVING_PERIOD = 3000;
   Desktop* m_desktop;
   ViewPortState m_state;
   Rect m_rect;

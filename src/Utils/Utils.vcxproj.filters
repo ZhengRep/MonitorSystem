@@ -75,6 +75,9 @@
     <ClInclude Include="GetCPUTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BrokenHandleException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnsiStringStorage.cpp">
