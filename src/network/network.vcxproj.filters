@@ -18,9 +18,15 @@
     <ClInclude Include="RfbOutputGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RfbInputGate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RfbOutputGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RfbInputGate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

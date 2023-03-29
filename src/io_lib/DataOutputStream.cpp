@@ -1,24 +1,24 @@
-#include "DateOutputStream.h"
+#include "DataOutputStream.h"
 #include "Utils/Utf8StringStorage.h"
 #include <vector>
 
 #define GETBYTE(x, n) (((x) >> ((n) * 8)) & 0xFF)
 
-DateOutputStream::DateOutputStream(OutputStream* outputStream)
+DataOutputStream::DataOutputStream(OutputStream* outputStream)
   :m_outputStream(outputStream)
 {
 }
 
-DateOutputStream::~DateOutputStream()
+DataOutputStream::~DataOutputStream()
 {
 }
 
-size_t DateOutputStream::write(const void* buffer, size_t len) throw(IOException)
+size_t DataOutputStream::write(const void* buffer, size_t len) throw(IOException)
 {
   return m_outputStream->write(buffer, len);
 }
 
-void DateOutputStream::writeFully(const void* buffer, size_t len) throw(IOException)
+void DataOutputStream::writeFully(const void* buffer, size_t len) throw(IOException)
 {
   char* typedBuffer = (char*)buffer;
   size_t totalWritten = 0;
@@ -30,12 +30,12 @@ void DateOutputStream::writeFully(const void* buffer, size_t len) throw(IOExcept
   }
 }
 
-void DateOutputStream::writeUInt8(UINT8 x) throw(IOException)
+void DataOutputStream::writeUInt8(UINT8 x) throw(IOException)
 {
   writeFully((char*)&x, 1);
 }
 
-void DateOutputStream::writeUInt16(UINT16 data) throw(IOException)
+void DataOutputStream::writeUInt16(UINT16 data) throw(IOException)
 {
   UINT8 buf[2];
 
@@ -45,7 +45,7 @@ void DateOutputStream::writeUInt16(UINT16 data) throw(IOException)
   writeFully((char*)buf, sizeof(buf));
 }
 
-void DateOutputStream::writeUInt32(UINT32 data) throw(IOException)
+void DataOutputStream::writeUInt32(UINT32 data) throw(IOException)
 {
   UINT8 buf[4];
 
@@ -57,7 +57,7 @@ void DateOutputStream::writeUInt32(UINT32 data) throw(IOException)
   writeFully((char*)buf, sizeof(buf));
 }
 
-void DateOutputStream::writeUInt64(UINT64 data) throw(IOException)
+void DataOutputStream::writeUInt64(UINT64 data) throw(IOException)
 {
   UINT8 buf[8];
 
@@ -73,29 +73,30 @@ void DateOutputStream::writeUInt64(UINT64 data) throw(IOException)
   writeFully((char*)buf, sizeof(buf));
 }
 
-void DateOutputStream::writeInt8(INT8 data) throw(IOException)
+void DataOutputStream::writeInt8(INT8 data) throw(IOException)
 {
   writeUInt8((UINT8)data);
 }
 
-void DateOutputStream::writeInt16(INT16 data) throw(IOException)
+void DataOutputStream::writeInt16(INT16 data) throw(IOException)
 {
   writeUInt16((UINT16)data);
 }
 
-void DateOutputStream::writeInt32(INT32 data) throw(IOException)
+void DataOutputStream::writeInt32(INT32 data) throw(IOException)
 {
   writeUInt32((UINT32)data);
 }
 
-void DateOutputStream::writeInt64(INT64 data) throw(IOException)
+void DataOutputStream::writeInt64(INT64 data) throw(IOException)
 {
   writeUInt64((UINT64)data);
 }
 
-void DateOutputStream::writeUTF8(const TCHAR* string) throw(IOException)
+void DataOutputStream::writeUTF8(const TCHAR* string) throw(IOException)
 {
-  Utf8StringStorage utf8String(&StringStorage(string));
+  StringStorage str = StringStorage(string);
+  Utf8StringStorage utf8String(&str);
 
   try {
     unsigned int sizeInBytes = (unsigned int)utf8String.getSize();
@@ -107,7 +108,7 @@ void DateOutputStream::writeUTF8(const TCHAR* string) throw(IOException)
   }
 }
 
-void DateOutputStream::flush() throw(IOException)
+void DataOutputStream::flush() throw(IOException)
 {
   m_outputStream->flush();
 }

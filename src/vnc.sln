@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fb_update_sender", "fb_upda
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network", "network\network.vcxproj", "{109D35E3-E689-48DB-AD4E-F9688E7A5C9C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rfb_utils", "rfb_utils\rfb_utils.vcxproj", "{C5B9375D-89D8-466C-857D-6747965B5F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{109D35E3-E689-48DB-AD4E-F9688E7A5C9C}.Release|x64.Build.0 = Release|x64
 		{109D35E3-E689-48DB-AD4E-F9688E7A5C9C}.Release|x86.ActiveCfg = Release|Win32
 		{109D35E3-E689-48DB-AD4E-F9688E7A5C9C}.Release|x86.Build.0 = Release|Win32
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Debug|x64.ActiveCfg = Debug|x64
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Debug|x64.Build.0 = Debug|x64
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Debug|x86.Build.0 = Debug|Win32
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Release|x64.ActiveCfg = Release|x64
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Release|x64.Build.0 = Release|x64
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Release|x86.ActiveCfg = Release|Win32
+		{C5B9375D-89D8-466C-857D-6747965B5F70}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

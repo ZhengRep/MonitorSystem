@@ -128,15 +128,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BufferedOutputStream.h" />
     <ClInclude Include="Channel.h" />
-    <ClInclude Include="DateOutputStream.h" />
+    <ClInclude Include="DataInputStream.h" />
+    <ClInclude Include="DataOutputStream.h" />
     <ClInclude Include="InputStream.h" />
     <ClInclude Include="IOException.h" />
     <ClInclude Include="OutputStream.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BufferedOutputStream.cpp" />
     <ClCompile Include="Channel.cpp" />
-    <ClCompile Include="DateOutputStream.cpp" />
+    <ClCompile Include="DataInputStream.cpp" />
+    <ClCompile Include="DataOutputStream.cpp" />
     <ClCompile Include="InputStream.cpp" />
     <ClCompile Include="IOException.cpp" />
     <ClCompile Include="OutputStream.cpp" />

@@ -4,7 +4,9 @@
 #include "desktop/UpdateKeeper.h"
 #include "UpdateRequestListener.h"
 #include "ViewPort.h"
-#include 
+#include "network/RfbOutputGate.h"
+#include "network/RfbInputGate.h"
+
 
 class UpdateSender
 {

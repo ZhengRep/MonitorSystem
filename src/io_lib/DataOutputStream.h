@@ -3,11 +3,11 @@
 #include "OutputStream.h"
 #include "IOException.h"
 
-class DateOutputStream: public OutputStream
+class DataOutputStream: public OutputStream
 {
 public:
-  DateOutputStream(OutputStream* outputStream);
-  virtual ~DateOutputStream();
+  DataOutputStream(OutputStream* outputStream);
+  virtual ~DataOutputStream();
   //Inherited from superclass, just delegate call to real output stream
   virtual size_t write(const void* buffer, size_t len) throw(IOException);
   void writeFully(const void* buffer, size_t len) throw(IOException);
