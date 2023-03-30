@@ -16,7 +16,7 @@ FrameBuffer::~FrameBuffer(void)
 
 bool FrameBuffer::assignProperties(const FrameBuffer* srcFrameBuffer)
 {
-    setProperties(&srcFrameBuffer->getDimension(), &srcFrameBuffer->getPixelFormat());
+    setProperties(&(srcFrameBuffer->getDimension()), &(srcFrameBuffer->getPixelFormat()));
     return resizeBuffer();
 }
 
@@ -36,12 +36,9 @@ void FrameBuffer::setColor(UINT8 red, UINT8 green, UINT8 blue)
 {
     size_t sizeInPixels = m_dimension.area();
     int pixelSize = m_pixelFormat.bitsPerPixel / 8;
-    UINT32 redPix = (red * m_pixelFormat.redMax / 255) <<
-        m_pixelFormat.redShift;
-    UINT32 greenPix = (green * m_pixelFormat.greenMax / 255) <<
-        m_pixelFormat.greenShift;
-    UINT32 bluePix = (blue * m_pixelFormat.blueMax / 255) <<
-        m_pixelFormat.blueShift;
+    UINT32 redPix = (red * m_pixelFormat.redMax / 255) << m_pixelFormat.redShift;
+    UINT32 greenPix = (green * m_pixelFormat.greenMax / 255) << m_pixelFormat.greenShift;
+    UINT32 bluePix = (blue * m_pixelFormat.blueMax / 255) << m_pixelFormat.blueShift;
     UINT32 color = redPix | greenPix | bluePix;
 
     UINT8* endPixPtr = (UINT8*)m_buffer + getBufferSize();
@@ -148,13 +145,9 @@ bool FrameBuffer::copyFromRotated90(const Rect* dstRect, const FrameBuffer* srcF
     int resultHeight = srcClippedRect.getHeight();
     int resultWidth = srcClippedRect.getWidth();
 
-    UINT8* pBaseDst = (UINT8*)m_buffer
-        + dstClippedRect.top * dstStrideBytesByX
-        + pixelSize * (dstClippedRect.right - 1);
+    UINT8* pBaseDst = (UINT8*)m_buffer + dstClippedRect.top * dstStrideBytesByX + pixelSize * (dstClippedRect.right - 1);
 
-    UINT8* pBaseSrc = (UINT8*)srcFrameBuffer->getBuffer()
-        + srcClippedRect.top * srcStrideBytes
-        + pixelSize * srcClippedRect.left;
+    UINT8* pBaseSrc = (UINT8*)srcFrameBuffer->getBuffer() + srcClippedRect.top * srcStrideBytes + pixelSize * srcClippedRect.left;
 
     for (int iRow = 0; iRow < resultHeight; iRow++, pBaseDst -= pixelSize, pBaseSrc += srcStrideBytes) {
         UINT32* pSrc = (UINT32*)pBaseSrc;
@@ -246,13 +239,9 @@ bool FrameBuffer::copyFromRotated270(const Rect* dstRect, const FrameBuffer* src
     int resultHeight = srcClippedRect.getHeight();
     int resultWidth = srcClippedRect.getWidth();
 
-    UINT8* pBaseDst = (UINT8*)m_buffer
-        + (dstClippedRect.bottom - 1) * dstStrideBytesByX
-        + pixelSize * dstClippedRect.left;
+    UINT8* pBaseDst = (UINT8*)m_buffer + (dstClippedRect.bottom - 1) * dstStrideBytesByX + pixelSize * dstClippedRect.left;
 
-    UINT8* pBaseSrc = (UINT8*)srcFrameBuffer->getBuffer()
-        + srcClippedRect.top * srcStrideBytes
-        + pixelSize * srcClippedRect.left;
+    UINT8* pBaseSrc = (UINT8*)srcFrameBuffer->getBuffer() + srcClippedRect.top * srcStrideBytes + pixelSize * srcClippedRect.left;
 
     for (int iRow = 0; iRow < resultHeight; iRow++, pBaseDst += pixelSize, pBaseSrc += srcStrideBytes) {
         UINT32* pSrc = (UINT32*)pBaseSrc;
@@ -306,10 +295,8 @@ void FrameBuffer::move(const Rect* dstRect, const int srcX, const int srcY)
 
     if (srcY > dstRect->top) {
         // Pointers set to first string of the rectanles
-        pdst = (UINT8*)m_buffer + dstClippedRect.top * strideBytes
-            + pixelSize * dstClippedRect.left;
-        psrc = (UINT8*)m_buffer + srcClippedRect.top * strideBytes
-            + pixelSize * srcClippedRect.left;
+        pdst = (UINT8*)m_buffer + dstClippedRect.top * strideBytes + pixelSize * dstClippedRect.left;
+        psrc = (UINT8*)m_buffer + srcClippedRect.top * strideBytes + pixelSize * srcClippedRect.left;
 
         for (int i = 0; i < resultHeight; i++, pdst += strideBytes, psrc += strideBytes) {
             memcpy(pdst, psrc, resultWidthBytes);
@@ -318,10 +305,8 @@ void FrameBuffer::move(const Rect* dstRect, const int srcX, const int srcY)
     }
     else {
         // Pointers set to last string of the rectanles
-        pdst = (UINT8*)m_buffer + (dstClippedRect.bottom - 1) * strideBytes
-            + pixelSize * dstClippedRect.left;
-        psrc = (UINT8*)m_buffer + (srcClippedRect.bottom - 1) * strideBytes
-            + pixelSize * srcClippedRect.left;
+        pdst = (UINT8*)m_buffer + (dstClippedRect.bottom - 1) * strideBytes + pixelSize * dstClippedRect.left;
+        psrc = (UINT8*)m_buffer + (srcClippedRect.bottom - 1) * strideBytes + pixelSize * srcClippedRect.left;
 
         for (int i = resultHeight - 1; i >= 0; i--, pdst -= strideBytes, psrc -= strideBytes) {
             memmove(pdst, psrc, resultWidthBytes);
@@ -329,7 +314,7 @@ void FrameBuffer::move(const Rect* dstRect, const int srcX, const int srcY)
     }
 }
 
-bool FrameBuffer::cmpFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, const int srcX, const int Y)
+bool FrameBuffer::cmpFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, const int srcX, const int srcY)
 {
     if (!m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
         return false;
@@ -350,13 +335,9 @@ bool FrameBuffer::cmpFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer
     int resultHeight = dstClippedRect.getHeight();
     int resultWidthBytes = dstClippedRect.getWidth() * pixelSize;
 
-    UINT8* pdst = (UINT8*)m_buffer
-        + dstClippedRect.top * dstStrideBytes
-        + pixelSize * dstClippedRect.left;
+    UINT8* pdst = (UINT8*)m_buffer + dstClippedRect.top * dstStrideBytes + pixelSize * dstClippedRect.left;
 
-    UINT8* psrc = (UINT8*)srcFrameBuffer->getBuffer()
-        + srcClippedRect.top * srcStrideBytes
-        + pixelSize * srcClippedRect.left;
+    UINT8* psrc = (UINT8*)srcFrameBuffer->getBuffer() + srcClippedRect.top * srcStrideBytes + pixelSize * srcClippedRect.left;
 
     for (int i = 0; i < resultHeight; i++, pdst += dstStrideBytes, psrc += srcStrideBytes) {
         if (memcmp(pdst, psrc, resultWidthBytes) != 0) {
@@ -395,8 +376,7 @@ void FrameBuffer::setPropertiesWithoutResize(const Dimension* newDim, const Pixe
     m_pixelFormat = *pf;
 }
 
-bool FrameBuffer::setProperties(const Dimension* newDim,
-    const PixelFormat* pixelFormat)
+bool FrameBuffer::setProperties(const Dimension* newDim, const PixelFormat* pixelFormat)
 {
     m_pixelFormat = *pixelFormat;
     m_dimension = *newDim;
@@ -457,14 +437,11 @@ void FrameBuffer::clipRect(const Rect* dstRect, const Rect* srcBufferRect, const
 {
     Rect dstBufferRect = m_dimension.getRect();
 
-    // Building srcRect
     Rect srcRect(srcX, srcY, srcX + dstRect->getWidth(), srcY + dstRect->getHeight());
 
-    // Finding common area between the dstRect, srcRect and the FrameBuffers
     Rect dstRectFB = dstBufferRect.intersection(dstRect);
     Rect srcRectFB = srcBufferRect->intersection(&srcRect);
 
-    // Finding common area between the dstRectFB and the srcRectFB
     Rect dstCommonArea(&dstRectFB);
     Rect srcCommonArea(&srcRectFB);
     // Move to common place (left = 0, top = 0)
@@ -473,7 +450,6 @@ void FrameBuffer::clipRect(const Rect* dstRect, const Rect* srcBufferRect, const
 
     Rect commonRect(&dstCommonArea.intersection(&srcCommonArea));
 
-    // Moving commonRect to destination coordinates and source
     dstClippedRect->setRect(&commonRect);
     dstClippedRect->move(dstRect->left, dstRect->top);
 
@@ -482,12 +458,11 @@ void FrameBuffer::clipRect(const Rect* dstRect, const Rect* srcBufferRect, const
 }
 
 
-template<class PIXEL_T>
-inline bool FrameBuffer::overLayT(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask)
+template<class PIXEL_T> inline bool FrameBuffer::overLayT(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask)
 {
     Rect srcClippedRect, dstClippedRect;
     clipRect(dstRect, srcFrameBuffer, srcX, srcY, &dstClippedRect, &srcClippedRect);
-    if (dstClippedRect.area() <= 0 || srcClippedRect.area() <= 0)){
+    if (dstClippedRect.area() <= 0 || srcClippedRect.area() <= 0){
         return true;
     }
 

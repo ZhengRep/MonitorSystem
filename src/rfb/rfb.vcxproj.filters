@@ -27,6 +27,9 @@
     <ClInclude Include="EncodingDefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PixelConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrameBuffer.cpp">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EncodingDefs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PixelConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

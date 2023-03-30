@@ -128,9 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EncodeOptions.h" />
     <ClInclude Include="Encoder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EncodeOptions.cpp" />
     <ClCompile Include="Encoder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

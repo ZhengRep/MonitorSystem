@@ -46,7 +46,7 @@ public:
 	virtual inline Dimension getDimension() const { return m_dimension; }
 
 	virtual bool setPixelFormat(const PixelFormat* pixelFormat);
-	virtual inline PixelFormat getPixelFormat() const { return m_pixelFormat; }
+	virtual inline PixelFormat getPixelFormat() const { return m_pixelFormat;}
 	virtual bool setProperties(const Dimension* newDim, const PixelFormat* pixelFormat);
 	virtual bool setProperties(const Rect* dimByRect, const PixelFormat* pixelFormat);
 	virtual UINT8 getBitsPerPixel() const;

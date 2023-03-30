@@ -18,9 +18,15 @@
     <ClInclude Include="Encoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EncodeOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodeOptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

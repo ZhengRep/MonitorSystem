@@ -69,7 +69,7 @@ int CursorShape::getMaskWidthInBytes() const
 
 void CursorShape::resetToEmpty()
 {
-  setDimension(&Dimension(0, 0));
+  setDimension(&(Dimension(0, 0)));
   setHotSpot(0, 0);
 }
 
