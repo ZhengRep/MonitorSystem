@@ -1,4 +1,5 @@
 #include "CursorShape.h"
+#include "Utils/Macros.h"
 
 CursorShape::~CursorShape()
 {
@@ -69,7 +70,7 @@ int CursorShape::getMaskWidthInBytes() const
 
 void CursorShape::resetToEmpty()
 {
-  setDimension(&(Dimension(0, 0)));
+  setDimension(&unmove(Dimension(0,0)));
   setHotSpot(0, 0);
 }
 

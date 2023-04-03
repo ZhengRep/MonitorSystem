@@ -130,10 +130,18 @@
   <ItemGroup>
     <ClInclude Include="EncodeOptions.h" />
     <ClInclude Include="Encoder.h" />
+    <ClInclude Include="HextileEncoder.h" />
+    <ClInclude Include="JpegEncoder.h" />
+    <ClInclude Include="TightEncoder.h" />
+    <ClInclude Include="TightPalette.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EncodeOptions.cpp" />
     <ClCompile Include="Encoder.cpp" />
+    <ClCompile Include="HextileEncoder.cpp" />
+    <ClCompile Include="JpegEncoder.cpp" />
+    <ClCompile Include="TightEncoder.cpp" />
+    <ClCompile Include="TightPalette.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

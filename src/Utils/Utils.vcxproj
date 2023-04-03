@@ -145,6 +145,7 @@
     <ClInclude Include="Exception.h" />
     <ClInclude Include="CharDefs.h" />
     <ClInclude Include="GetCPUTime.h" />
+    <ClInclude Include="Macros.h" />
     <ClInclude Include="inttypes.h" />
     <ClInclude Include="ResourceLoader.h" />
     <ClInclude Include="Singleton.h" />

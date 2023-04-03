@@ -1,5 +1,6 @@
 #include "FrameBuffer.h"
 #include<string.h>
+#include "Utils/Macros.h"
 
 FrameBuffer::FrameBuffer(void)
     :m_buffer(0)
@@ -16,7 +17,7 @@ FrameBuffer::~FrameBuffer(void)
 
 bool FrameBuffer::assignProperties(const FrameBuffer* srcFrameBuffer)
 {
-    setProperties(&(srcFrameBuffer->getDimension()), &(srcFrameBuffer->getPixelFormat()));
+    setProperties(&unmove(srcFrameBuffer->getDimension()), &unmove(srcFrameBuffer->getPixelFormat()));
     return resizeBuffer();
 }
 
@@ -26,7 +27,7 @@ bool FrameBuffer::clone(const FrameBuffer* srcFrameBuffer)
         return false;
     }
 
-    Rect fbRect = &m_dimension.getRect();
+    Rect fbRect = &unmove(m_dimension.getRect());
     copyFrom(&fbRect, srcFrameBuffer, fbRect.left, fbRect.top);
 
     return true;
@@ -72,12 +73,12 @@ void FrameBuffer::fillRect(const Rect* dstRect, UINT32 color)
 
 bool FrameBuffer::isEqualTo(const FrameBuffer* frameBuffer)
 {
-    return m_dimension.cmpDim(&frameBuffer->getDimension()) && m_pixelFormat.isEqualTo(&frameBuffer->getPixelFormat());
+    return m_dimension.cmpDim(&unmove(frameBuffer->getDimension())) && m_pixelFormat.isEqualTo(&unmove(frameBuffer->getPixelFormat()));
 }
 
 bool FrameBuffer::copyFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY)
 {
-    if (!m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (!m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -113,12 +114,12 @@ bool FrameBuffer::copyFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffe
 
 bool FrameBuffer::copyFrom(const FrameBuffer* srcFrameBuffer, int srcX, int srcY)
 {
-    return copyFrom(&m_dimension.getRect(), srcFrameBuffer, srcX, srcY);
+    return copyFrom(&unmove(m_dimension.getRect()), srcFrameBuffer, srcX, srcY);
 }
 
 bool FrameBuffer::copyFromRotated90(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY)
 {
-    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -162,7 +163,7 @@ bool FrameBuffer::copyFromRotated90(const Rect* dstRect, const FrameBuffer* srcF
 
 bool FrameBuffer::copyFromRotated180(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY)
 {
-    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -212,7 +213,7 @@ bool FrameBuffer::copyFromRotated180(const Rect* dstRect, const FrameBuffer* src
 
 bool FrameBuffer::copyFromRotated270(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY)
 {
-    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (m_pixelFormat.bitsPerPixel != 32 || !m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -256,7 +257,7 @@ bool FrameBuffer::copyFromRotated270(const Rect* dstRect, const FrameBuffer* src
 
 bool FrameBuffer::overlay(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask)
 {
-    if (!m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (!m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -316,7 +317,7 @@ void FrameBuffer::move(const Rect* dstRect, const int srcX, const int srcY)
 
 bool FrameBuffer::cmpFrom(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, const int srcX, const int srcY)
 {
-    if (!m_pixelFormat.isEqualTo(&srcFrameBuffer->getPixelFormat())) {
+    if (!m_pixelFormat.isEqualTo(&unmove(srcFrameBuffer->getPixelFormat()))) {
         return false;
     }
 
@@ -448,7 +449,7 @@ void FrameBuffer::clipRect(const Rect* dstRect, const Rect* srcBufferRect, const
     dstCommonArea.move(-dstRect->left, -dstRect->top);
     srcCommonArea.move(-srcRect.left, -srcRect.top);
 
-    Rect commonRect(&dstCommonArea.intersection(&srcCommonArea));
+    Rect commonRect(&unmove(dstCommonArea.intersection(&srcCommonArea)));
 
     dstClippedRect->setRect(&commonRect);
     dstClippedRect->move(dstRect->left, dstRect->top);
@@ -483,4 +484,33 @@ template<class PIXEL_T> inline bool FrameBuffer::overLayT(const Rect* dstRect, c
         }
     }
     return true;
+}
+
+template<class PIXEL_T>
+bool FrameBuffer::overlayT(const Rect* dstRect, const FrameBuffer* srcFrameBuffer, int srcX, int srcY, const char* andMask)
+{
+  Rect srcClippedRect, dstClippedRect;
+
+  clipRect(dstRect, srcFrameBuffer, srcX, srcY, &dstClippedRect, &srcClippedRect);
+  if (dstClippedRect.area() <= 0 || srcClippedRect.area() <= 0) {
+    return true;
+  }
+
+  PIXEL_T* dstPixels = (PIXEL_T*)getBuffer();
+  PIXEL_T* srcPixels = (PIXEL_T*)srcFrameBuffer->getBuffer();
+  int srcWidth = srcFrameBuffer->getDimension().width;
+  int dstWidth = getDimension().width;
+  size_t bytesPerRow = (srcWidth + 7) / 8;
+  for (int iRow = srcClippedRect.top; iRow < srcClippedRect.bottom; iRow++) {
+    for (int iCol = srcClippedRect.left; iCol < srcClippedRect.right; iCol++) {
+      unsigned char curByte = andMask[iRow * bytesPerRow + iCol / 8];
+      bool andBit = (curByte & 128 >> iCol % 8) != 0;
+      if (andBit) {
+        int iDstRow = dstClippedRect.top + iRow - srcY - srcClippedRect.top;
+        int iDstCol = dstClippedRect.left + iCol - srcX - srcClippedRect.left;
+        dstPixels[iDstRow * dstWidth + iDstCol] = srcPixels[iRow * srcWidth + iCol];
+      }
+    }
+  }
+  return true;
 }

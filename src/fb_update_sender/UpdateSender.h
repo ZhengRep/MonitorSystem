@@ -6,6 +6,7 @@
 #include "ViewPort.h"
 #include "network/RfbOutputGate.h"
 #include "network/RfbInputGate.h"
+#include "rfb_utils/Encoder.h"
 
 
 class UpdateSender
