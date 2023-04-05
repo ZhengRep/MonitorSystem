@@ -54,6 +54,6 @@ protected:
 
   TightPaletteEntry m_entry[256];
   TightColorList* m_hash[256];
-  TightColorList* m_list[256];
+  TightColorList m_list[256];
 };
 
