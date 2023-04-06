@@ -130,7 +130,9 @@
   <ItemGroup>
     <ClInclude Include="EncodeOptions.h" />
     <ClInclude Include="Encoder.h" />
+    <ClInclude Include="EncoderStore.h" />
     <ClInclude Include="HextileEncoder.h" />
+    <ClInclude Include="HextileTile.h" />
     <ClInclude Include="JpegCompressor.h" />
     <ClInclude Include="JpegEncoder.h" />
     <ClInclude Include="TightEncoder.h" />
@@ -139,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="EncodeOptions.cpp" />
     <ClCompile Include="Encoder.cpp" />
+    <ClCompile Include="EncoderStore.cpp" />
     <ClCompile Include="HextileEncoder.cpp" />
     <ClCompile Include="JpegCompressor.cpp" />
     <ClCompile Include="JpegEncoder.cpp" />

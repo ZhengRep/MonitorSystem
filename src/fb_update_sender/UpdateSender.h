@@ -7,6 +7,8 @@
 #include "network/RfbOutputGate.h"
 #include "network/RfbInputGate.h"
 #include "rfb_utils/Encoder.h"
+#include "rfb_utils/HextileEncoder.h"
+#include "rfb_utils/JpegEncoder.h"
 
 
 class UpdateSender

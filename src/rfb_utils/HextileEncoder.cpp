@@ -1,10 +1,6 @@
 #include "HextileEncoder.h"
-
-const int hextileRaw = 1;
-const int hextileBgSpecified = 2;
-const int hextileFgSpecified = 4;
-const int hextileAnySubrects = 8;
-const int hextileSubrectsColoured = 16;
+#include "HextileTile.h"
+#include "Utils/Macros.h"
 
 HextileEncoder::HextileEncoder(PixelConverter* conv, DataOutputStream* output)
   :Encoder(conv, output)
@@ -39,7 +35,7 @@ void HextileEncoder::sendRectangle(const Rect* rect, const FrameBuffer* serverFb
 template<class PIXEL_T>
 inline void HextileEncoder::hextileFunction(const Rect& r, const FrameBuffer* frameBuffer) throw(IOException)
 {
-  ect t;
+  Rect t;
   PIXEL_T* buf;
   FrameBuffer fb;
   PIXEL_T oldBg = 0, oldFg = 0;
@@ -54,7 +50,7 @@ inline void HextileEncoder::hextileFunction(const Rect& r, const FrameBuffer* fr
     for (t.left = r.left; t.left < r.right; t.left += 16) {
       t.right = min(r.right, t.left + 16);
 
-      fb.setProperties(&t, &frameBuffer->getPixelFormat());
+      fb.setProperties(&t, &unmove(frameBuffer->getPixelFormat()));
       fb.copyFrom(frameBuffer, t.left, t.top);
       buf = (PIXEL_T*)fb.getBuffer();
 

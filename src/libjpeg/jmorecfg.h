@@ -1,4 +1,16 @@
-#pragma once
+/*
+ * jmorecfg.h
+ *
+ * Copyright (C) 1991-1997, Thomas G. Lane.
+ * Modified 1997-2009 by Guido Vollbeding.
+ * This file is part of the Independent JPEG Group's software.
+ * For conditions of distribution and use, see the accompanying README file.
+ *
+ * This file contains additional configuration options that customize the
+ * JPEG software for special applications or support machine-dependent
+ * optimizations.  Most users will not need to touch this file.
+ */
+
 
 /*
  * Define BITS_IN_JSAMPLE as either
@@ -12,36 +24,36 @@
 #define BITS_IN_JSAMPLE  8	/* use 8 or 12 */
 
 
- /*
-  * Maximum number of components (color channels) allowed in JPEG image.
-  * To meet the letter of the JPEG spec, set this to 255.  However, darn
-  * few applications need more than 4 channels (maybe 5 for CMYK + alpha
-  * mask).  We recommend 10 as a reasonable compromise; use 4 if you are
-  * really short on memory.  (Each allowed component costs a hundred or so
-  * bytes of storage, whether actually used in an image or not.)
-  */
+/*
+ * Maximum number of components (color channels) allowed in JPEG image.
+ * To meet the letter of the JPEG spec, set this to 255.  However, darn
+ * few applications need more than 4 channels (maybe 5 for CMYK + alpha
+ * mask).  We recommend 10 as a reasonable compromise; use 4 if you are
+ * really short on memory.  (Each allowed component costs a hundred or so
+ * bytes of storage, whether actually used in an image or not.)
+ */
 
 #define MAX_COMPONENTS  10	/* maximum number of image components */
 
 
-  /*
-   * Basic data types.
-   * You may need to change these if you have a machine with unusual data
-   * type sizes; for example, "char" not 8 bits, "short" not 16 bits,
-   * or "long" not 32 bits.  We don't care whether "int" is 16 or 32 bits,
-   * but it had better be at least 16.
-   */
+/*
+ * Basic data types.
+ * You may need to change these if you have a machine with unusual data
+ * type sizes; for example, "char" not 8 bits, "short" not 16 bits,
+ * or "long" not 32 bits.  We don't care whether "int" is 16 or 32 bits,
+ * but it had better be at least 16.
+ */
 
-   /* Representation of a single sample (pixel element value).
-    * We frequently allocate large arrays of these, so it's important to keep
-    * them small.  But if you have memory to burn and access to char or short
-    * arrays is very slow on your hardware, you might want to change these.
-    */
+/* Representation of a single sample (pixel element value).
+ * We frequently allocate large arrays of these, so it's important to keep
+ * them small.  But if you have memory to burn and access to char or short
+ * arrays is very slow on your hardware, you might want to change these.
+ */
 
 #if BITS_IN_JSAMPLE == 8
-    /* JSAMPLE should be the smallest type that will hold the values 0..255.
-     * You can use a signed char by having GETJSAMPLE mask it with 0xFF.
-     */
+/* JSAMPLE should be the smallest type that will hold the values 0..255.
+ * You can use a signed char by having GETJSAMPLE mask it with 0xFF.
+ */
 
 #ifdef HAVE_UNSIGNED_CHAR
 
@@ -117,7 +129,7 @@ typedef char JOCTET;
  * typedefs live at a different point on the speed/space tradeoff curve.)
  */
 
- /* UINT8 must hold at least the values 0..255. */
+/* UINT8 must hold at least the values 0..255. */
 
 #ifdef HAVE_UNSIGNED_CHAR
 typedef unsigned char UINT8;
@@ -174,7 +186,7 @@ typedef unsigned int JDIMENSION;
  * or code profilers that require it.
  */
 
- /* a function called through method pointers: */
+/* a function called through method pointers: */
 #define METHODDEF(type)		static type
 /* a function used only in its module: */
 #define LOCAL(type)		static type
@@ -197,11 +209,11 @@ typedef unsigned int JDIMENSION;
 #endif
 
 
- /* Here is the pseudo-keyword for declaring pointers that must be "far"
-  * on 80x86 machines.  Most of the specialized coding for 80x86 is handled
-  * by just saying "FAR *" where such a pointer is needed.  In a few places
-  * explicit coding is needed; see uses of the NEED_FAR_POINTERS symbol.
-  */
+/* Here is the pseudo-keyword for declaring pointers that must be "far"
+ * on 80x86 machines.  Most of the specialized coding for 80x86 is handled
+ * by just saying "FAR *" where such a pointer is needed.  In a few places
+ * explicit coding is needed; see uses of the NEED_FAR_POINTERS symbol.
+ */
 
 #ifndef FAR
 #ifdef NEED_FAR_POINTERS
@@ -212,12 +224,12 @@ typedef unsigned int JDIMENSION;
 #endif
 
 
-  /*
-   * On a few systems, type boolean and/or its values FALSE, TRUE may appear
-   * in standard header files.  Or you may have conflicts with application-
-   * specific header files that you want to include together with these files.
-   * Defining HAVE_BOOLEAN before including jpeglib.h should make it work.
-   */
+/*
+ * On a few systems, type boolean and/or its values FALSE, TRUE may appear
+ * in standard header files.  Or you may have conflicts with application-
+ * specific header files that you want to include together with these files.
+ * Defining HAVE_BOOLEAN before including jpeglib.h should make it work.
+ */
 
 #ifndef HAVE_BOOLEAN
 typedef int boolean;
@@ -244,15 +256,15 @@ typedef int boolean;
 #ifdef JPEG_INTERNAL_OPTIONS
 
 
- /*
-  * These defines indicate whether to include various optional functions.
-  * Undefining some of these symbols will produce a smaller but less capable
-  * library.  Note that you can leave certain source files out of the
-  * compilation/linking process if you've #undef'd the corresponding symbols.
-  * (You may HAVE to do that if your compiler doesn't like null source files.)
-  */
+/*
+ * These defines indicate whether to include various optional functions.
+ * Undefining some of these symbols will produce a smaller but less capable
+ * library.  Note that you can leave certain source files out of the
+ * compilation/linking process if you've #undef'd the corresponding symbols.
+ * (You may HAVE to do that if your compiler doesn't like null source files.)
+ */
 
-  /* Capability options common to encoder and decoder: */
+/* Capability options common to encoder and decoder: */
 
 #define DCT_ISLOW_SUPPORTED	/* slow but accurate integer algorithm */
 #define DCT_IFAST_SUPPORTED	/* faster, less accurate integer method */
@@ -275,7 +287,7 @@ typedef int boolean;
  */
 #define INPUT_SMOOTHING_SUPPORTED   /* Input image smoothing option? */
 
- /* Decoder capability options: */
+/* Decoder capability options: */
 
 #define D_ARITH_CODING_SUPPORTED    /* Arithmetic coding back end? */
 #define D_MULTISCAN_FILES_SUPPORTED /* Multiple-scan JPEG files? */
@@ -312,12 +324,12 @@ typedef int boolean;
 #define RGB_PIXELSIZE	3	/* JSAMPLEs per RGB scanline element */
 
 
- /* Definitions for speed-related optimizations. */
+/* Definitions for speed-related optimizations. */
 
 
- /* If your compiler supports inline functions, define INLINE
-  * as the inline keyword; otherwise define it as empty.
-  */
+/* If your compiler supports inline functions, define INLINE
+ * as the inline keyword; otherwise define it as empty.
+ */
 
 #ifndef INLINE
 #ifdef __GNUC__			/* for instance, GNU C knows about inline */
@@ -329,23 +341,23 @@ typedef int boolean;
 #endif
 
 
-  /* On some machines (notably 68000 series) "int" is 32 bits, but multiplying
-   * two 16-bit shorts is faster than multiplying two ints.  Define MULTIPLIER
-   * as short on such a machine.  MULTIPLIER must be at least 16 bits wide.
-   */
+/* On some machines (notably 68000 series) "int" is 32 bits, but multiplying
+ * two 16-bit shorts is faster than multiplying two ints.  Define MULTIPLIER
+ * as short on such a machine.  MULTIPLIER must be at least 16 bits wide.
+ */
 
 #ifndef MULTIPLIER
 #define MULTIPLIER  int		/* type for fastest integer multiply */
 #endif
 
 
-   /* FAST_FLOAT should be either float or double, whichever is done faster
-    * by your compiler.  (Note that this type is only used in the floating point
-    * DCT routines, so it only matters if you've defined DCT_FLOAT_SUPPORTED.)
-    * Typically, float is faster in ANSI C compilers, while double is faster in
-    * pre-ANSI compilers (because they insist on converting to double anyway).
-    * The code below therefore chooses float if we have ANSI-style prototypes.
-    */
+/* FAST_FLOAT should be either float or double, whichever is done faster
+ * by your compiler.  (Note that this type is only used in the floating point
+ * DCT routines, so it only matters if you've defined DCT_FLOAT_SUPPORTED.)
+ * Typically, float is faster in ANSI C compilers, while double is faster in
+ * pre-ANSI compilers (because they insist on converting to double anyway).
+ * The code below therefore chooses float if we have ANSI-style prototypes.
+ */
 
 #ifndef FAST_FLOAT
 #ifdef HAVE_PROTOTYPES
@@ -355,4 +367,4 @@ typedef int boolean;
 #endif
 #endif
 
-#endif
+#endif /* JPEG_INTERNAL_OPTIONS */

@@ -36,6 +36,12 @@
     <ClInclude Include="JpegCompressor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EncoderStore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HextileTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">
@@ -57,6 +63,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="JpegCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EncoderStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

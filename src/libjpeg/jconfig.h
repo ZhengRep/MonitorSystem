@@ -1,4 +1,5 @@
-#pragma once
+/* jconfig.vc --- jconfig.h for Microsoft Visual C++ on Windows 95 or NT. */
+/* see jconfig.txt for explanations */
 
 /* Let Windows headers define types like INT32 and UINT16. */
 #ifdef WIN32

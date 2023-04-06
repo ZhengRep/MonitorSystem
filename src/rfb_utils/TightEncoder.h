@@ -126,42 +126,4 @@ protected:
   StandardJpegCompressor m_compressor;
 };
 
-template<class PIXEL_T>
-inline void TightEncoder::sendAnyRect(const Rect* rect, const FrameBuffer* serverFb, const FrameBuffer* clientFb, const EncodeOptions* options) throw(IOException)
-{
-}
 
-template<class PIXEL_T>
-inline void TightEncoder::sendMonoRect(const Rect* rect, const FrameBuffer* fb, const EncodeOptions* options) throw(IOException)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::sendIndexedRect(const Rect* rect, const FrameBuffer* fb, const EncodeOptions* options) throw(IOException)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::sendFullColorRect(const Rect* rect, const FrameBuffer* fb, const EncodeOptions* options) throw(IOException)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::fillPalette(const Rect* r, const FrameBuffer* fb, int maxColors)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::copyPixels(const Rect* rect, const FrameBuffer* fb, UINT8* dst)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::encodeMonoRect(const Rect* rect, const FrameBuffer* fb, DataOutputStream* out) throw(IOException)
-{
-}
-
-template<class PIXEL_T>
-inline void TightEncoder::encodeIndexedRect(const Rect* rect, const FrameBuffer* fb, DataOutputStream* out) throw(IOException)
-{
-}
