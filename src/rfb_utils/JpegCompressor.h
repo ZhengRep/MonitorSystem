@@ -1,6 +1,6 @@
 #pragma once
-#include "libjpeg/jpeglib.h"
-#include <rfb/PixelFormat.h>
+//#include "libjpeg/jpeglib.h"
+#include "rfb/PixelFormat.h""
 
 class JpegCompressor
 {
@@ -35,7 +35,6 @@ public:
   bool emptyOutputBuffer();
   void termDestination();
 
-protected:
   static const int ALLOC_CHUNK_SIZE;
   static const int DEFAULT_JPEG_QUALITY;
 
@@ -47,10 +46,10 @@ protected:
   size_t m_numBytesReady;
   void convertRow(JSAMPLE* dst, const void* src, const PixelFormat* fmt, int numPixels);
   void convertRow24(JSAMPLE* dst, const void* src, const PixelFormat* fmt, int numPixels);
-private:
-  METHODDEF(StringStorage) getMessage(j_common_ptr cinfo);
-  METHODDEF(void) errorExit(j_common_ptr cinfo);
-  METHODDEF(void) outputMessage(j_common_ptr cinfo);
+
+  StringStorage getMessage(j_common_ptr cinfo);
+  void errorExit(j_common_ptr cinfo);
+  void outputMessage(j_common_ptr cinfo);
 
   typedef struct _TC_JPEG_COMPRESSOR {
     struct jpeg_compress_struct cinfo;

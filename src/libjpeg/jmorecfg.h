@@ -1,16 +1,3 @@
-/*
- * jmorecfg.h
- *
- * Copyright (C) 1991-1997, Thomas G. Lane.
- * Modified 1997-2009 by Guido Vollbeding.
- * This file is part of the Independent JPEG Group's software.
- * For conditions of distribution and use, see the accompanying README file.
- *
- * This file contains additional configuration options that customize the
- * JPEG software for special applications or support machine-dependent
- * optimizations.  Most users will not need to touch this file.
- */
-
 
 /*
  * Define BITS_IN_JSAMPLE as either
@@ -161,7 +148,7 @@ typedef short INT16;
 #ifndef _BASETSD_H_		/* Microsoft defines it in basetsd.h */
 #ifndef _BASETSD_H		/* MinGW is slightly different */
 #ifndef QGLOBAL_H		/* Qt defines it in qglobal.h */
-typedef long INT32;
+//typedef long INT32;
 #endif
 #endif
 #endif
