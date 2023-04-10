@@ -135,15 +135,19 @@
     <ClInclude Include="CursorShape.h" />
     <ClInclude Include="EncodingDefs.h" />
     <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="MsgDefs.h" />
     <ClInclude Include="PixelConverter.h" />
     <ClInclude Include="PixelFormat.h" />
+    <ClInclude Include="VendorDefs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CursorShape.cpp" />
     <ClCompile Include="EncodingDefs.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="MsgDefs.cpp" />
     <ClCompile Include="PixelConverter.cpp" />
     <ClCompile Include="PixelFormat.cpp" />
+    <ClCompile Include="VendorDefs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

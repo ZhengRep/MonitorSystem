@@ -30,6 +30,12 @@
     <ClInclude Include="PixelConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VendorDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrameBuffer.cpp">
@@ -45,6 +51,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PixelConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VendorDefs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgDefs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,13 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CursorUpdates.h" />
+    <ClInclude Include="SenderControlInformationInterface.h" />
     <ClInclude Include="UpdateRequestListener.h" />
     <ClInclude Include="UpdateSender.h" />
+    <ClInclude Include="UpdSenderMsgDefs.h" />
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="ViewPortState.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CursorUpdates.cpp" />
     <ClCompile Include="UpdateSender.cpp" />
+    <ClCompile Include="UpdSenderMsgDefs.cpp" />
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="ViewPortState.cpp" />
   </ItemGroup>

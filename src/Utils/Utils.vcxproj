@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnEventListener.h" />
     <ClInclude Include="AnsiStringStorage.h" />
     <ClInclude Include="BrokenHandleException.h" />
     <ClInclude Include="Command.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="CommandLineArgs.h" />
     <ClInclude Include="CommonHeader.h" />
     <ClInclude Include="DateTime.h" />
+    <ClInclude Include="Deflater.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="CharDefs.h" />
     <ClInclude Include="GetCPUTime.h" />
@@ -157,6 +159,8 @@
     <ClInclude Include="UnicodeStringStorage.h" />
     <ClInclude Include="Utf8StringStorage.h" />
     <ClInclude Include="winhdr.h" />
+    <ClInclude Include="ZLibBase.h" />
+    <ClInclude Include="ZLibException.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnsiStringStorage.cpp" />
@@ -164,6 +168,7 @@
     <ClCompile Include="CommandLine.cpp" />
     <ClCompile Include="CommandLineArgs.cpp" />
     <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="Deflater.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="GetCPUTime.cpp" />
     <ClCompile Include="ResourceLoader.cpp" />
@@ -173,6 +178,8 @@
     <ClCompile Include="Unicode.cpp" />
     <ClCompile Include="UnicodeStringStorage.cpp" />
     <ClCompile Include="Utf8StringStorage.cpp" />
+    <ClCompile Include="ZLibBase.cpp" />
+    <ClCompile Include="ZLibException.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

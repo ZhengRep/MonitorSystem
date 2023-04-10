@@ -1,8 +1,3 @@
-
-
-#ifndef JPEGLIB_H
-#define JPEGLIB_H
-
 /*
  * First we include the configuration files that record how this
  * installation of the JPEG library is set up.  jconfig.h can be
@@ -1143,5 +1138,3 @@ struct jpeg_color_quantizer { long dummy; };
 }
 #endif
 #endif
-
-#endif /* JPEGLIB_H */

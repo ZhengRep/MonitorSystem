@@ -1,6 +1,8 @@
 #pragma once
-//#include "libjpeg/jpeglib.h"
+#include <stdio.h>
+#include "Utils/CommonHeader.h"
 #include "rfb/PixelFormat.h""
+#include "libjpeg/jpeglib.h"
 
 class JpegCompressor
 {
@@ -47,9 +49,10 @@ public:
   void convertRow(JSAMPLE* dst, const void* src, const PixelFormat* fmt, int numPixels);
   void convertRow24(JSAMPLE* dst, const void* src, const PixelFormat* fmt, int numPixels);
 
-  StringStorage getMessage(j_common_ptr cinfo);
-  void errorExit(j_common_ptr cinfo);
-  void outputMessage(j_common_ptr cinfo);
+private:
+  METHODDEF(StringStorage) getMessage(j_common_ptr cinfo);
+  METHODDEF(void) errorExit(j_common_ptr cinfo);
+  METHODDEF(void) outputMessage(j_common_ptr cinfo);
 
   typedef struct _TC_JPEG_COMPRESSOR {
     struct jpeg_compress_struct cinfo;

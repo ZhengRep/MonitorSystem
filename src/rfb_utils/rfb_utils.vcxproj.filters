@@ -24,22 +24,43 @@
     <ClInclude Include="HextileEncoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TightPalette.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EncoderStore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HextileTile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JpegCompressor.h">
+    <ClInclude Include="TightPalette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TightEncoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="JpegEncoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TightEncoder.h">
+    <ClInclude Include="JpegCompressor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZrleEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RreEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RfbCodeRegistrator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RfbDispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RfbDispatcherListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CapContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClipboardExchange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,19 +74,37 @@
     <ClCompile Include="HextileEncoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TightPalette.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EncoderStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="JpegCompressor.cpp">
+    <ClCompile Include="TightPalette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TightEncoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="JpegEncoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TightEncoder.cpp">
+    <ClCompile Include="JpegCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZrleEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RreEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RfbCodeRegistrator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RfbDispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CapContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClipboardExchange.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

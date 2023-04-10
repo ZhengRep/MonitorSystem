@@ -27,6 +27,15 @@
     <ClInclude Include="ViewPortState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CursorUpdates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SenderControlInformationInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdSenderMsgDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UpdateSender.cpp">
@@ -36,6 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ViewPortState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorUpdates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdSenderMsgDefs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
