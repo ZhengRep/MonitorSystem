@@ -136,6 +136,7 @@
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Impersonator.h" />
     <ClInclude Include="PipeImpersonatedThread.h" />
+    <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Shell.h" />
@@ -151,6 +152,7 @@
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Impersonator.cpp" />
     <ClCompile Include="PipeImpersonatedThread.cpp" />
+    <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Shell.cpp" />

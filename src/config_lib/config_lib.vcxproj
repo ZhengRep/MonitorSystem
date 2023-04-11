@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a645183f-7363-4ae5-ad50-e9d98572d3d4}</ProjectGuid>
-    <RootNamespace>desktop</RootNamespace>
+    <ProjectGuid>{0774d1bd-cc34-4e3a-9833-5712cd796ded}</ProjectGuid>
+    <RootNamespace>configlib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -128,27 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AbnormDeskTermListener.h" />
-    <ClInclude Include="ApplicationDesktopFactory.h" />
-    <ClInclude Include="ClipboardListener.h" />
-    <ClInclude Include="Desktop.h" />
-    <ClInclude Include="DesktopClientImpl.h" />
-    <ClInclude Include="DesktopFactory.h" />
-    <ClInclude Include="DesktopServerWatcher.h" />
-    <ClInclude Include="UpdateContainer.h" />
-    <ClInclude Include="UpdateKeeper.h" />
-    <ClInclude Include="UpdateListener.h" />
-    <ClInclude Include="UpdateSendingListener.h" />
-    <ClInclude Include="WinServiceDesktopFactory.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="ApplicationDesktopFactory.cpp" />
-    <ClCompile Include="ClipboardListener.cpp" />
-    <ClCompile Include="DesktopClientImpl.cpp" />
-    <ClCompile Include="DesktopServerWatcher.cpp" />
-    <ClCompile Include="UpdateContainer.cpp" />
-    <ClCompile Include="UpdateKeeper.cpp" />
-    <ClCompile Include="WinServiceDesktopFactory.cpp" />
+    <ClInclude Include="SettingsManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
