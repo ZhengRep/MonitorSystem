@@ -2,6 +2,7 @@
 #include "thread/AutoLock.h"
 #include <crtdbg.h>
 #include "Utils/BrokenHandleException.h"
+#include "Utils/Macros.h"
 
 ViewPort::ViewPort(LogWriter* log)
   :m_desktop(0),
@@ -36,7 +37,7 @@ void ViewPort::update(const Dimension* fbDimension)
     m_desktop->getApplicationRegion(m_state.m_processId, &m_appRegion);
 
   case ViewPortState::FULL_DESKTOP:
-    rect.setRect(&fbDimension->getRect());
+    rect.setRect(&unmove(fbDimension->getRect()));
     break;
 
   case ViewPortState::PRIMARY_DISPLAY:
@@ -66,7 +67,7 @@ void ViewPort::update(const Dimension* fbDimension)
   }
 
   m_log->debug(_T("View port coordinates: (%d, %d, %dx%d)"), rect.left, rect.top, rect.getWidth(), rect.getHeight());
-  m_rect = rect.intersection(&fbDimension->getRect());
+  m_rect = rect.intersection(&unmove(fbDimension->getRect()));
   if (m_rect.getWidth() < 0 || m_rect.getHeight() < 0) {
     m_rect.clear();
   }

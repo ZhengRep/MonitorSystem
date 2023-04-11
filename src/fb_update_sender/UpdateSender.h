@@ -39,10 +39,10 @@ protected:
   void addUpdateContainer(const UpdateContainer* updateContainer);
   virtual void execute();
   virtual void onTerminate();
-  void checkCursorPos(UpdateContainer* updCont, const Rect* viewPort);
+  //void checkCursorPos(UpdateContainer* updCont, const Rect* viewPort);
 
   void setVideoFrozen(bool value);
-  void getVideoFrozen();
+  bool getVideoFrozen();
 
   void sendUpdate();
 
@@ -109,6 +109,9 @@ protected:
 
   EncodeOptions m_newEncodeOptions;
   LocalMutex m_newEncodeOptionsLocker;
+
+  PixelFormat m_newPixelFormat;
+  LocalMutex m_newPixelFormatLocker;
 
   bool m_setColorMapEntr;
   bool m_videoFrozen;

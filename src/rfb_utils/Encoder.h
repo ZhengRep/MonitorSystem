@@ -15,7 +15,7 @@ public:
   virtual int getCode() const;
 
   virtual void splitRectangle(const Rect* rect, std::vector<Rect>* rectList, const FrameBuffer* serverFb, const EncodeOptions* options);
-
+  virtual void sendRectangle(const Rect* rect, const FrameBuffer* serverFb, const EncodeOptions* options) throw(IOException);
 protected:
   PixelConverter* m_pixelConverter;
   DataOutputStream* m_output;
