@@ -15,19 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VncServer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NamingDefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="VncLogFilename.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VncServer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NamingDefs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="VncLogFilename.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

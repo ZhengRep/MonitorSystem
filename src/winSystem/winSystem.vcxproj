@@ -138,6 +138,7 @@
     <ClInclude Include="PipeImpersonatedThread.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
+    <ClInclude Include="RegistryKey.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="security\SecurityDescriptor.h" />
     <ClInclude Include="security\SecurityIdentifier.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="PipeImpersonatedThread.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
+    <ClCompile Include="RegistryKey.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="security\SecurityDescriptor.cpp" />
     <ClCompile Include="security\SecurityIdentifier.cpp" />

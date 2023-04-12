@@ -93,6 +93,9 @@
     <ClInclude Include="AnEventListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListenerContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnsiStringStorage.cpp">
@@ -144,6 +147,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ZLibException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListenerContainer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

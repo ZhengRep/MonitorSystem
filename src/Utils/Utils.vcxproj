@@ -147,6 +147,7 @@
     <ClInclude Include="Exception.h" />
     <ClInclude Include="CharDefs.h" />
     <ClInclude Include="GetCPUTime.h" />
+    <ClInclude Include="ListenerContainer.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="inttypes.h" />
     <ClInclude Include="ResourceLoader.h" />
@@ -171,6 +172,7 @@
     <ClCompile Include="Deflater.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="GetCPUTime.cpp" />
+    <ClCompile Include="ListenerContainer.cpp" />
     <ClCompile Include="ResourceLoader.cpp" />
     <ClCompile Include="StringParser.cpp" />
     <ClCompile Include="StringStorage.cpp" />

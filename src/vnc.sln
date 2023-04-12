@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "config_lib", "config_lib\co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "file_lib", "file_lib\file_lib.vcxproj", "{CB484ED0-13E2-4DFB-9480-979F9F742528}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wsconfig_lib", "wsconfig_lib\wsconfig_lib.vcxproj", "{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{CB484ED0-13E2-4DFB-9480-979F9F742528}.Release|x64.Build.0 = Release|x64
 		{CB484ED0-13E2-4DFB-9480-979F9F742528}.Release|x86.ActiveCfg = Release|Win32
 		{CB484ED0-13E2-4DFB-9480-979F9F742528}.Release|x86.Build.0 = Release|Win32
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Debug|x64.ActiveCfg = Debug|x64
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Debug|x64.Build.0 = Debug|x64
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Debug|x86.ActiveCfg = Debug|Win32
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Debug|x86.Build.0 = Debug|Win32
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Release|x64.ActiveCfg = Release|x64
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Release|x64.Build.0 = Release|x64
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Release|x86.ActiveCfg = Release|Win32
+		{D25929C9-0ED4-4F2D-90D1-0B50CF9D8731}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
