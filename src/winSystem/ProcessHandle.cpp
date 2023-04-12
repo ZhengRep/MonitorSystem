@@ -18,7 +18,7 @@ void ProcessHandle::openProcess(DWORD desiredAccess, BOOL inheritedHandle, DWORD
     m_hProcess = OpenProcess(desiredAccess, inheritedHandle, processId);
     if (m_hProcess == 0) {
         StringStorage errMsg;
-        errMsg.format(_T("Cant open the %d process"), dwProcessId);
+        errMsg.format(_T("Cant open the %d process"), processId);
         throw SystemException(errMsg.getString());
     }
 }

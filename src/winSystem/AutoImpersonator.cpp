@@ -14,9 +14,9 @@ AutoImpersonator::AutoImpersonator(Impersonator* imp, LogWriter* log)
 
 AutoImpersonator::~AutoImpersonator()
 {
-    try {
-        m_imp->revertToSelf();
-    }
-    catch (Exception& e) {
-        m_log->error(e.getMessage());
-    }
+  try {
+    m_imp->revertToSelf();
+  } catch (Exception& e) {
+    m_log->error(e.getMessage());
+  }
+}

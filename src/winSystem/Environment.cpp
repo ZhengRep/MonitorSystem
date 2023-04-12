@@ -10,6 +10,8 @@
 #include <vector>
 #include <algorithm>
 
+#pragma warning(disable: 4996)
+
 OSVERSIONINFO Environment::m_osVerInfo = { 0 };
 typedef VOID(WINAPI* SendSas)(BOOL asUser);
 typedef HRESULT(WINAPI* DwmIsCompositionEnabled)(BOOL* pfEnabled);
@@ -112,7 +114,7 @@ bool Environment::getCurrentModuleFolderPath(StringStorage* out)
 
     size_t lastPos = out->findLast(_T('\\'));
     if (lastPos != -1) {
-        out->getSubString(out, 0, max(lastPos - 1, 0));
+        out->getSubstring(out, 0, max(lastPos - 1, 0));
     }
     return true;
 }

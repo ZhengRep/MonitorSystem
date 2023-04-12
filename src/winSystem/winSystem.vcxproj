@@ -41,7 +41,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -139,6 +139,8 @@
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="security\SecurityDescriptor.h" />
+    <ClInclude Include="security\SecurityIdentifier.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="SystemException.h" />
     <ClInclude Include="WindowsEvent.h" />
@@ -155,6 +157,8 @@
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="security\SecurityDescriptor.cpp" />
+    <ClCompile Include="security\SecurityIdentifier.cpp" />
     <ClCompile Include="Shell.cpp" />
     <ClCompile Include="SystemException.cpp" />
     <ClCompile Include="WindowsEvent.cpp" />

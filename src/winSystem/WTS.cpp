@@ -60,7 +60,7 @@ DWORD WTS::getRdpSessionId(LogWriter* log)
                 log->debug(_T("RDP Session selected, Id: %d"), sessionId);
             }
         }
-        wtsFreeMemory();
+        wtsFreeMemory(sessionInfo);
     }
     return sessionId;
 }
@@ -96,7 +96,6 @@ void WTS::queryConsoleUserToken(HANDLE* token, LogWriter* log) throw(SystemExcep
     }
 
     DWORD sessionId = getActiveConsoleSessionId(log);
-    AutoLock l(&m_mutex);
     if (m_WTSQueryUserToken != 0) {
         if (!m_WTSQueryUserToken(sessionId, token)) {
             throw SystemException(_T("WTSQueryUserToken error:"));

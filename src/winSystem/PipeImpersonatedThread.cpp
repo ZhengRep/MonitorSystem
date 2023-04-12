@@ -35,7 +35,7 @@ void PipeImpersonatedThread::execute()
         Environment::getErrStr(&m_faultReason);
     }
     m_impersonationReadyEvent.notify();
-    while (!isTerminating) {
+    while (!isTerminating()) {
         m_threadSleeper.waitForEvent();
     }
     RevertToSelf(); //ToTest

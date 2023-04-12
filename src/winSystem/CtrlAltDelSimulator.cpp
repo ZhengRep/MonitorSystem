@@ -1,4 +1,5 @@
 #include "CtrlAltDelSimulator.h"
+#include "Utils/Macros.h"
 
 CtrlAltDelSimulator::CtrlAltDelSimulator()
 {
@@ -12,7 +13,7 @@ CtrlAltDelSimulator::~CtrlAltDelSimulator()
 void CtrlAltDelSimulator::execute()
 {
 	//Switch thread desktop to "Winlogon"
-	if (DesktopSelector::selectDesktop(&StringStorage(_T("Winlogon")))) {
+	if (DesktopSelector::selectDesktop(&unmove(StringStorage(_T("Winlogon"))))) {
 		HWND hwndCtrlAltDel = FindWindow(_T("SAS window class"), _T("SAS Window"));
 		if (hwndCtrlAltDel == NULL) {
 			hwndCtrlAltDel = HWND_BROADCAST;
