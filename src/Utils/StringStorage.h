@@ -17,7 +17,7 @@ public:
 	bool isEmpty() const;
 	bool endsWith(TCHAR postfix) const;
 	bool beginsWith(TCHAR prefix) const;
-	void getSubString(StringStorage* substr, size_t startIndex, size_t endIndex) const;
+	void getSubstring(StringStorage* substr, size_t startIndex, size_t endIndex) const;
 	void appendChar(TCHAR c);
 	void appendString(const TCHAR* string);
 	void quoteSelf();

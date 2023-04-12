@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ba0069e9-30b6-4881-861c-375f09443e64}</ProjectGuid>
-    <RootNamespace>serverconfiglib</RootNamespace>
+    <ProjectGuid>{cb484ed0-13e2-4dfb-9480-979f9f742528}</ProjectGuid>
+    <RootNamespace>filelib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,6 +110,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,22 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Configurator.h" />
-    <ClInclude Include="IpAccessControl.h" />
-    <ClInclude Include="IpAccessRule.h" />
-    <ClInclude Include="PortMapping.h" />
-    <ClInclude Include="PortMappingContainer.h" />
-    <ClInclude Include="PortMappingRect.h" />
-    <ClInclude Include="ServerConfig.h" />
+    <ClInclude Include="File.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Configurator.cpp" />
-    <ClCompile Include="IpAccessControl.cpp" />
-    <ClCompile Include="IpAccessRule.cpp" />
-    <ClCompile Include="PortMapping.cpp" />
-    <ClCompile Include="PortMappingContainer.cpp" />
-    <ClCompile Include="PortMappingRect.cpp" />
-    <ClCompile Include="ServerConfig.cpp" />
+    <ClCompile Include="File.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

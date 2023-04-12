@@ -72,7 +72,7 @@ bool StringStorage::beginsWith(TCHAR prefix) const
     return (firstCharacter == prefix);
 }
 
-void StringStorage::getSubString(StringStorage* substr, size_t startIndex, size_t endIndex) const
+void StringStorage::getSubstring(StringStorage* substr, size_t startIndex, size_t endIndex) const
 {
     endIndex++;
     startIndex = min(startIndex, getLength()); //this is macro
@@ -174,10 +174,10 @@ bool StringStorage::split(const TCHAR* delimiters, StringStorage* stringArray, s
             chunk = copy;
         }
         else {
-            copy.getSubString(&chunk, 0, index - 1);
+            copy.getSubstring(&chunk, 0, index - 1);
         }
 
-        copy.getSubString(&copy, index + 1, copy.getLength() - 1);
+        copy.getSubstring(&copy, index + 1, copy.getLength() - 1);
 
         if (stringArray != NULL && chunksCount >= *arrayLength) {
             return false;

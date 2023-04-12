@@ -136,10 +136,12 @@
     <ClInclude Include="Dimension.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rect.h" />
+    <ClInclude Include="RectSerializer.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="x11region.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="RectSerializer.cpp" />
     <ClCompile Include="Region.cpp" />
     <ClCompile Include="x11region.c" />
   </ItemGroup>
