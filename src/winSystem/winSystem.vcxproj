@@ -129,19 +129,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnonymousPipe.h" />
+    <ClInclude Include="AnonymousPipeFactory.h" />
     <ClInclude Include="AutoImpersonator.h" />
     <ClInclude Include="CtrlAltDelSimulator.h" />
     <ClInclude Include="CurrentConsoleProcess.h" />
     <ClInclude Include="DibSection.h" />
     <ClInclude Include="DynamicLibrary.h" />
+    <ClInclude Include="EmulatedAnonymousPipeFactory.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Impersonator.h" />
+    <ClInclude Include="NamedPipe.h" />
+    <ClInclude Include="Pipe.h" />
     <ClInclude Include="PipeImpersonatedThread.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Registry.h" />
     <ClInclude Include="RegistryKey.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="SecurityAttributes.h" />
     <ClInclude Include="security\SecurityDescriptor.h" />
     <ClInclude Include="security\SecurityIdentifier.h" />
     <ClInclude Include="Shell.h" />
@@ -150,19 +156,25 @@
     <ClInclude Include="WTS.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnonymousPipe.cpp" />
+    <ClCompile Include="AnonymousPipeFactory.cpp" />
     <ClCompile Include="AutoImpersonator.cpp" />
     <ClCompile Include="CtrlAltDelSimulator.cpp" />
     <ClCompile Include="CurrentConsoleProcess.cpp" />
     <ClCompile Include="DibSection.cpp" />
     <ClCompile Include="DynamicLibrary.cpp" />
+    <ClCompile Include="EmulatedAnonymousPipeFactory.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Impersonator.cpp" />
+    <ClCompile Include="NamedPipe.cpp" />
+    <ClCompile Include="Pipe.cpp" />
     <ClCompile Include="PipeImpersonatedThread.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Registry.cpp" />
     <ClCompile Include="RegistryKey.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="SecurityAttributes.cpp" />
     <ClCompile Include="security\SecurityDescriptor.cpp" />
     <ClCompile Include="security\SecurityIdentifier.cpp" />
     <ClCompile Include="Shell.cpp" />

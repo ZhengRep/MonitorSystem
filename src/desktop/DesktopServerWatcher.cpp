@@ -2,6 +2,8 @@
 #include "winSystem/Environment.h"
 #include "Utils/Exception.h"
 #include "server_config_lib/Configurator.h"
+#include "winSystem/CurrentConsoleProcess.h"
+#include "winSystem/AnonymousPipeFactory.h"
 
 
 DesktopServerWatcher::DesktopServerWatcher(ReconnectionListener* recListener, LogWriter* log)
