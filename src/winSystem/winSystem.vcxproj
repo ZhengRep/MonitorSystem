@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="AutoImpersonator.h" />
     <ClInclude Include="CtrlAltDelSimulator.h" />
+    <ClInclude Include="CurrentConsoleProcess.h" />
     <ClInclude Include="DibSection.h" />
     <ClInclude Include="DynamicLibrary.h" />
     <ClInclude Include="Environment.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="PipeImpersonatedThread.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
+    <ClInclude Include="Registry.h" />
     <ClInclude Include="RegistryKey.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="security\SecurityDescriptor.h" />
@@ -150,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="AutoImpersonator.cpp" />
     <ClCompile Include="CtrlAltDelSimulator.cpp" />
+    <ClCompile Include="CurrentConsoleProcess.cpp" />
     <ClCompile Include="DibSection.cpp" />
     <ClCompile Include="DynamicLibrary.cpp" />
     <ClCompile Include="Environment.cpp" />
@@ -157,6 +160,7 @@
     <ClCompile Include="PipeImpersonatedThread.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
+    <ClCompile Include="Registry.cpp" />
     <ClCompile Include="RegistryKey.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="security\SecurityDescriptor.cpp" />

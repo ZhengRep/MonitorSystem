@@ -1,7 +1,8 @@
 #include "DesktopServerWatcher.h"
 #include "winSystem/Environment.h"
 #include "Utils/Exception.h"
-#include "ser"
+#include "server_config_lib/Configurator.h"
+
 
 DesktopServerWatcher::DesktopServerWatcher(ReconnectionListener* recListener, LogWriter* log)
 {

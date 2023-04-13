@@ -40,7 +40,7 @@ public:
   bool isEqualTo(IpAccessRule* other) const;
 
   bool isIncludingAddress(unsigned long ip) const;
-  static bool isIpAccessStringValid(const TCHAR* string);
+  static bool isIpAddressStringValid(const TCHAR* string);
 
   //
   // Return values:

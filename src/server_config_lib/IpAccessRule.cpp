@@ -44,7 +44,7 @@ bool IpAccessRule::parseIp(const TCHAR* string, IpAccessRule* rule)
     return false;
   }
 
-  if (!isIpAccessStringValid(&firstIp[0])) {
+  if (!isIpAddressStringValid(&firstIp[0])) {
     return false;
   }
 
@@ -153,7 +153,7 @@ bool IpAccessRule::isIncludingAddress(unsigned long ip) const
   return false;
 }
 
-bool IpAccessRule::isIpAccessStringValid(const TCHAR* string)
+bool IpAccessRule::isIpAddressStringValid(const TCHAR* string)
 {
   StringStorage ipStorage(string);
   StringStorage stringArray[4];

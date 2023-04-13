@@ -4,7 +4,7 @@
 class RegistryKey
 {
 public:
-  RegistryKey(HKEY rootKey, const TCHAR* entry, bool createIfNotExits = true, SECURITY_ATTRIBUTES* sa = 0);
+  RegistryKey(HKEY rootKey, const TCHAR* entry, bool createIfNotExists = true, SECURITY_ATTRIBUTES* sa = 0);
   RegistryKey(RegistryKey* rootKey, const TCHAR* entry, bool createIfNotExists = true, SECURITY_ATTRIBUTES* sa = 0);
   RegistryKey(HKEY rootKey);
   // Default contructor for a defer initialization.
@@ -54,6 +54,14 @@ public:
   void close();
 
 private:
-  void initialize(HKEY rootKey, const TCHAR* entry, bool create)
+  void initialize(HKEY rootKey, const TCHAR* entry, bool createIfNotExits, SECURITY_ATTRIBUTES* sa);
+  DWORD enumKey(DWORD i, StringStorage* name);
+  static bool tryOpenSubKey(HKEY key, const TCHAR* subkey, HKEY* openedKey, bool createIfNotExists, SECURITY_ATTRIBUTES* sa);
+
+protected:
+  HKEY m_key;
+  HKEY m_rootKey;
+  StringStorage m_entry;
+  friend class Registry;
 };
 

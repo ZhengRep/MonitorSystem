@@ -46,7 +46,6 @@ public:
   void useControlAuth(bool useAuth);
 
   bool getControlAuthAlwaysChecking();
-  bool getControlAuthAlwaysChecking();
   void setControlAuthAlwaysChecking(bool value);
 
   void setRfbPort(int port);
