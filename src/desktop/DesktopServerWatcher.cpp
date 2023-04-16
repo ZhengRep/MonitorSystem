@@ -4,7 +4,12 @@
 #include "server_config_lib/Configurator.h"
 #include "winSystem/CurrentConsoleProcess.h"
 #include "winSystem/AnonymousPipeFactory.h"
-
+#include "winSystem/EmulatedAnonymousPipeFactory.h"
+#include "winSystem/WTS.h"
+#include "winSystem/WinStaLibrary.h"
+#include "winSystem/ShareMemory.h"
+#include "winSystem/WinHandles.h"
+#include <time.h>
 
 DesktopServerWatcher::DesktopServerWatcher(ReconnectionListener* recListener, LogWriter* log)
 {

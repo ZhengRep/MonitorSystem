@@ -90,6 +90,21 @@
     <ClInclude Include="NamedPipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PipeServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinStaLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinHandles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareMemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DibSection.cpp">
@@ -165,6 +180,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NamedPipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinStaLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinHandles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareMemory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

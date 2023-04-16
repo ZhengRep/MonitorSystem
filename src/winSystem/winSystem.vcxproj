@@ -141,7 +141,9 @@
     <ClInclude Include="Impersonator.h" />
     <ClInclude Include="NamedPipe.h" />
     <ClInclude Include="Pipe.h" />
+    <ClInclude Include="PipeClient.h" />
     <ClInclude Include="PipeImpersonatedThread.h" />
+    <ClInclude Include="PipeServer.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Registry.h" />
@@ -150,9 +152,12 @@
     <ClInclude Include="SecurityAttributes.h" />
     <ClInclude Include="security\SecurityDescriptor.h" />
     <ClInclude Include="security\SecurityIdentifier.h" />
+    <ClInclude Include="ShareMemory.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="SystemException.h" />
     <ClInclude Include="WindowsEvent.h" />
+    <ClInclude Include="WinHandles.h" />
+    <ClInclude Include="WinStaLibrary.h" />
     <ClInclude Include="WTS.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +173,9 @@
     <ClCompile Include="Impersonator.cpp" />
     <ClCompile Include="NamedPipe.cpp" />
     <ClCompile Include="Pipe.cpp" />
+    <ClCompile Include="PipeClient.cpp" />
     <ClCompile Include="PipeImpersonatedThread.cpp" />
+    <ClCompile Include="PipeServer.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Registry.cpp" />
@@ -177,9 +184,12 @@
     <ClCompile Include="SecurityAttributes.cpp" />
     <ClCompile Include="security\SecurityDescriptor.cpp" />
     <ClCompile Include="security\SecurityIdentifier.cpp" />
+    <ClCompile Include="ShareMemory.cpp" />
     <ClCompile Include="Shell.cpp" />
     <ClCompile Include="SystemException.cpp" />
     <ClCompile Include="WindowsEvent.cpp" />
+    <ClCompile Include="WinHandles.cpp" />
+    <ClCompile Include="WinStaLibrary.cpp" />
     <ClCompile Include="WTS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

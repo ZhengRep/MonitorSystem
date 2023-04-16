@@ -3,7 +3,7 @@
 #include "InputStream.h"
 #include "OutputStream.h"
 
-class Channel: public InputStream, OutputStream
+class Channel: public InputStream, public OutputStream
 {
 public:
   virtual ~Channel();
