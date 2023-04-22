@@ -132,22 +132,35 @@
     <ClInclude Include="ApplicationDesktopFactory.h" />
     <ClInclude Include="ClipboardListener.h" />
     <ClInclude Include="Desktop.h" />
+    <ClInclude Include="DesktopBaseImpl.h" />
     <ClInclude Include="DesktopClientImpl.h" />
     <ClInclude Include="DesktopFactory.h" />
     <ClInclude Include="DesktopServerWatcher.h" />
+    <ClInclude Include="GrabOptimizator.h" />
+    <ClInclude Include="ScreenDriver.h" />
+    <ClInclude Include="ScreenGrabber.h" />
     <ClInclude Include="UpdateContainer.h" />
+    <ClInclude Include="UpdateFilter.h" />
+    <ClInclude Include="UpdateHandler.h" />
     <ClInclude Include="UpdateKeeper.h" />
     <ClInclude Include="UpdateListener.h" />
     <ClInclude Include="UpdateSendingListener.h" />
+    <ClInclude Include="WindowsScreenGrabber.h" />
     <ClInclude Include="WinServiceDesktopFactory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationDesktopFactory.cpp" />
     <ClCompile Include="ClipboardListener.cpp" />
+    <ClCompile Include="DesktopBaseImpl.cpp" />
     <ClCompile Include="DesktopClientImpl.cpp" />
     <ClCompile Include="DesktopServerWatcher.cpp" />
+    <ClCompile Include="GrabOptimizator.cpp" />
+    <ClCompile Include="ScreenGrabber.cpp" />
     <ClCompile Include="UpdateContainer.cpp" />
+    <ClCompile Include="UpdateFilter.cpp" />
+    <ClCompile Include="UpdateHandler.cpp" />
     <ClCompile Include="UpdateKeeper.cpp" />
+    <ClCompile Include="WindowsScreenGrabber.cpp" />
     <ClCompile Include="WinServiceDesktopFactory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

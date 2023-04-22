@@ -135,11 +135,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BlockingGate.h" />
+    <ClInclude Include="ClientListener.h" />
+    <ClInclude Include="DesktopConfigClient.h" />
+    <ClInclude Include="DesktopServerProto.h" />
+    <ClInclude Include="DesktopSrvDispatcher.h" />
+    <ClInclude Include="GateKicker.h" />
     <ClInclude Include="ReconnectingChannel.h" />
     <ClInclude Include="ReconnectException.h" />
     <ClInclude Include="ReconnectionListener.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlockingGate.cpp" />
+    <ClCompile Include="DesktopConfigClient.cpp" />
+    <ClCompile Include="DesktopServerProto.cpp" />
+    <ClCompile Include="DesktopSrvDispatcher.cpp" />
+    <ClCompile Include="GateKicker.cpp" />
     <ClCompile Include="ReconnectingChannel.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

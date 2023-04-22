@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="AutoLock.h" />
     <ClInclude Include="DesktopSelector.h" />
+    <ClInclude Include="GuiThread.h" />
     <ClInclude Include="LocalMutex.h" />
     <ClInclude Include="Lockable.h" />
     <ClInclude Include="Thread.h" />
@@ -138,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="AutoLock.cpp" />
     <ClCompile Include="DesktopSelector.cpp" />
+    <ClCompile Include="GuiThread.cpp" />
     <ClCompile Include="LocalMutex.cpp" />
     <ClCompile Include="Thread.cpp" />
   </ItemGroup>

@@ -16,7 +16,7 @@ public:
 
 	PixelFormat getPixelFormat();
 	Dimension getDesktopDimension();
-	Rect getDestopRect();
+	Rect getDesktopRect();
 	
 	struct BMI
 	{

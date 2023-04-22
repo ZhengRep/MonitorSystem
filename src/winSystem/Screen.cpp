@@ -30,7 +30,7 @@ Dimension Screen::getDesktopDimension()
 	return Dimension(&m_virtDesktopRect);
 }
 
-Rect Screen::getDestopRect()
+Rect Screen::getDesktopRect()
 {
 	return m_virtDesktopRect;
 }

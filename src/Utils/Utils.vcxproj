@@ -144,6 +144,7 @@
     <ClInclude Include="CommonHeader.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Deflater.h" />
+    <ClInclude Include="DemandTimer.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="CharDefs.h" />
     <ClInclude Include="GetCPUTime.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="CommandLineArgs.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Deflater.cpp" />
+    <ClCompile Include="DemandTimer.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="GetCPUTime.cpp" />
     <ClCompile Include="ListenerContainer.cpp" />

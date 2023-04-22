@@ -10,5 +10,7 @@ public:
     UpdateSendingListener* extUpdSendingListener,
     AbnormDeskTermListener* extDeskTermListener,
     LogWriter* log);
+
+
 };
 

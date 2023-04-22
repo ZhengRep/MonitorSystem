@@ -13,6 +13,7 @@
 
 DesktopServerWatcher::DesktopServerWatcher(ReconnectionListener* recListener, LogWriter* log)
 {
+
 }
 
 DesktopServerWatcher::~DesktopServerWatcher()
