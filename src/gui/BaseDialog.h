@@ -49,11 +49,10 @@ protected:
 	//windows message proccessing method
 	static INT_PTR CALLBACK dialogProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-private:
 	TCHAR* getResourceName();
 	
-private:
 	Control m_ctrlThis;
+private:
 	TCHAR* m_resourceName;
 	DWORD m_resourceId;
 	Control* m_ctrlParent;

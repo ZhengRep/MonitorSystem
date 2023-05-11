@@ -1,5 +1,4 @@
 #include "ServerConfig.h"
-
 #include "winSystem/Environment.h"
 #include "file_lib/File.h"
 
@@ -46,9 +45,9 @@ void ServerConfig::serialize(DataOutputStream* output) throw(Exception)
   output->writeInt32(m_disconnectAction);
   output->writeInt8(m_acceptRfbConnections ? 1 : 0);
   output->writeInt8(m_acceptHttpConnections ? 1 : 0);
-  output->writeFully(m_primaryPassword, VNC_PASSWORD_SIZE);
-  output->writeFully(m_readonlyPassword, VNC_PASSWORD_SIZE);
-  output->writeFully(m_controlPassword, VNC_PASSWORD_SIZE);
+  output->writeFully(m_primaryPassword, MNT_PASSWORD_SIZE);
+  output->writeFully(m_readonlyPassword, MNT_PASSWORD_SIZE);
+  output->writeFully(m_controlPassword, MNT_PASSWORD_SIZE);
   output->writeInt8(m_useAuthentication ? 1 : 0);
   output->writeInt8(m_onlyLoopbackConnections ? 1 : 0);
   output->writeInt8(m_enableAppletParamInUrl ? 1 : 0);
@@ -117,9 +116,9 @@ void ServerConfig::deserialize(DataInputStream* input) throw(Exception)
   m_disconnectAction = (ServerConfig::DisconnectAction)input->readInt32();
   m_acceptRfbConnections = input->readInt8() == 1;
   m_acceptHttpConnections = input->readInt8() == 1;
-  input->readFully(m_primaryPassword, VNC_PASSWORD_SIZE);
-  input->readFully(m_readonlyPassword, VNC_PASSWORD_SIZE);
-  input->readFully(m_controlPassword, VNC_PASSWORD_SIZE);
+  input->readFully(m_primaryPassword, MNT_PASSWORD_SIZE);
+  input->readFully(m_readonlyPassword, MNT_PASSWORD_SIZE);
+  input->readFully(m_controlPassword, MNT_PASSWORD_SIZE);
   m_useAuthentication = input->readInt8() == 1;
   m_onlyLoopbackConnections = input->readInt8() == 1;
   m_enableAppletParamInUrl = input->readInt8() == 1;
@@ -313,7 +312,7 @@ void ServerConfig::getPrimaryPassword(unsigned char* password)
 {
   AutoLock lock(&m_objectCS);
 
-  memcpy(password, m_primaryPassword, VNC_PASSWORD_SIZE);
+  memcpy(password, m_primaryPassword, MNT_PASSWORD_SIZE);
 }
 
 void ServerConfig::setPrimaryPassword(const unsigned char* value)
@@ -322,14 +321,14 @@ void ServerConfig::setPrimaryPassword(const unsigned char* value)
 
   m_hasPrimaryPassword = true;
 
-  memcpy((void*)&m_primaryPassword[0], (void*)value, VNC_PASSWORD_SIZE);
+  memcpy((void*)&m_primaryPassword[0], (void*)value, MNT_PASSWORD_SIZE);
 }
 
 void ServerConfig::getReadOnlyPassword(unsigned char* password)
 {
   AutoLock lock(&m_objectCS);
 
-  memcpy(password, m_readonlyPassword, VNC_PASSWORD_SIZE);
+  memcpy(password, m_readonlyPassword, MNT_PASSWORD_SIZE);
 }
 
 void ServerConfig::setReadOnlyPassword(const unsigned char* value)
@@ -338,21 +337,21 @@ void ServerConfig::setReadOnlyPassword(const unsigned char* value)
 
   m_hasReadOnlyPassword = true;
 
-  memcpy((void*)&m_readonlyPassword[0], (void*)value, VNC_PASSWORD_SIZE);
+  memcpy((void*)&m_readonlyPassword[0], (void*)value, MNT_PASSWORD_SIZE);
 }
 
 void ServerConfig::getControlPassword(unsigned char* password)
 {
   AutoLock lock(&m_objectCS);
 
-  memcpy(password, m_controlPassword, VNC_PASSWORD_SIZE);
+  memcpy(password, m_controlPassword, MNT_PASSWORD_SIZE);
 }
 
 void ServerConfig::setControlPassword(const unsigned char* password)
 {
   AutoLock lock(&m_objectCS);
 
-  memcpy((void*)&m_controlPassword[0], (const void*)password, VNC_PASSWORD_SIZE);
+  memcpy((void*)&m_controlPassword[0], (const void*)password, MNT_PASSWORD_SIZE);
 
   m_hasControlPassword = true;
 }

@@ -2,9 +2,9 @@
 #include "Utils/Exception.h"
 #include <AclAPI.h>
 
-ShareMemory::ShareMemory(const TCHAR* name, size_t size)
+SharedMemory::SharedMemory(const TCHAR* name, size_t size)
   : m_hToMap(0),
-   m_memory(0)
+    m_memory(0)
 {
   try {
     bool needToInit = createFile(name, size);
@@ -18,12 +18,12 @@ ShareMemory::ShareMemory(const TCHAR* name, size_t size)
   }
 }
 
-ShareMemory::~ShareMemory()
+SharedMemory::~SharedMemory()
 {
   freeRes();
 }
 
-bool ShareMemory::createFile(const TCHAR* name, size_t size)
+bool SharedMemory::createFile(const TCHAR* name, size_t size)
 {
   DWORD lowSize = size & 0xffffffff;
   DWORD highSize = (DWORD64)size >> 32 & 0xffffffff;
@@ -50,7 +50,7 @@ bool ShareMemory::createFile(const TCHAR* name, size_t size)
   return needToInit;
 }
 
-void ShareMemory::mapViewOfFile()
+void SharedMemory::mapViewOfFile()
 {
   // Get a pointer to the file-mapped shared memory
   m_memory = MapViewOfFile(m_hToMap,       // object to map view of
@@ -66,7 +66,7 @@ void ShareMemory::mapViewOfFile()
   }
 }
 
-void ShareMemory::setAllAccess(HANDLE objHandle)
+void SharedMemory::setAllAccess(HANDLE objHandle)
 {
   DWORD errorCode = SetSecurityInfo(objHandle, SE_FILE_OBJECT,
     DACL_SECURITY_INFORMATION, // Modify DACL
@@ -81,7 +81,7 @@ void ShareMemory::setAllAccess(HANDLE objHandle)
   }
 }
 
-void ShareMemory::freeRes()
+void SharedMemory::freeRes()
 {
   if (m_memory) {
     UnmapViewOfFile(m_memory);

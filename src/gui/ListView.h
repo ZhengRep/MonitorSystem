@@ -11,6 +11,7 @@ typedef struct
 
 class ListView: public Control
 {
+public:
 	ListView();
 	void addColumn(int index, const TCHAR* caption, int width, int fmt);
 	void addColumn(int index, const TCHAR* caption, int width);

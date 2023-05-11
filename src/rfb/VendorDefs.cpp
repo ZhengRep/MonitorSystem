@@ -1,4 +1,4 @@
 #include "VendorDefs.h"
 
 const char* const VendorDefs::STANDARD = "STDV";
-const char* const VendorDefs::VNC = "VNC_";
+const char* const VendorDefs::MNT = "MNT ";

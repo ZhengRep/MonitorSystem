@@ -36,6 +36,12 @@
     <ClInclude Include="MsgDefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="keysymdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrameBuffer.cpp">
@@ -57,6 +63,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MsgDefs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthDefs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

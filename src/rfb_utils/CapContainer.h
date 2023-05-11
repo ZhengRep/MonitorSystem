@@ -18,8 +18,7 @@ public:
   CapContainer();
   virtual ~CapContainer();
 
-  void addCap(UINT32 code, const char* vendorSignature,
-    const char* nameSignature);
+  void addCap(UINT32 code, const char* vendorSignature, const char* nameSignature);
 
   unsigned int getCapCount() const;
   void sendCaps(DataOutputStream* output) const;

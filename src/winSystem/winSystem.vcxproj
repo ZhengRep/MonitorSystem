@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="AnonymousPipe.h" />
     <ClInclude Include="AnonymousPipeFactory.h" />
+    <ClInclude Include="ApplicationCrashEvents.h" />
     <ClInclude Include="AutoImpersonator.h" />
     <ClInclude Include="CtrlAltDelSimulator.h" />
     <ClInclude Include="CurrentConsoleProcess.h" />
@@ -139,7 +140,11 @@
     <ClInclude Include="EmulatedAnonymousPipeFactory.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Impersonator.h" />
+    <ClInclude Include="InputInjector.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="LocalWindowsApplication.h" />
     <ClInclude Include="NamedPipe.h" />
+    <ClInclude Include="ParentProcess.h" />
     <ClInclude Include="Pipe.h" />
     <ClInclude Include="PipeClient.h" />
     <ClInclude Include="PipeImpersonatedThread.h" />
@@ -148,21 +153,31 @@
     <ClInclude Include="ProcessHandle.h" />
     <ClInclude Include="Registry.h" />
     <ClInclude Include="RegistryKey.h" />
+    <ClInclude Include="SCMClient.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="SecurityAttributes.h" />
     <ClInclude Include="security\SecurityDescriptor.h" />
     <ClInclude Include="security\SecurityIdentifier.h" />
+    <ClInclude Include="Service.h" />
     <ClInclude Include="ShareMemory.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="SystemException.h" />
+    <ClInclude Include="WinCommandLineArgs.h" />
+    <ClInclude Include="WinCursor.h" />
+    <ClInclude Include="WindowsApplication.h" />
+    <ClInclude Include="WindowsDisplays.h" />
     <ClInclude Include="WindowsEvent.h" />
     <ClInclude Include="WinHandles.h" />
     <ClInclude Include="WinStaLibrary.h" />
+    <ClInclude Include="WinTimeMillis.h" />
+    <ClInclude Include="WorkStation.h" />
+    <ClInclude Include="WsaStartup.h" />
     <ClInclude Include="WTS.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnonymousPipe.cpp" />
     <ClCompile Include="AnonymousPipeFactory.cpp" />
+    <ClCompile Include="ApplicationCrashEvents.cpp" />
     <ClCompile Include="AutoImpersonator.cpp" />
     <ClCompile Include="CtrlAltDelSimulator.cpp" />
     <ClCompile Include="CurrentConsoleProcess.cpp" />
@@ -171,7 +186,11 @@
     <ClCompile Include="EmulatedAnonymousPipeFactory.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Impersonator.cpp" />
+    <ClCompile Include="InputInjector.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="LocalWindowsApplication.cpp" />
     <ClCompile Include="NamedPipe.cpp" />
+    <ClCompile Include="ParentProcess.cpp" />
     <ClCompile Include="Pipe.cpp" />
     <ClCompile Include="PipeClient.cpp" />
     <ClCompile Include="PipeImpersonatedThread.cpp" />
@@ -180,16 +199,25 @@
     <ClCompile Include="ProcessHandle.cpp" />
     <ClCompile Include="Registry.cpp" />
     <ClCompile Include="RegistryKey.cpp" />
+    <ClCompile Include="SCMClient.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="SecurityAttributes.cpp" />
     <ClCompile Include="security\SecurityDescriptor.cpp" />
     <ClCompile Include="security\SecurityIdentifier.cpp" />
+    <ClCompile Include="Service.cpp" />
     <ClCompile Include="ShareMemory.cpp" />
     <ClCompile Include="Shell.cpp" />
     <ClCompile Include="SystemException.cpp" />
+    <ClCompile Include="WinCommandLineArgs.cpp" />
+    <ClCompile Include="WinCursor.cpp" />
+    <ClCompile Include="WindowsApplication.cpp" />
+    <ClCompile Include="WindowsDisplays.cpp" />
     <ClCompile Include="WindowsEvent.cpp" />
     <ClCompile Include="WinHandles.cpp" />
     <ClCompile Include="WinStaLibrary.cpp" />
+    <ClCompile Include="WinTimeMillis.cpp" />
+    <ClCompile Include="WorkStation.cpp" />
+    <ClCompile Include="WsaStartup.cpp" />
     <ClCompile Include="WTS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

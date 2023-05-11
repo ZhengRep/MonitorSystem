@@ -1,11 +1,11 @@
 #pragma once
 #include "Utils/CommonHeader.h"
 
-class ShareMemory
+class SharedMemory
 {
 public:
-  ShareMemory(const TCHAR* name, size_t size);
-  virtual ~ShareMemory();
+  SharedMemory(const TCHAR* name, size_t size);
+  virtual ~SharedMemory();
   void* getMemPointer() { return m_memory; }
 
 protected:

@@ -19,7 +19,7 @@ public:
   static const unsigned int MINIMAL_LOCAL_INPUT_PRIORITY_TIMEOUT = 1;
   static const unsigned int MINIMAL_QUERY_TIMEOUT = 1;
 
-  static const int VNC_PASSWORD_SIZE = 8;
+  static const int MNT_PASSWORD_SIZE = 8;
 
   //Enum defines server action when last client disconnects from the vnc sever
   enum DisconnectAction {
@@ -180,7 +180,6 @@ public:
   // Video regions
   //
 
-  // FIXME: Deprecated?
   // Remark: not-thread safe method, use lock / unlock methods of this class
   // to lock and unlock server configuration.
   StringVector* getVideoClassNames();
@@ -227,9 +226,9 @@ protected:
   bool m_acceptRfbConnections;
   bool m_acceptHttpConnections;
 
-  unsigned char m_primaryPassword[VNC_PASSWORD_SIZE];
-  unsigned char m_readonlyPassword[VNC_PASSWORD_SIZE];
-  unsigned char m_controlPassword[VNC_PASSWORD_SIZE];
+  unsigned char m_primaryPassword[MNT_PASSWORD_SIZE];
+  unsigned char m_readonlyPassword[MNT_PASSWORD_SIZE];
+  unsigned char m_controlPassword[MNT_PASSWORD_SIZE];
 
   //Configurator from administration tab
   bool m_useAuthentication;

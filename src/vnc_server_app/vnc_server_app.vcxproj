@@ -24,6 +24,7 @@
     <ProjectGuid>{991c3e3c-cecb-4c91-b024-08e2aced27e0}</ProjectGuid>
     <RootNamespace>vncserverapp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>mnt_server_app</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,7 +41,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -131,12 +132,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AdditionalActionApplication.h" />
+    <ClInclude Include="AuthTracker.h" />
+    <ClInclude Include="ControlAppAuthenticator.h" />
+    <ClInclude Include="ControlServer.h" />
+    <ClInclude Include="CrashHook.h" />
+    <ClInclude Include="DesktopServerCommandLine.h" />
+    <ClInclude Include="LogInitListener.h" />
+    <ClInclude Include="MntServer.h" />
+    <ClInclude Include="MntServerListener.h" />
+    <ClInclude Include="MntService.h" />
     <ClInclude Include="NamingDefs.h" />
-    <ClInclude Include="VncServer.h" />
+    <ClInclude Include="NewConnectionEvents.h" />
+    <ClInclude Include="QueryConnectionApplication.h" />
+    <ClInclude Include="QueryConnectionCommandLine.h" />
+    <ClInclude Include="RfbClientManager.h" />
+    <ClInclude Include="RfbClientManagerEventListener.h" />
+    <ClInclude Include="RfbServer.h" />
+    <ClInclude Include="ServerCommandLine.h" />
+    <ClInclude Include="ServiceControlCommandLine.h" />
+    <ClInclude Include="WinEventLogWriter.h" />
+    <ClInclude Include="WinServiceEvents.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdditionalActionApplication.cpp" />
+    <ClCompile Include="AuthTracker.cpp" />
+    <ClCompile Include="ControlAppAuthenticator.cpp" />
+    <ClCompile Include="ControlServer.cpp" />
+    <ClCompile Include="CrashHook.cpp" />
+    <ClCompile Include="DesktopServerCommandLine.cpp" />
+    <ClCompile Include="MntServer.cpp" />
+    <ClCompile Include="MntService.cpp" />
     <ClCompile Include="NamingDefs.cpp" />
-    <ClCompile Include="VncServer.cpp" />
+    <ClCompile Include="QueryConnectionApplication.cpp" />
+    <ClCompile Include="QueryConnectionCommandLine.cpp" />
+    <ClCompile Include="RfbClientManager.cpp" />
+    <ClCompile Include="RfbServer.cpp" />
+    <ClCompile Include="ServerCommandLine.cpp" />
+    <ClCompile Include="ServiceControlCommandLine.cpp" />
+    <ClCompile Include="WinEventLogWriter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

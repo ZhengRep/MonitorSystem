@@ -30,7 +30,7 @@ public:
 	bool setForeground();
 	void setVisiable(bool visiable);
 
-	virtual bool isEnable();
+	virtual bool isEnabled();
 	//Invalidates control
 	void invalidate();
 	

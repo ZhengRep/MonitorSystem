@@ -12,7 +12,7 @@ public:
 	void setRange32(int lower, int upper);
 	void setAccel(UINT nSec, UINT nInc);
 
-	void autoAccelerationHandle(LPNMUPDOWN message);
+	void autoAccelerationHandler(LPNMUPDOWN message);
 	void enableAutoAcceleration(bool enabled);
 	void setAutoAccelerationParams(const std::vector<int>* limitters, const std::vector<int>* deltas, int maxDelta);
 

@@ -80,7 +80,7 @@ void Control::setVisiable(bool visiable)
     ShowWindow(m_hwnd, visiable ? SW_SHOW : SW_HIDE);
 }
 
-bool Control::isEnable()
+bool Control::isEnabled()
 {
     return !isStyleEnabled(WS_DISABLED);
 }

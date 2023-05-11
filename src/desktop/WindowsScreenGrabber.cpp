@@ -1,4 +1,5 @@
 #include "WindowsScreenGrabber.h"
+#include "Utils/Macros.h"
 
 WindowsScreenGrabber::WindowsScreenGrabber(void)
   : m_destDC(NULL), m_screenDC(NULL), m_hbmDIB(NULL), m_hbmOld(NULL)
@@ -89,7 +90,7 @@ bool WindowsScreenGrabber::applyNewFullScreenRect()
 bool WindowsScreenGrabber::applyNewPixelFormat()
 {
   m_screen.update();
-  m_workFrameBuffer.setEmptyPixelFmt(&m_screen.getPixelFormat());
+  m_workFrameBuffer.setEmptyPixelFmt(&unmove(m_screen.getPixelFormat()));
 
   return true;
 }
@@ -132,7 +133,6 @@ bool WindowsScreenGrabber::openDIBSection()
     return false;
   }
   
-  Screen::BMI bmi;
   Screen::BMI bmi;
   try {
     m_screen.getBMI(&bmi, m_screenDC);

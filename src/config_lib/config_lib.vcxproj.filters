@@ -21,9 +21,15 @@
     <ClInclude Include="RegistrySettingsManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConnectionHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RegistrySettingsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionHistory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

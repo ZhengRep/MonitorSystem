@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BufferedInputStream.h" />
     <ClInclude Include="BufferedOutputStream.h" />
     <ClInclude Include="ByteArrayInputStream.h" />
     <ClInclude Include="ByteArrayOutputStream.h" />
@@ -139,6 +140,7 @@
     <ClInclude Include="OutputStream.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BufferedInputStream.cpp" />
     <ClCompile Include="BufferedOutputStream.cpp" />
     <ClCompile Include="ByteArrayInputStream.cpp" />
     <ClCompile Include="ByteArrayOutputStream.cpp" />

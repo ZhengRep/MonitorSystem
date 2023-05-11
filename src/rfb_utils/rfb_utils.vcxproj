@@ -129,8 +129,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AuthException.h" />
     <ClInclude Include="CapContainer.h" />
+    <ClInclude Include="ClientAuthListener.h" />
+    <ClInclude Include="ClientInputEventListener.h" />
+    <ClInclude Include="ClientInputHandler.h" />
+    <ClInclude Include="ClientTerminationListener.h" />
     <ClInclude Include="ClipboardExchange.h" />
+    <ClInclude Include="EchoExtensionRequestHandler.h" />
     <ClInclude Include="EncodeOptions.h" />
     <ClInclude Include="Encoder.h" />
     <ClInclude Include="EncoderStore.h" />
@@ -138,9 +144,11 @@
     <ClInclude Include="HextileTile.h" />
     <ClInclude Include="JpegCompressor.h" />
     <ClInclude Include="JpegEncoder.h" />
+    <ClInclude Include="RfbClient.h" />
     <ClInclude Include="RfbCodeRegistrator.h" />
     <ClInclude Include="RfbDispatcher.h" />
     <ClInclude Include="RfbDispatcherListener.h" />
+    <ClInclude Include="RfbInitializer.h" />
     <ClInclude Include="RreEncoder.h" />
     <ClInclude Include="TightEncoder.h" />
     <ClInclude Include="TightPalette.h" />
@@ -148,15 +156,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CapContainer.cpp" />
+    <ClCompile Include="ClientInputHandler.cpp" />
     <ClCompile Include="ClipboardExchange.cpp" />
+    <ClCompile Include="EchoExtensionRequestHandler.cpp" />
     <ClCompile Include="EncodeOptions.cpp" />
     <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="EncoderStore.cpp" />
     <ClCompile Include="HextileEncoder.cpp" />
     <ClCompile Include="JpegCompressor.cpp" />
     <ClCompile Include="JpegEncoder.cpp" />
+    <ClCompile Include="RfbClient.cpp" />
     <ClCompile Include="RfbCodeRegistrator.cpp" />
     <ClCompile Include="RfbDispatcher.cpp" />
+    <ClCompile Include="RfbInitializer.cpp" />
     <ClCompile Include="RreEncoder.cpp" />
     <ClCompile Include="TightEncoder.cpp" />
     <ClCompile Include="TightPalette.cpp" />

@@ -4,7 +4,7 @@
 
 #include<shellapi.h>
 
-class NotifyIcon: NotifyIconWindow
+class NotifyIcon:public NotifyIconWindow
 {
 public:
 	NotifyIcon(bool showAfterCreation = true);

@@ -18,7 +18,7 @@ public:
   virtual HWND getWindowHandleByName(const StringStorage* windowName) = 0;
 
   virtual void getApplicationRegion(unsigned int procId, Region* region) = 0;
-  virtual void isApplicationInFocus(unsigned int procId) = 0;
+  virtual bool isApplicationInFocus(unsigned int procId) = 0;
 
   virtual void setKeyboardEvent(UINT32 keySym, bool down) = 0;
   virtual void setMouseEvent(UINT16 x, UINT16 y, UINT8 buttonMask) = 0;

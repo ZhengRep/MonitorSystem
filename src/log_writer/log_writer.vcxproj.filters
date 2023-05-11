@@ -24,12 +24,24 @@
     <ClInclude Include="ProfileLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FileAccount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogDump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LogWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ProfileLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogDump.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

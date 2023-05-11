@@ -119,7 +119,7 @@ bool Environment::getCurrentModuleFolderPath(StringStorage* out)
     return true;
 }
 
-bool Environment::getCurentUserName(StringStorage* out, LogWriter* log)
+bool Environment::getCurrentUserName(StringStorage* out, LogWriter* log)
 {
     return WTS::getCurrentUserName(out, log); //ToDo create WTS
 }

@@ -8,6 +8,7 @@
 
 class ViewPort
 {
+public:
   ViewPort(LogWriter* log);
   ViewPort(const ViewPortState* viewPortState, LogWriter* log);
   ~ViewPort();
@@ -18,7 +19,7 @@ class ViewPort
   bool getOnlyApplication();
   unsigned int getApplicationId();
   void getApplicationRegion(Region* region);
-  void changedState(const ViewPortState* newState);
+  void changeState(const ViewPortState* newState);
 
 private:
   ViewPort(const ViewPort&); //Can't used outside

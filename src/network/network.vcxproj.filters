@@ -21,12 +21,48 @@
     <ClInclude Include="RfbInputGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="socket\SocketIPv4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\SocketAddressIPv4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\SocketException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\WindowsSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\SocketStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RfbOutputGate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RfbInputGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\SocketIPv4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\SocketAddressIPv4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\SocketException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\WindowsSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\SocketStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

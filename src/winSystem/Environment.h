@@ -23,7 +23,7 @@ public:
 
 	//Sets full path to folder(without last directory separator character)
 	static bool getCurrentModuleFolderPath(StringStorage* out);
-	static bool getCurentUserName(StringStorage* out, LogWriter* log);
+	static bool getCurrentUserName(StringStorage* out, LogWriter* log);
 	static bool getComputerName(StringStorage* out);
 	static bool isWinNTFamily();
 	static bool isWin2000();

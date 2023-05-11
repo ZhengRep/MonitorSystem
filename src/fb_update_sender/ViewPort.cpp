@@ -96,7 +96,7 @@ void ViewPort::getApplicationRegion(Region* region)
   *region = m_appRegion;
 }
 
-void ViewPort::changedState(const ViewPortState* newState)
+void ViewPort::changeState(const ViewPortState* newState)
 {
   AutoLock al(&m_stateMutex);
   m_state = *newState;

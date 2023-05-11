@@ -8,8 +8,8 @@ class ScreenDriver
 {
 public:
   virtual ~ScreenDriver() {}
-  virtual void executeDetectin() = 0;
-  virtual void terminateDetectin() = 0;
+  virtual void executeDetection() = 0;
+  virtual void terminateDetection() = 0;
   virtual Dimension getScreenDimension() = 0;
   virtual bool grabFb(const Rect* rect = 0) = 0;
   virtual FrameBuffer* getScreenBuffer() = 0;

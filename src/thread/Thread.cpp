@@ -100,14 +100,6 @@ bool Thread::isTerminating()
     return m_terminated;
 }
 
-void Thread::onTerminate()
-{
-}
-
-void Thread::execute()
-{
-}
-
 DWORD __stdcall Thread::threadProc(LPVOID pThread)
 {
     Thread* _this = (Thread*)pThread;

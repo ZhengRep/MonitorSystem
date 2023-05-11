@@ -144,6 +144,8 @@
     <ClInclude Include="ReconnectingChannel.h" />
     <ClInclude Include="ReconnectException.h" />
     <ClInclude Include="ReconnectionListener.h" />
+    <ClInclude Include="UpdateHandlerClient.h" />
+    <ClInclude Include="UserInputClient.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlockingGate.cpp" />
@@ -152,6 +154,8 @@
     <ClCompile Include="DesktopSrvDispatcher.cpp" />
     <ClCompile Include="GateKicker.cpp" />
     <ClCompile Include="ReconnectingChannel.cpp" />
+    <ClCompile Include="UpdateHandlerClient.cpp" />
+    <ClCompile Include="UserInputClient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

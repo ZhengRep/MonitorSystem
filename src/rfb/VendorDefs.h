@@ -3,6 +3,6 @@ class VendorDefs
 {
 public:
   static const char* const STANDARD;
-  static const char* const VNC;
+  static const char* const MNT;
 };
 

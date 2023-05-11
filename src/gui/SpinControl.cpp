@@ -36,7 +36,7 @@ void SpinControl::setAccel(UINT nSec, UINT nInc)
 	SendMessage(m_hwnd, UDM_SETACCEL, 1, (LPARAM)&accel);
 }
 
-void SpinControl::autoAccelerationHandle(LPNMUPDOWN message)
+void SpinControl::autoAccelerationHandler(LPNMUPDOWN message)
 {
 	if (m_limitters.size() == 0 || m_buddy == NULL || !m_isAutoAccelerationEnabled) {
 		return;

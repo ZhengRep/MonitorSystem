@@ -67,7 +67,7 @@ void DibSection::openDIBSection(const PixelFormat* pf, const Dimension* dim, HWN
   }
   if (compatibleWin == 0) {
     m_screen.update();
-    Rect deskRect = m_screen.getDestopRect();
+    Rect deskRect = m_screen.getDesktopRect();
     m_srcOffsetX = deskRect.left;
     m_srcOffsetY = deskRect.right;
   }

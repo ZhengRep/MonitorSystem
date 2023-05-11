@@ -130,10 +130,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EOFException.h" />
     <ClInclude Include="File.h" />
+    <ClInclude Include="FileChannel.h" />
+    <ClInclude Include="FileNotFoundException.h" />
+    <ClInclude Include="WinFile.h" />
+    <ClInclude Include="WinFileChannel.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EOFException.cpp" />
     <ClCompile Include="File.cpp" />
+    <ClCompile Include="FileNotFoundException.cpp" />
+    <ClCompile Include="WinFile.cpp" />
+    <ClCompile Include="WinFileChannel.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

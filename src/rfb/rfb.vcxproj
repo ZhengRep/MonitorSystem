@@ -132,15 +132,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AuthDefs.h" />
     <ClInclude Include="CursorShape.h" />
     <ClInclude Include="EncodingDefs.h" />
     <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="keysymdef.h" />
     <ClInclude Include="MsgDefs.h" />
     <ClInclude Include="PixelConverter.h" />
     <ClInclude Include="PixelFormat.h" />
     <ClInclude Include="VendorDefs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AuthDefs.cpp" />
     <ClCompile Include="CursorShape.cpp" />
     <ClCompile Include="EncodingDefs.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />

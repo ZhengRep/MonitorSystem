@@ -131,17 +131,23 @@
   <ItemGroup>
     <ClInclude Include="AutoLock.h" />
     <ClInclude Include="DesktopSelector.h" />
+    <ClInclude Include="GlobalMutex.h" />
     <ClInclude Include="GuiThread.h" />
     <ClInclude Include="LocalMutex.h" />
     <ClInclude Include="Lockable.h" />
     <ClInclude Include="Thread.h" />
+    <ClInclude Include="ThreadCollector.h" />
+    <ClInclude Include="ZombieKiller.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutoLock.cpp" />
     <ClCompile Include="DesktopSelector.cpp" />
+    <ClCompile Include="GlobalMutex.cpp" />
     <ClCompile Include="GuiThread.cpp" />
     <ClCompile Include="LocalMutex.cpp" />
     <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="ThreadCollector.cpp" />
+    <ClCompile Include="ZombieKiller.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

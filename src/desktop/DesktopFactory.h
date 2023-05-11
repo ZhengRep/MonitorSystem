@@ -8,8 +8,6 @@
 class DesktopFactory
 {
 public:
-  virtual Desktop* createDesktop(ClipboardListener* extClipListener,
-    UpdateSendingListener* extUpdateSendingListener,
-    AbnormDeskTermListener* extDeskTermListener,
-    LogWriter* log) = 0;
+  virtual Desktop* createDesktop(ClipboardListener* extClipListener, UpdateSendingListener* extUpdateSendingListener,
+    AbnormDeskTermListener* extDeskTermListener, LogWriter* log) = 0;
 };

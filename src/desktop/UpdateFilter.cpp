@@ -278,8 +278,3 @@ void UpdateFilter::updateChangedSubRect(Region* rgn, const Rect* rect)
   // Update the rectangle
   rgn->addRect(&final_rect);
 }
-
-bool UpdateFilter::grab()
-{
-    return false;
-}

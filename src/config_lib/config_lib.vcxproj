@@ -128,10 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ConnectionHistory.h" />
     <ClInclude Include="RegistrySettingsManager.h" />
     <ClInclude Include="SettingsManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConnectionHistory.cpp" />
     <ClCompile Include="RegistrySettingsManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
