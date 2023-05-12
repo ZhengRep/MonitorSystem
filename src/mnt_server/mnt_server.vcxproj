@@ -76,10 +76,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;config_lib.lib;desktop.lib;desktop_ipc.lib;fb_update_sender.lib;file_lib.lib;ft_common.lib;ft_server_lib.lib;gui.lib;io_lib.lib;libjpeg.lib;log_server.lib;log_writer.lib;mnt_control_app.lib;mnt_server_app.lib;network.lib;region.lib;rfb.lib;rfb_utils.lib;screen_hooks.lib;server_config_lib.lib;thread.lib;utils.lib;win_event_log.lib;win_system.lib;wsconfig_lib.lib;Zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

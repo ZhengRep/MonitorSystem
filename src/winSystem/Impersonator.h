@@ -9,7 +9,7 @@ class Impersonator
 {
 public:
 	Impersonator(LogWriter* log);
-	virtual ~Impersonator();
+	virtual ~Impersonator(){};
 	virtual void impersonateAsLoggedUser() throw(SystemException);
 	virtual void revertToSelf() throw(SystemException);
 

@@ -1,5 +1,6 @@
 #include "RectSerializer.h"
 #include "Utils/Exception.h"
+#pragma warning(disable: 4996)
 
 void RectSerializer::toString(const Rect* rect, StringStorage* strOut)
 {

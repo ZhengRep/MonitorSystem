@@ -2,6 +2,7 @@
 
 #ifdef WINVER
 #undef WINVER
+
 #endif
 
 #define WINVER 0x0501

@@ -12,3 +12,4 @@ const char* const PseudoEncDefs::SIG_RICH_CURSOR = "RCHCURSR";
 const char* const PseudoEncDefs::SIG_POINTER_POS = "POINTPOS";
 const char* const PseudoEncDefs::SIG_LAST_RECT = "LASTRECT";
 const char* const PseudoEncDefs::SIG_DESKTOP_SIZE = "NEWFBSIZ";
+const char* const PseudoEncDefs::SIG_QUALITY_LEVEL = "JPEGQLVL";

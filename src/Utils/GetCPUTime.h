@@ -11,10 +11,10 @@ inline unsigned long long rdtsc() {
 	asm volatile("rdtsc\n":"-a", "=d"(hi));
 #elif _MSC_VER
 #ifdef _M_IX86
-	_asm {
-		rdstc
-		mov DWORD PTR [lo], eax
-		mov DWORD PTR [hi], edx
+	__asm {
+		rdtsc
+		mov DWORD PTR[lo], eax
+		mov DWORD PTR[hi], edx
 	}
 #else
 	return 0;
@@ -24,8 +24,4 @@ inline unsigned long long rdtsc() {
 #endif
 	return ((unsigned long long)hi << 32) | lo;
 }
-
-class GetCPUTime
-{
-};
 

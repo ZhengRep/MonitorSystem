@@ -8,6 +8,6 @@ public:
   static const TCHAR DATE[];
 
 private:
-  BuildTime();
+  BuildTime(){};
 };
 

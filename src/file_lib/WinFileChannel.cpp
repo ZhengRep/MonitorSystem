@@ -1,4 +1,5 @@
 #include "WinFileChannel.h"
+#pragma warning(disable: 4996)
 
 WinFileChannel::WinFileChannel(const TCHAR* pathName,
   DesiredAccess dAcc,

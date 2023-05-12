@@ -7,6 +7,7 @@
 #include "winSystem/Registry.h"
 
 #include "vnc_server_app/NamingDefs.h"
+#pragma warning(disable: 4996)
 
 Configurator* Configurator::s_instance = NULL;
 LocalMutex Configurator::m_instanceMutex;

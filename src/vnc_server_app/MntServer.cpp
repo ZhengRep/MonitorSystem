@@ -10,6 +10,8 @@
 #include "winSystem/Environment.h"
 #include "winSystem/CurrentConsoleProcess.h"
 
+#pragma comment(lib, "Winmm.lib")
+
 MntServer::MntServer(bool runsInServiceContext, NewConnectionEvents* newConnectionEvents, LogInitListener* logInitListener, Logger* logger)
   : Singleton<MntServer>(),
   ListenerContainer<MntServerListener*>(),
@@ -22,6 +24,7 @@ MntServer::MntServer(bool runsInServiceContext, NewConnectionEvents* newConnecti
 {
   m_log.message(_T("%s Build on %s"),
     ProductNames::SERVER_PRODUCT_NAME, BuildTime::DATE);
+    //ProductNames::SERVER_PRODUCT_NAME, _T("TestTime"));
 
   // Initialize configuration.
   Configurator* configurator = Configurator::getInstance();

@@ -1,6 +1,8 @@
 #include "IpAccessRule.h"
 #include "Utils/AnsiStringStorage.h"
 
+#pragma warning(disable: 4996)
+
 IpAccessRule::IpAccessRule()
   : m_action(ACTION_TYPE_DENY)
 {

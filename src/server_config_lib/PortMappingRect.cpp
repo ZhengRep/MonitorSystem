@@ -1,4 +1,5 @@
 #include "PortMappingRect.h"
+#pragma warning(disable: 4996)
 
 PortMappingRect::PortMappingRect(int left, int top, int right, int bottom)
   :Rect(left, top, right, bottom)

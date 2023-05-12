@@ -1,4 +1,5 @@
 #include "PortMapping.h"
+#pragma warning(disable: 4996)
 
 PortMapping::PortMapping()
   :m_port(0)

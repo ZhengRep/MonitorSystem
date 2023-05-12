@@ -684,6 +684,47 @@ bool ServerConfig::getGrabTransparentWindowsFlag()
   return m_grabTransparentWindows;
 }
 
+bool ServerConfig::getShowTrayIconFlag()
+{
+  AutoLock l(this);
+
+  return m_showTrayIcon;
+}
+
+void ServerConfig::setShowTrayIconFlag(bool val)
+{
+  AutoLock l(this);
+
+  m_showTrayIcon = val;
+}
+
+bool ServerConfig::getConnectToRdpFlag()
+{
+  AutoLock l(this);
+
+  return m_connectToRdp;
+}
+
+void ServerConfig::setConnectToRdpFlag(bool val)
+{
+  AutoLock l(this);
+
+  m_connectToRdp = val;
+}
+
+void ServerConfig::getLogFileDir(StringStorage* logFilePath)
+{
+  AutoLock l(this);
+
+  *logFilePath = m_logFilePath;
+}
+
+void ServerConfig::setLogFileDir(const TCHAR* logFilePath)
+{
+  AutoLock l(this);
+
+  m_logFilePath.setString(logFilePath);
+}
 
 IpAccessRule::ActionType ServerConfig::getActionByAddress(unsigned long ip)
 {
