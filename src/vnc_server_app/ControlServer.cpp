@@ -1,4 +1,6 @@
 #include "ControlServer.h"
+#include "ControlClient.h"
+#include "mnt_control_app/NamedPipeTransport.h"
 
 ControlServer::ControlServer(PipeServer* pipeServer, RfbClientManager* rfbClientManager, LogWriter* log) throw(Exception)
   : m_authenticator(30000, 3),

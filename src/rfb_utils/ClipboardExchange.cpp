@@ -15,9 +15,9 @@ ClipboardExchange::ClipboardExchange(RfbCodeRegistrator* codeRegtor, Desktop* de
 {
   codeRegtor->regCode(ClientMsgDefs::CLIENT_CUT_TEXT, this);
 
-  codeRegtor->addClToSrvCap(ClientMsgDefs::CLIENT_CUT_TEXT_UTF8, VendorDefs::VNC, Utf8CutTextDefs::CLIENT_CUT_TEXT_UTF8_SIG);
-  codeRegtor->addClToSrvCap(ClientMsgDefs::ENABLE_CUT_TEXT_UTF8, VendorDefs::VNC, Utf8CutTextDefs::ENABLE_CUT_TEXT_UTF8_SIG);
-  codeRegtor->addSrvToClCap(ServerMsgDefs::SERVER_CUT_TEXT_UTF8, VendorDefs::VNC, Utf8CutTextDefs::SERVER_CUT_TEXT_UTF8_SIG);
+  codeRegtor->addClToSrvCap(ClientMsgDefs::CLIENT_CUT_TEXT_UTF8, VendorDefs::MNT, Utf8CutTextDefs::CLIENT_CUT_TEXT_UTF8_SIG);
+  codeRegtor->addClToSrvCap(ClientMsgDefs::ENABLE_CUT_TEXT_UTF8, VendorDefs::MNT, Utf8CutTextDefs::ENABLE_CUT_TEXT_UTF8_SIG);
+  codeRegtor->addSrvToClCap(ServerMsgDefs::SERVER_CUT_TEXT_UTF8, VendorDefs::MNT, Utf8CutTextDefs::SERVER_CUT_TEXT_UTF8_SIG);
   codeRegtor->regCode(ClientMsgDefs::CLIENT_CUT_TEXT_UTF8, this);
   codeRegtor->regCode(ClientMsgDefs::ENABLE_CUT_TEXT_UTF8, this);
 

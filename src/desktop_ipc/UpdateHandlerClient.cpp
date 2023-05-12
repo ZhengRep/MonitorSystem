@@ -1,5 +1,6 @@
 #include "UpdateHandlerClient.h"
 #include "ReconnectException.h"
+#include "Utils/Macros.h"
 
 UpdateHandlerClient::UpdateHandlerClient(BlockingGate* forwGate, DesktopSrvDispatcher* dispatcher, UpdateListener* externalUpdateListener, LogWriter* log)
   :DesktopServerProto(forwGate), m_externalUpdateListener(externalUpdateListener),
@@ -158,10 +159,10 @@ void UpdateHandlerClient::sendInit(BlockingGate* gate)
   AutoLock al(gate);
   gate->writeUInt8(FRAME_BUFFER_INIT);
 
-  sendPixelFormat(&m_backupFrameBuffer.getPixelFormat(), gate);
+  sendPixelFormat(&unmove(m_backupFrameBuffer.getPixelFormat()), gate);
   Dimension dim = m_backupFrameBuffer.getDimension();
   sendDimension(&dim, gate);
-  sendFrameBuffer(&m_backupFrameBuffer, &dim.getRect(), gate);
+  sendFrameBuffer(&m_backupFrameBuffer, &unmove(dim.getRect()), gate);
 }
 
 void UpdateHandlerClient::onRequest(UINT8 reqCode, BlockingGate* backGate)

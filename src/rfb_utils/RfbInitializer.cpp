@@ -8,6 +8,7 @@
 #include "rfb/AuthDefs.h"
 #include "rfb/VendorDefs.h"
 #include "Utils/MntPassCrypt.h"
+#include "Utils/Macros.h"
 
 RfbInitializer::RfbInitializer(Channel* stream, ClientAuthListener* extAuthListener, RfbClient* client, bool authAllowed)
   : m_shared(false),
@@ -64,7 +65,7 @@ void RfbInitializer::initVersion()
     } else {
       m_output->writeUInt8(0);
     }
-    AnsiStringStorage reason(&StringStorage(e.getMessage()));
+    AnsiStringStorage reason(&unmove(StringStorage(e.getMessage())));
     unsigned int reasonLen = (unsigned int)reason.getLength();
     _ASSERT(reasonLen == reason.getLength());
 
@@ -126,11 +127,11 @@ void RfbInitializer::initAuthenticate()
     }
   } catch (AuthException& e) {
     if (m_minorVerNum >= 8) {
-      AnsiStringStorage reason(&StringStorage(e.getMessage()));
+      AnsiStringStorage reason(&unmove(StringStorage(e.getMessage())));
       unsigned int reasonLen = (unsigned int)reason.getLength();
       _ASSERT(reasonLen == reason.getLength());
 
-      m_output->writeUInt32(1); // FIXME: Use a named constant instead of 1.
+      m_output->writeUInt32(1); 
       m_output->writeUInt32(reasonLen);
       m_output->writeFully(reason.getString(), reasonLen);
     }

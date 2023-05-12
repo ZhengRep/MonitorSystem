@@ -1,5 +1,8 @@
 #include "ProcessHandle.h"
 #include "SystemException.h"
+#include "Utils/winhdr.h"
+
+#pragma comment(lib, "Psapi")
 
 ProcessHandle::ProcessHandle()
     :m_hProcess(0)

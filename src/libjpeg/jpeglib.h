@@ -1,4 +1,20 @@
 /*
+ * jpeglib.h
+ *
+ * Copyright (C) 1991-1998, Thomas G. Lane.
+ * Modified 2002-2009 by Guido Vollbeding.
+ * This file is part of the Independent JPEG Group's software.
+ * For conditions of distribution and use, see the accompanying README file.
+ *
+ * This file defines the application interface for the JPEG library.
+ * Most applications using the library need only include this file,
+ * and perhaps jerror.h if they want to know the exact error codes.
+ */
+
+#ifndef JPEGLIB_H
+#define JPEGLIB_H
+
+/*
  * First we include the configuration files that record how this
  * installation of the JPEG library is set up.  jconfig.h can be
  * generated automatically for many systems.  jmorecfg.h contains
@@ -933,8 +949,8 @@ EXTERN(void) jpeg_destroy_decompress JPP((j_decompress_ptr cinfo));
 
 /* Standard data source and destination managers: stdio streams. */
 /* Caller is responsible for opening the file before and closing after. */
-//EXTERN(void) jpeg_stdio_dest JPP((j_compress_ptr cinfo, FILE * outfile));
-//EXTERN(void) jpeg_stdio_src JPP((j_decompress_ptr cinfo, FILE * infile));
+EXTERN(void) jpeg_stdio_dest JPP((j_compress_ptr cinfo, FILE * outfile));
+EXTERN(void) jpeg_stdio_src JPP((j_decompress_ptr cinfo, FILE * infile));
 
 /* Data source and destination managers: memory buffers. */
 EXTERN(void) jpeg_mem_dest JPP((j_compress_ptr cinfo,
@@ -1138,3 +1154,5 @@ struct jpeg_color_quantizer { long dummy; };
 }
 #endif
 #endif
+
+#endif /* JPEGLIB_H */

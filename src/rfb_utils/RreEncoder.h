@@ -1,6 +1,8 @@
 #pragma once
 #include "Encoder.h"
 #include "region/Region.h"
+#include <vector>
+using namespace std;
 
 class RreEncoder : public Encoder
 {

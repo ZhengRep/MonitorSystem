@@ -103,7 +103,7 @@ void BaseDialog::setResourceName(const TCHAR* resourceName)
 	m_resourceName = _tcsdup(resourceName);
 }
 
-void BaseDialog::setREsourceId(DWORD id)
+void BaseDialog::setResourceId(DWORD id)
 {
 	m_resourceId = id;
 }
@@ -133,7 +133,7 @@ bool BaseDialog::setForeground()
 	return m_ctrlThis.setForeground();
 }
 
-void BaseDialog::setDefaultPushButtton(UINT buttonId)
+void BaseDialog::setDefaultPushButton(UINT buttonId)
 {
 	SendMessage(m_ctrlThis.getWindow(), DM_SETDEFID, buttonId, 0);
 }

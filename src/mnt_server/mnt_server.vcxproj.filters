@@ -36,9 +36,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\mnt_log.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="res\idle.ico">
       <Filter>Resource Files</Filter>
     </Image>
@@ -46,6 +43,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\disabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mnt_logo.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -16,21 +16,19 @@
 #define IDD_CONTROL_AUTH                123
 #define IDD_ABOUT_DIALOG                125
 #define IDD_QUERY_RFB_CONNECTION        128
-#define IDD_DISPATCHER_CONN             130
 #define IDD_SET_PASSWORDS               134
-#define IDI_MNT_LOGO                    136
+#define IDI_ICON1                       141
+#define IDI_MNT_LOGO                    141
 #define IDC_ACCEPT_BUTTON               1000
 #define IDC_SHOW_MNTCONTROL_ICON_CHECKBOX 1001
 #define IDC_STATIC_VERSION              1002
 #define IDC_CONFIG_TAB                  1003
-#define IDC_DISPATCH_ID                 1004
 #define IDC_IP_ACCESS_CONTROL_LIST      1005
 #define IDC_LOG_LEVEL_SPIN              1006
 #define IDC_PASSWORD_EDIT               1007
 #define IDC_RFB_PORT_SPIN               1008
 #define IDC_VISIT_WEB_SITE_BUTTON       1011
 #define IDC_ALLOW_LOOPBACK_CONNECTIONS  1012
-#define IDC_DISPATCH_NAME               1013
 #define IDC_LOG_FILEPATH_EDIT           1014
 #define IDC_PORT_EDIT                   1015
 #define IDC_STATIC_LICENSING            1016
@@ -40,7 +38,6 @@
 #define IDC_ORDER_SUPPORT_BUTTON        1021
 #define IDC_UNSET_PRIMARY_PASSWORD_BUTTON 1022
 #define IDC_BLOCK_REMOTE_INPUT          1023
-#define IDC_DISPATCH_KEYWORD            1024
 #define IDC_USE_D3D                     1025
 #define IDC_ADD_BUTTON                  1026
 #define IDC_USE_CONTROL_AUTH_CHECKBOX   1027
@@ -138,7 +135,6 @@
 #define IDS_NEW_PASSWORD                40025
 #define IDS_CHANGE_PASSWORD             40026
 #define IDS_SERVER_TAB_CAPTION          40027
-#define IDC_HOSTNAME_COMBO              40028
 #define IDS_ACCESS_CONTROL_TAB_CAPTION  40029
 #define IDS_EXTRA_PORTS_TAB_CAPTION     40030
 #define IDS_VIDEO_WINDOWS_TAB_CAPTION   40031
@@ -220,7 +216,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        139
+#define _APS_NEXT_RESOURCE_VALUE        142
 #define _APS_NEXT_COMMAND_VALUE         40101
 #define _APS_NEXT_CONTROL_VALUE         1094
 #define _APS_NEXT_SYMED_VALUE           101

@@ -7,6 +7,7 @@
 #include "io_lib/BufferedInputStream.h"
 #include "EchoExtensionRequestHandler.h"
 #include "RfbInitializer.h"
+#include "Utils/Macros.h"
 
 RfbClient::RfbClient(NewConnectionEvents* newConnectionEvents, SocketIPv4* socket, ClientTerminationListener* extTermListener, ClientAuthListener* extAuthListener, bool viewOnly, bool isOutgoing, unsigned int id, const ViewPortState* constViewPort, const ViewPortState* dynViewPort, int idleTimeout, LogWriter* log)
   : m_socket(socket), // now we own the socket
@@ -189,7 +190,7 @@ void RfbClient::execute()
     Dimension fbDim;
     m_desktop->getFrameBufferProperties(&fbDim, &pf);
     Rect viewPort = getViewPortRect(&fbDim);
-    m_updateSender->init(&Dimension(&viewPort), &pf);
+    m_updateSender->init(&unmove(Dimension(&viewPort)), &pf);
     m_log->debug(_T("UpdateSender has been initialized"));
     // ClientInputHandler initialization
     m_clientInputHandler = new ClientInputHandler(&codeRegtor, this, m_viewOnly);
@@ -217,7 +218,7 @@ void RfbClient::execute()
       viewPort.getWidth(),
       viewPort.getHeight());
     m_log->info(_T("Entering RFB initialization phase 2"));
-    rfbInitializer.afterAuthPhase(&srvToClCaps, &clToSrvCaps, &encCaps, &Dimension(&viewPort), &pf);
+    rfbInitializer.afterAuthPhase(&srvToClCaps, &clToSrvCaps, &encCaps, &unmove(Dimension(&viewPort)), &pf);
     m_log->debug(_T("RFB initialization phase 2 completed"));
 
     // Start normal phase
@@ -314,7 +315,7 @@ Rect RfbClient::getViewPortRect(const Dimension* fbDimension)
   m_constViewPort.update(fbDimension);
   m_dynamicViewPort.update(fbDimension);
 
-  return m_constViewPort.getViewPortRect().intersection(&m_dynamicViewPort.getViewPortRect());
+  return m_constViewPort.getViewPortRect().intersection(&unmove(m_dynamicViewPort.getViewPortRect()));
 }
 
 void RfbClient::onGetViewPort(Rect* viewRect, bool* shareApp, Region* shareAppRegion)

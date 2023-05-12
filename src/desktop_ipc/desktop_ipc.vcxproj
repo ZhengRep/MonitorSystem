@@ -137,25 +137,33 @@
   <ItemGroup>
     <ClInclude Include="BlockingGate.h" />
     <ClInclude Include="ClientListener.h" />
+    <ClInclude Include="ConfigServer.h" />
     <ClInclude Include="DesktopConfigClient.h" />
     <ClInclude Include="DesktopServerProto.h" />
     <ClInclude Include="DesktopSrvDispatcher.h" />
     <ClInclude Include="GateKicker.h" />
+    <ClInclude Include="GateKickHandler.h" />
     <ClInclude Include="ReconnectingChannel.h" />
     <ClInclude Include="ReconnectException.h" />
     <ClInclude Include="ReconnectionListener.h" />
     <ClInclude Include="UpdateHandlerClient.h" />
+    <ClInclude Include="UpdateHandlerServer.h" />
     <ClInclude Include="UserInputClient.h" />
+    <ClInclude Include="UserInputServer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlockingGate.cpp" />
+    <ClCompile Include="ConfigServer.cpp" />
     <ClCompile Include="DesktopConfigClient.cpp" />
     <ClCompile Include="DesktopServerProto.cpp" />
     <ClCompile Include="DesktopSrvDispatcher.cpp" />
     <ClCompile Include="GateKicker.cpp" />
+    <ClCompile Include="GateKickHandler.cpp" />
     <ClCompile Include="ReconnectingChannel.cpp" />
     <ClCompile Include="UpdateHandlerClient.cpp" />
+    <ClCompile Include="UpdateHandlerServer.cpp" />
     <ClCompile Include="UserInputClient.cpp" />
+    <ClCompile Include="UserInputServer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include "Utils/CommonHeader.h"
-#include "rfb/PixelFormat.h""
+#include "rfb/PixelFormat.h"
 #include "libjpeg/jpeglib.h"
 
 class JpegCompressor

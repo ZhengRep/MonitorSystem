@@ -109,6 +109,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>desktop_ipc.lib;fb_update_sender.lib;file_lib.lib;ft_common.lib;ft_server_lib.lib;gui.lib;io_lib.lib;log_server.lib;log_writer.lib;mnt_control_app.lib;mnt_server_app.lib;network.lib;region.lib;rfb.lib;rfb_utils.lib;screen_hooks.lib;server_config_lib.lib;thread.lib;Utils.lib;vnc_server_app.lib;win_event_log.lib;win_system.lib;wsconfig_lib.lib;Zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,7 +144,7 @@
     <Image Include="res\connected.ico" />
     <Image Include="res\disabled.ico" />
     <Image Include="res\idle.ico" />
-    <Image Include="res\mnt_log.ico" />
+    <Image Include="res\mnt_logo.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

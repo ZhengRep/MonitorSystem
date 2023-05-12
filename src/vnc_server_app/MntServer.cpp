@@ -126,7 +126,7 @@ void MntServer::getServerInfo(MntServerInfo* info)
     statusString = StringTable::getString(IDS_SERVER_NOT_LISTENING);
   } // not accepting connections.
 
-  UINT stringId = m_runAsService ? IDS_TVNSERVER_SERVICE : IDS_TVNSERVER_APP;
+  UINT stringId = m_runAsService ? IDS_MNTSERVER_SERVICE : IDS_MNTSERVER_APP;
 
   info->m_statusText.format(_T("%s - %s"),
     StringTable::getString(stringId),

@@ -1,6 +1,6 @@
 #include "Configurator.h"
 #include "winSystem/Environment.h"
-#include "wsconfig_lib/VncLogFilename.h"
+#include "wsconfig_lib/MntLogFilename.h"
 #include "config_lib/RegistrySettingsManager.h"
 
 #include "winSystem/RegistryKey.h"
@@ -243,33 +243,33 @@ bool Configurator::saveServerConfig(SettingsManager* sm)
     saveResult = false;
   }
   if (m_serverConfig.hasPrimaryPassword()) {
-    unsigned char password[ServerConfig::VNC_PASSWORD_SIZE];
+    unsigned char password[ServerConfig::MNT_PASSWORD_SIZE];
 
     m_serverConfig.getPrimaryPassword(&password[0]);
 
-    if (!sm->setBinaryData(_T("Password"), &password[0], ServerConfig::VNC_PASSWORD_SIZE)) {
+    if (!sm->setBinaryData(_T("Password"), &password[0], ServerConfig::MNT_PASSWORD_SIZE)) {
       saveResult = false;
     }
   } else {
     sm->deleteKey(_T("Password"));
   }
   if (m_serverConfig.hasReadOnlyPassword()) {
-    unsigned char password[ServerConfig::VNC_PASSWORD_SIZE];
+    unsigned char password[ServerConfig::MNT_PASSWORD_SIZE];
 
     m_serverConfig.getReadOnlyPassword(&password[0]);
 
-    if (!sm->setBinaryData(_T("PasswordViewOnly"), &password[0], ServerConfig::VNC_PASSWORD_SIZE)) {
+    if (!sm->setBinaryData(_T("PasswordViewOnly"), &password[0], ServerConfig::MNT_PASSWORD_SIZE)) {
       saveResult = false;
     }
   } else {
     sm->deleteKey(_T("PasswordViewOnly"));
   }
   if (m_serverConfig.hasControlPassword()) {
-    unsigned char password[ServerConfig::VNC_PASSWORD_SIZE];
+    unsigned char password[ServerConfig::MNT_PASSWORD_SIZE];
 
     m_serverConfig.getControlPassword(&password[0]);
 
-    if (!sm->setBinaryData(_T("ControlPassword"), &password[0], ServerConfig::VNC_PASSWORD_SIZE)) {
+    if (!sm->setBinaryData(_T("ControlPassword"), &password[0], ServerConfig::MNT_PASSWORD_SIZE)) {
       saveResult = false;
     }
   } else {
@@ -413,7 +413,7 @@ bool Configurator::loadServerConfig(SettingsManager* sm, ServerConfig* config)
   }
 
   size_t passSize = 8;
-  unsigned char buffer[ServerConfig::VNC_PASSWORD_SIZE] = { 0 };
+  unsigned char buffer[ServerConfig::MNT_PASSWORD_SIZE] = { 0 };
 
   if (!sm->getBinaryData(_T("Password"), (void*)&buffer, &passSize)) {
     loadResult = false;
@@ -514,7 +514,7 @@ bool Configurator::loadServerConfig(SettingsManager* sm, ServerConfig* config)
 void Configurator::updateLogDirPath()
 {
   StringStorage pathToLogDirectory;
-  VncLogFilename::queryLogFileDirectory(m_isConfiguringService, m_serverConfig.isSaveLogToAllUsersPathFlagEnabled(), &pathToLogDirectory);
+  MntLogFilename::queryLogFileDirectory(m_isConfiguringService, m_serverConfig.isSaveLogToAllUsersPathFlagEnabled(), &pathToLogDirectory);
   m_serverConfig.setLogFileDir(pathToLogDirectory.getString());
 }
 

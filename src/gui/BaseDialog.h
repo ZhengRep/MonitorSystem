@@ -21,7 +21,7 @@ public:
 	//Dialog's parent is control???
 	void setParent(Control* ctrlParent);
 	void setResourceName(const TCHAR* resourceName);
-	void setREsourceId(DWORD id);
+	void setResourceId(DWORD id);
 	Control* getControl() { return &m_ctrlThis; };
 	//Setup control by ID
 	void setControlById(Control& control, DWORD id);
@@ -32,7 +32,7 @@ public:
 	bool setForeground();
 
 protected:
-	void setDefaultPushButtton(UINT buttonId);
+	void setDefaultPushButton(UINT buttonId);
 
 protected:
 	//this methods must be override by child classes

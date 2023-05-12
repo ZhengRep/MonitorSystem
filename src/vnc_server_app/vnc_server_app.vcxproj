@@ -114,6 +114,12 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -135,42 +141,56 @@
     <ClInclude Include="AdditionalActionApplication.h" />
     <ClInclude Include="AuthTracker.h" />
     <ClInclude Include="ControlAppAuthenticator.h" />
+    <ClInclude Include="ControlClient.h" />
     <ClInclude Include="ControlServer.h" />
     <ClInclude Include="CrashHook.h" />
+    <ClInclude Include="DesktopServerApplication.h" />
     <ClInclude Include="DesktopServerCommandLine.h" />
     <ClInclude Include="LogInitListener.h" />
     <ClInclude Include="MntServer.h" />
+    <ClInclude Include="MntServerApplication.h" />
     <ClInclude Include="MntServerListener.h" />
     <ClInclude Include="MntService.h" />
     <ClInclude Include="NamingDefs.h" />
     <ClInclude Include="NewConnectionEvents.h" />
     <ClInclude Include="QueryConnectionApplication.h" />
     <ClInclude Include="QueryConnectionCommandLine.h" />
+    <ClInclude Include="QueryConnectionDialog.h" />
     <ClInclude Include="RfbClientManager.h" />
     <ClInclude Include="RfbClientManagerEventListener.h" />
     <ClInclude Include="RfbServer.h" />
     <ClInclude Include="ServerCommandLine.h" />
+    <ClInclude Include="ServiceControlApplication.h" />
     <ClInclude Include="ServiceControlCommandLine.h" />
+    <ClInclude Include="SessionChangesWatcher.h" />
     <ClInclude Include="WinEventLogWriter.h" />
     <ClInclude Include="WinServiceEvents.h" />
+    <ClInclude Include="WsConfigRunner.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdditionalActionApplication.cpp" />
     <ClCompile Include="AuthTracker.cpp" />
     <ClCompile Include="ControlAppAuthenticator.cpp" />
+    <ClCompile Include="ControlClient.cpp" />
     <ClCompile Include="ControlServer.cpp" />
     <ClCompile Include="CrashHook.cpp" />
+    <ClCompile Include="DesktopServerApplication.cpp" />
     <ClCompile Include="DesktopServerCommandLine.cpp" />
     <ClCompile Include="MntServer.cpp" />
+    <ClCompile Include="MntServerApplication.cpp" />
     <ClCompile Include="MntService.cpp" />
     <ClCompile Include="NamingDefs.cpp" />
     <ClCompile Include="QueryConnectionApplication.cpp" />
     <ClCompile Include="QueryConnectionCommandLine.cpp" />
+    <ClCompile Include="QueryConnectionDialog.cpp" />
     <ClCompile Include="RfbClientManager.cpp" />
     <ClCompile Include="RfbServer.cpp" />
     <ClCompile Include="ServerCommandLine.cpp" />
+    <ClCompile Include="ServiceControlApplication.cpp" />
     <ClCompile Include="ServiceControlCommandLine.cpp" />
+    <ClCompile Include="SessionChangesWatcher.cpp" />
     <ClCompile Include="WinEventLogWriter.cpp" />
+    <ClCompile Include="WsConfigRunner.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -136,6 +136,7 @@
     <ClInclude Include="CursorShape.h" />
     <ClInclude Include="EncodingDefs.h" />
     <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="HostPath.h" />
     <ClInclude Include="keysymdef.h" />
     <ClInclude Include="MsgDefs.h" />
     <ClInclude Include="PixelConverter.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="CursorShape.cpp" />
     <ClCompile Include="EncodingDefs.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="HostPath.cpp" />
     <ClCompile Include="MsgDefs.cpp" />
     <ClCompile Include="PixelConverter.cpp" />
     <ClCompile Include="PixelFormat.cpp" />

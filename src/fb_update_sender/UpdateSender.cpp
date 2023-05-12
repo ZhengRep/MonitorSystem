@@ -29,14 +29,14 @@ UpdateSender::UpdateSender(RfbCodeRegistrator* codeRegtor, UpdateRequestListener
   //Capabilities
   codeRegtor->addEncCap(EncodingDefs::COPYRECT, VendorDefs::STANDARD, EncodingDefs::SIG_COPYRECT);
   codeRegtor->addEncCap(EncodingDefs::HEXTILE, VendorDefs::STANDARD, EncodingDefs::SIG_HEXTILE);
-  codeRegtor->addEncCap(EncodingDefs::TIGHT, VendorDefs::VNC, EncodingDefs::SIG_TIGHT);
+  codeRegtor->addEncCap(EncodingDefs::TIGHT, VendorDefs::MNT, EncodingDefs::SIG_TIGHT);
 
-  codeRegtor->addEncCap(PseudoEncDefs::COMPR_LEVEL_0, VendorDefs::VNC, PseudoEncDefs::SIG_COMPR_LEVEL); //verdorSig nameSig
-  codeRegtor->addEncCap(PseudoEncDefs::QUALITY_LEVEL_0, VendorDefs::VNC, PseudoEncDefs::SIG_QUALITY_LEVEL);
-  codeRegtor->addEncCap(PseudoEncDefs::RICH_CURSOR, VendorDefs::VNC, PseudoEncDefs::SIG_RICH_CURSOR);
-  codeRegtor->addEncCap(PseudoEncDefs::POINTER_POS, VendorDefs::VNC, PseudoEncDefs::SIG_POINTER_POS);
+  codeRegtor->addEncCap(PseudoEncDefs::COMPR_LEVEL_0, VendorDefs::MNT, PseudoEncDefs::SIG_COMPR_LEVEL); //verdorSig nameSig
+  codeRegtor->addEncCap(PseudoEncDefs::QUALITY_LEVEL_0, VendorDefs::MNT, PseudoEncDefs::SIG_QUALITY_LEVEL);
+  codeRegtor->addEncCap(PseudoEncDefs::RICH_CURSOR, VendorDefs::MNT, PseudoEncDefs::SIG_RICH_CURSOR);
+  codeRegtor->addEncCap(PseudoEncDefs::POINTER_POS, VendorDefs::MNT, PseudoEncDefs::SIG_POINTER_POS);
 
-  codeRegtor->addClToSrvCap(UpdSenderClientMsgDefs::RFB_VIDEO_FREEZE, VendorDefs::VNC, UpdSenderClientMsgDefs::RFB_VIDEO_FREEZE_SIG);
+  codeRegtor->addClToSrvCap(UpdSenderClientMsgDefs::RFB_VIDEO_FREEZE, VendorDefs::MNT, UpdSenderClientMsgDefs::RFB_VIDEO_FREEZE_SIG);
 
   // Request codes
   codeRegtor->regCode(UpdSenderClientMsgDefs::RFB_VIDEO_FREEZE, this);

@@ -47,7 +47,7 @@ public:
 class ServiceNames
 {
 public:
-  static const TCHAR VNCCONTROL_START_REGISTRY_ENTRY_NAME[];
+  static const TCHAR MNTCONTROL_START_REGISTRY_ENTRY_NAME[];
   static const TCHAR SERVICE_NAME[];
   static const TCHAR SERVICE_NAME_TO_DISPLAY[];
 };

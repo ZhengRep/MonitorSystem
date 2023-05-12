@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="win_system_test\TestCurrentConsoleProcess.cpp">
+    <ClCompile Include="UtilsTest\TestStringStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

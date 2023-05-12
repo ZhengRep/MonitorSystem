@@ -1,5 +1,5 @@
 #include "MntService.h"
-
+#include "Utils/Macros.h"
 #include "ServerCommandLine.h"
 #include "vnc_server_app/NamingDefs.h"
 #include "winSystem/SCMClient.h"
@@ -30,7 +30,7 @@ void MntService::onStart()
     m_mntServer->addListener(this);
     m_winServiceEvents->onSuccServiceStart();
   } catch (Exception& e) {
-    m_winServiceEvents->onFailedServiceStart(&StringStorage(e.getMessage()));
+    m_winServiceEvents->onFailedServiceStart(&unmove(StringStorage(e.getMessage())));
   }
 }
 

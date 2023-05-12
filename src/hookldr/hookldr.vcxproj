@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);Utils.lib;thread.lib;win_system.lib;</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);Utils.lib;thread.lib;win_system.lib;desktop.lib;vnc_server_app.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

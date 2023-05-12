@@ -20,7 +20,7 @@ const TCHAR LogNames::WIN_EVENT_PROVIDER_NAME[] = _T("MNTServer");
 const TCHAR ClipboardNames::CLIPBOARD_WIN_CLASS_NAME[] = _T("MNTServer.Clipboard.MessageWindow");
 
 
-const TCHAR ServiceNames::VNCCONTROL_START_REGISTRY_ENTRY_NAME[] = _T("MNTControl");
+const TCHAR ServiceNames::MNTCONTROL_START_REGISTRY_ENTRY_NAME[] = _T("MNTControl");
 const TCHAR ServiceNames::SERVICE_NAME[] = _T("MNTServer");
 const TCHAR ServiceNames::SERVICE_NAME_TO_DISPLAY[] = _T("MNT Server");
 

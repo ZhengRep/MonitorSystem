@@ -1,6 +1,7 @@
 #include "QueryConnectionApplication.h"
 #include "QueryConnectionCommandLine.h"
 #include "winSystem/WinCommandLineArgs.h"
+#include "QueryConnectionDialog.h"
 
 QueryConnectionApplication::QueryConnectionApplication(HINSTANCE hInstance, const TCHAR* windowClassName, const TCHAR* cmdLine)
   : LocalWindowsApplication(hInstance, windowClassName),
@@ -30,7 +31,7 @@ int QueryConnectionApplication::run()
 
   DWORD queryTimeout = parser.isTimeoutSpecified() ? parser.getTimeout() : 30;
 
-  //QueryConnectionDialog dialog(peerAddress.getString(), parser.isDefaultActionAccept(), queryTimeout);
+  QueryConnectionDialog dialog(peerAddress.getString(), parser.isDefaultActionAccept(), queryTimeout);
 
   return dialog.showModal();
 }

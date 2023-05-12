@@ -74,15 +74,15 @@ END
 
 IDD_CHANGE_PASSWORD DIALOGEX 0, 0, 126, 87
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Change Password"
+CAPTION "修改密码"
 FONT 8, "Ms Shell Dlg 2", 0, 0, 0x0
 BEGIN
-    LTEXT           "Enter new password:",IDC_STATIC,9,6,115,10
+    LTEXT           "输入新密码：",IDC_STATIC,9,6,115,10
     EDITTEXT        IDC_PASSWORD,9,17,107,12,ES_PASSWORD | ES_AUTOHSCROLL | WS_GROUP
-    LTEXT           "Re-type password for verification:",IDC_STATIC,9,33,115,10
+    LTEXT           "再次确认：",IDC_STATIC,9,33,115,10
     EDITTEXT        IDC_PASSWORD2,9,43,107,12,ES_PASSWORD | ES_AUTOHSCROLL
-    DEFPUSHBUTTON   "OK",IDOK,9,64,50,15,WS_GROUP
-    PUSHBUTTON      "Cancel",IDCANCEL,66,64,50,15
+    DEFPUSHBUTTON   "确认",IDOK,9,64,50,15,WS_GROUP
+    PUSHBUTTON      "取消",IDCANCEL,66,64,50,15
 END
 
 IDD_CONFIG DIALOGEX 0, 0, 319, 249
@@ -199,25 +199,6 @@ BEGIN
     PUSHBUTTON      "取消",IDCANCEL,96,56,50,15
 END
 
-IDD_DISPATCHER_CONN DIALOGEX 0, 0, 257, 124
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Attach to Dispatcher"
-FONT 8, "Ms Shell Dlg 2", 0, 0, 0x0
-BEGIN
-    LTEXT           "Here you can attach to a special TCP Dispatcher which would allow its clients to view or control your machine.",IDC_STATIC,7,7,243,18
-    LTEXT           "To specify a TCP port, append it after two colons (myhost::443).  A number up to 99 after just one colon specifies an offset from the default port 5500.",IDC_STATIC,7,27,240,26,NOT WS_GROUP
-    LTEXT           "Host name or IP address\nof the dispatcher:",IDC_STATIC,7,57,81,18,NOT WS_GROUP
-    COMBOBOX        IDC_HOSTNAME_COMBO,94,60,154,68,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_GROUP | WS_TABSTOP
-    LTEXT           "Dispatcher name:",IDC_STATIC,1,78,81,12,SS_CENTERIMAGE | NOT WS_VISIBLE | NOT WS_GROUP
-    EDITTEXT        IDC_DISPATCH_NAME,0,88,154,12,ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_GROUP
-    RTEXT           "ID:",IDC_STATIC,55,79,31,12,SS_CENTERIMAGE | NOT WS_GROUP
-    EDITTEXT        IDC_DISPATCH_ID,94,79,70,12,ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
-    RTEXT           "Keyword:",IDC_STATIC,185,79,35,12,SS_CENTERIMAGE | NOT WS_VISIBLE | NOT WS_GROUP
-    EDITTEXT        IDC_DISPATCH_KEYWORD,185,89,71,12,ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_GROUP
-    DEFPUSHBUTTON   "&Attach",IDOK,75,101,50,15,WS_GROUP
-    PUSHBUTTON      "&Cancel",IDCANCEL,132,101,50,15
-END
-
 IDD_EDIT_IP_ACESS_CONTROL DIALOGEX 0, 0, 157, 158
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "IP规则"
@@ -252,15 +233,14 @@ END
 
 IDD_QUERY_RFB_CONNECTION DIALOGEX 0, 0, 250, 104
 STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
-CAPTION "Incoming MNT Connection"
+CAPTION "连接请求"
 FONT 8, "Ms Shell Dlg 2", 0, 0, 0x0
 BEGIN
-    LTEXT           "MNT Server has received an incoming connection originating from",IDC_STATIC,7,7,236,10
-    EDITTEXT        IDC_IP_EDIT,7,19,236,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | WS_GROUP | NOT WS_TABSTOP
-    LTEXT           "By accepting the connection, you allow the remote person to view and possibly control your computer.  Choose the action by pressing a button below.",IDC_STATIC,7,36,236,26,NOT WS_GROUP
-    PUSHBUTTON      "&Accept",IDC_ACCEPT_BUTTON,71,64,50,15,WS_GROUP
-    PUSHBUTTON      "&Reject",IDC_REJECT_BUTTON,128,64,50,15
+    LTEXT           "MNT收受到远程客户端连接请求",IDC_STATIC,7,7,236,10
+    PUSHBUTTON      "接受",IDC_ACCEPT_BUTTON,71,64,50,15,WS_GROUP
+    PUSHBUTTON      "拒绝",IDC_REJECT_BUTTON,128,64,50,15
     CTEXT           "[default action]",IDC_TIMEOUT_LABEL,7,86,236,10
+    EDITTEXT        IDC_IP_EDIT,7,19,236,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | WS_GROUP | NOT WS_TABSTOP
 END
 
 IDD_SET_PASSWORDS DIALOGEX 0, 0, 299, 230
@@ -385,12 +365,6 @@ BEGIN
     BEGIN
     END
 
-    IDD_DISPATCHER_CONN, DIALOG
-    BEGIN
-        VERTGUIDE, 94
-        BOTTOMMARGIN, 116
-    END
-
     IDD_EDIT_IP_ACESS_CONTROL, DIALOG
     BEGIN
     END
@@ -468,6 +442,16 @@ BEGIN
 END
 
 IDD_SET_PASSWORDS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CHANGE_PASSWORD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_QUERY_RFB_CONNECTION AFX_DIALOG_LAYOUT
 BEGIN
     0
 END
@@ -638,7 +622,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_MNT_LOGO            ICON                    "res\\mnt_log.ico"
+IDI_MNT_LOGO            ICON                    "res\\mnt_logo.ico"
 
 #endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
