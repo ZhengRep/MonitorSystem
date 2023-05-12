@@ -1,7 +1,7 @@
 #pragma once
 #include "UpdateDetector.h"
 #include "ScreenGrabber.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "log_writer/LogWriter.h"
 
 class ConsolePoller : public UpdateDetector

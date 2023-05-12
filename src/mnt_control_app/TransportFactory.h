@@ -1,9 +1,9 @@
 #pragma once
 #include "Transport.h"
 #include "network/socket/SocketIPv4.h"
-#include "winSystem/Pipe.h"
-#include "winSystem/PipeClient.h"
-#include "winSystem/PipeServer.h"
+#include "win_system/Pipe.h"
+#include "win_system/PipeClient.h"
+#include "win_system/PipeServer.h"
 
 class TransportFactory
 {

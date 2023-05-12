@@ -2,7 +2,7 @@
 #include "ConfigDialog.h"
 #include "ChangePasswordDialog.h"
 #include "server_config_lib/Configurator.h"
-#include "Utils/StringParser.h"
+#include "utils/StringParser.h"
 #include "CommonInputValidation.h"
 #include "UIDataAccess.h"
 #include <limits.h>

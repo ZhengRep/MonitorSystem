@@ -1,7 +1,7 @@
 #pragma once
 #include "Thread.h"
 #include "LocalMutex.h"
-#include "Utils/Singleton.h"
+#include "utils/Singleton.h"
 
 #include <list>
 using namespace std;

@@ -1,6 +1,6 @@
 #pragma once
 #include "thread/Thread.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "TimerListener.h"
 
 class ConnectionTimer : private Thread

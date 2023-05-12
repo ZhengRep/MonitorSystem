@@ -1,7 +1,7 @@
 #include "ClipboardExchange.h"
 #include "rfb/MsgDefs.h"
-#include "Utils/Utf8StringStorage.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/Utf8StringStorage.h"
+#include "utils/AnsiStringStorage.h"
 #include "thread/AutoLock.h"
 #include "rfb/VendorDefs.h"
 

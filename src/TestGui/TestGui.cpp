@@ -1,9 +1,9 @@
 
-#include "Utils/CommonHeader.h"
-#include "vnc_server_app/CrashHook.h"
-#include "vnc_server_app/WinEventLogWriter.h"
-#include "vnc_server_app/MntServerApplication.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "utils/CommonHeader.h"
+#include "mnt_server_app/CrashHook.h"
+#include "mnt_server_app/WinEventLogWriter.h"
+#include "mnt_server_app/MntServerApplication.h"
+#include "mnt_server_app/NamingDefs.h"
 
 int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)
 {

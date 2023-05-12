@@ -1,7 +1,7 @@
 #include "UserInputClient.h"
 #include "thread/AutoLock.h"
 #include "ReconnectException.h"
-#include "Utils/BrokenHandleException.h"
+#include "utils/BrokenHandleException.h"
 
 UserInputClient::UserInputClient(BlockingGate* forwGate, DesktopSrvDispatcher* dispatcher, ClipboardListener* clipboardListener)
   : DesktopServerProto(forwGate),

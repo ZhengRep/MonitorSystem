@@ -1,6 +1,6 @@
 #include "FrameBuffer.h"
 #include<string.h>
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 FrameBuffer::FrameBuffer(void)
     :m_buffer(0)

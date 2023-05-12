@@ -1,8 +1,8 @@
 #include "ControlCommand.h"
 #include "RemoteException.h"
 #include "ControlAuthException.h"
-#include "Utils/CommonHeader.h"
-#include "Utils/Exception.h"
+#include "utils/CommonHeader.h"
+#include "utils/Exception.h"
 #include "io_lib/IOException.h"
 
 ControlCommand::ControlCommand(Command* command, Notificator* notificator)

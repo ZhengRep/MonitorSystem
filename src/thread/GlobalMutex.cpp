@@ -1,5 +1,5 @@
 #include "GlobalMutex.h"
-#include "winSystem/SystemException.h"
+#include "win_system/SystemException.h"
 #include <Aclapi.h>
 
 GlobalMutex::GlobalMutex(const TCHAR* name, bool interSession, bool throwIfExist)

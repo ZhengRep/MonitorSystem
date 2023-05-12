@@ -1,9 +1,9 @@
 #include "ControlAuth.h"
 
-#include "Utils/AnsiStringStorage.h"
+#include "utils/AnsiStringStorage.h"
 #include "ControlProto.h"
 #include "thread/AutoLock.h"
-#include "Utils/DesCrypt.h"
+#include "utils/DesCrypt.h"
 
 ControlAuth::ControlAuth(ControlGate* gate, const TCHAR* password)
   : m_gate(gate)

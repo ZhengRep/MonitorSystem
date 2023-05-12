@@ -1,6 +1,6 @@
 #pragma once
 #include <stdio.h>
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "rfb/PixelFormat.h"
 #include "libjpeg/jpeglib.h"
 

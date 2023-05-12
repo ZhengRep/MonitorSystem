@@ -1,7 +1,7 @@
 #include "PasswordControl.h"
-#include "Utils/MntPassCrypt.h"
-#include "Utils/StringTable.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/MntPassCrypt.h"
+#include "utils/StringTable.h"
+#include "utils/AnsiStringStorage.h"
 #include "ChangePasswordDialog.h"
 #include "mnt_server/resource.h"
 

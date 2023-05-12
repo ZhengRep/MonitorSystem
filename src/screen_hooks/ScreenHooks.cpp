@@ -1,8 +1,8 @@
 #include "ScreenHooks.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "mnt_server_app/NamingDefs.h"
 #include "region/Region.h"
 #include "region/Point.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 LRESULT CALLBACK callWndRetProc(int nCode, WPARAM wParam, LPARAM lParam);
 LRESULT CALLBACK getMsgProc(int code, WPARAM wParam, LPARAM lParam);

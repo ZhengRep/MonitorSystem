@@ -1,5 +1,5 @@
 #include "GrabOptimizator.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 
 GrabOptimizator::GrabOptimizator(LogWriter* log)
   : m_gSum(0),

@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "DesktopConfigLocal.h"
 #include "thread/GuiThread.h"
 #include "WallpaperUtil.h"

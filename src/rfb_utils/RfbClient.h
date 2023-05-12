@@ -1,6 +1,6 @@
 #pragma once
 #include "network/socket/SocketIPv4.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "thread/Thread.h"
 #include "network/RfbOutputGate.h"
 #include "desktop/Desktop.h"
@@ -11,8 +11,8 @@
 #include "ClientInputHandler.h"
 #include "ClientInputEventListener.h"
 #include "ClientTerminationListener.h"
-#include "vnc_server_app/NewConnectionEvents.h"
-#include "Utils/DemandTimer.h"
+#include "mnt_server_app/NewConnectionEvents.h"
+#include "utils/DemandTimer.h"
 
 class ClientAuthListener;
 

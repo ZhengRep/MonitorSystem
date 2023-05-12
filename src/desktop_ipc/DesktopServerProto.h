@@ -1,10 +1,10 @@
 #pragma once
 #include "region/Point.h"
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include "rfb/FrameBuffer.h"
 #include "region/Region.h"
 #include "region/Dimension.h"
-#include "Utils/DateTime.h"
+#include "utils/DateTime.h"
 #include "BlockingGate.h"
 
 class DesktopServerProto

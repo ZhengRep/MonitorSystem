@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/CommonHeader.h"
-#include "Utils/StringStorage.h"
+#include "utils/CommonHeader.h"
+#include "utils/StringStorage.h"
 #include "region/Rect.h"
 
 class PortMappingRect: public Rect

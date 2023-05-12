@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 
 struct TightColorList {
   TightColorList* next;

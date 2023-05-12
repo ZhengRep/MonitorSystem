@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/CommandLine.h"
-#include "Utils/CommandLineFormatException.h"
+#include "utils/CommandLine.h"
+#include "utils/CommandLineFormatException.h"
 #include "region/Rect.h"
 
 class ControlCommandLine : private CommandLine

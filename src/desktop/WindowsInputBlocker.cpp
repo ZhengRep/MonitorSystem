@@ -1,5 +1,5 @@
 #include "WindowsInputBlocker.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 #include "thread/AutoLock.h"
 
 LocalMutex WindowsInputBlocker::m_instanceMutex;

@@ -5,9 +5,9 @@
 #include "ShutdownCommand.h"
 #include "ControlCommand.h"
 #include "UpdateLocalConfigCommand.h"
-#include "Utils/ResourceLoader.h"
-#include "Utils/StringTable.h"
-#include "Utils/MacroCommand.h"
+#include "utils/ResourceLoader.h"
+#include "utils/StringTable.h"
+#include "utils/MacroCommand.h"
 #include "mnt_server/resource.h"
 
 #include <crtdbg.h>

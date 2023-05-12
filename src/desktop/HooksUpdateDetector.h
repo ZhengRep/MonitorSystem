@@ -1,10 +1,10 @@
 #pragma once
 #include "UpdateDetector.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "HookInstaller.h"
 #include "gui/MessageWindow.h"
 #include "HookUpdateTimer.h"
-#include "winSystem/Process.h"
+#include "win_system/Process.h"
 #include "log_writer/LogWriter.h"
 
 class HooksUpdateDetector : public UpdateDetector

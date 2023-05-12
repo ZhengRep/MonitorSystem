@@ -2,7 +2,7 @@
 #include "UpdateKeeper.h"
 #include "CursorShapeGrabber.h"
 #include "UpdateDetector.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "log_writer/LogWriter.h"
 
 class CursorShapeDetector : public UpdateDetector

@@ -5,7 +5,7 @@
 #include "ServerConfig.h"
 #include "ConfigReloadListener.h"
 #include "RegistrySecurityAttributes.h"
-#include "Utils/ListenerContainer.h"
+#include "utils/ListenerContainer.h"
 
 class Configurator: public ListenerContainer<ConfigReloadListener*>
 {

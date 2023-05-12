@@ -4,9 +4,9 @@
 #include "UIDataAccess.h"
 #include "server_config_lib/Configurator.h"
 #include "server_config_lib/IpAccessControl.h"
-#include "Utils/CommonHeader.h"
-#include "Utils/StringParser.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/CommonHeader.h"
+#include "utils/StringParser.h"
+#include "utils/AnsiStringStorage.h"
 #include "mnt_server/resource.h"
 
 IpAccessControlDialog::IpAccessControlDialog()

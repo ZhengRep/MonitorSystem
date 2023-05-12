@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/CommonHeader.h"
-#include "Utils/Exception.h"
+#include "utils/CommonHeader.h"
+#include "utils/Exception.h"
 #include "Lockable.h"
 
 class GlobalMutex : public Lockable

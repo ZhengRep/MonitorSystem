@@ -1,10 +1,10 @@
 #include "WindowsUserInput.h"
 #include "thread/DesktopSelector.h"
-#include "winSystem/Environment.h"
-#include "winSystem/Keyboard.h"
+#include "win_system/Environment.h"
+#include "win_system/Keyboard.h"
 #include "gui/WindowFinder.h"
-#include "Utils/BrokenHandleException.h"
-#include "Utils/Macros.h"
+#include "utils/BrokenHandleException.h"
+#include "utils/Macros.h"
 
 WindowsUserInput::WindowsUserInput(ClipboardListener* clipboardListener, bool ctrlAltDelEnabled, LogWriter* log)
   : m_prevKeyFlag(0),

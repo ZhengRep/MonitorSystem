@@ -1,8 +1,8 @@
 #include "ChangePasswordDialog.h"
 #include "mnt_server/resource.h"
 #include "server_config_lib/ServerConfig.h"
-#include "Utils/MntPassCrypt.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/MntPassCrypt.h"
+#include "utils/AnsiStringStorage.h"
 
 ChangePasswordDialog::ChangePasswordDialog(Control* parent, bool isNewPassword)
   : BaseDialog(IDD_CHANGE_PASSWORD), m_allowEmptyPassword(false), m_newPassword(isNewPassword)

@@ -1,5 +1,5 @@
 #include "WindowsCursorShapeGrabber.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 #include "WinCursorShapeUtils.h"
 
 WindowsCursorShapeGrabber::WindowsCursorShapeGrabber(void)

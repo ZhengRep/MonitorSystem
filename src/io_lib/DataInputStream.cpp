@@ -1,5 +1,5 @@
 #include "DataInputStream.h"
-#include "Utils/Utf8StringStorage.h"
+#include "utils/Utf8StringStorage.h"
 
 #define SETBYTE(y, n) (((y) & 0xFF) << ((n) * 8))
 

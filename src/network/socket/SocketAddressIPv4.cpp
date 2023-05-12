@@ -1,6 +1,6 @@
 #include "SocketAddressIPv4.h"
 #include "SocketException.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/AnsiStringStorage.h"
 #include "thread/AutoLock.h"
 
 #pragma warning(push)

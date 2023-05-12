@@ -1,6 +1,6 @@
 #include "CursorUpdates.h"
 #include "thread/AutoLock.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 CursorUpdates::CursorUpdates(LogWriter* log)
   : m_blockCurPosTime(0),

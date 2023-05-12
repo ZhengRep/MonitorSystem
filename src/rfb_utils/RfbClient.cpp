@@ -1,5 +1,5 @@
 #include "RfbClient.h"
-#include "Utils/MemUsage.h"
+#include "utils/MemUsage.h"
 #include "ft_server_lib/FileTransferRequestHandler.h"
 #include "server_config_lib/ServerConfig.h"
 #include "server_config_lib/Configurator.h"
@@ -7,7 +7,7 @@
 #include "io_lib/BufferedInputStream.h"
 #include "EchoExtensionRequestHandler.h"
 #include "RfbInitializer.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 RfbClient::RfbClient(NewConnectionEvents* newConnectionEvents, SocketIPv4* socket, ClientTerminationListener* extTermListener, ClientAuthListener* extAuthListener, bool viewOnly, bool isOutgoing, unsigned int id, const ViewPortState* constViewPort, const ViewPortState* dynViewPort, int idleTimeout, LogWriter* log)
   : m_socket(socket), // now we own the socket

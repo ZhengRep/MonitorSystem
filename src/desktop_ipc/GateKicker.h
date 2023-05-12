@@ -1,7 +1,7 @@
 #pragma once
 #include "BlockingGate.h"
 #include "thread/Thread.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 
 class GateKicker: public Thread
 {

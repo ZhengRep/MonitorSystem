@@ -2,7 +2,7 @@
 
 #include "io_lib/DataInputStream.h"
 #include "io_lib/DataOutputStream.h"
-#include "winSystem/NamedPipe.h"
+#include "win_system/NamedPipe.h"
 
 SecurityPipeClient::SecurityPipeClient(Channel* tempPublChan, unsigned int maxPortionSize)
   : m_secChannel(0)

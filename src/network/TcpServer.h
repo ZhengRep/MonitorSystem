@@ -1,7 +1,7 @@
 #pragma once
 #include "thread/Thread.h"
 #include "socket/SocketIPv4.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 
 class TcpServer: public Thread
 {

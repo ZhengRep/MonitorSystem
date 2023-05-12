@@ -8,7 +8,7 @@
 #include "server_config_lib/Configurator.h"
 #include "ft_common/WinFilePath.h"
 #include "ft_common/FolderListener.h"
-#include "Utils/Md5.h"
+#include "utils/Md5.h"
 
 FileTransferRequestHandler::FileTransferRequestHandler(RfbCodeRegistrator* registrator, RfbOutputGate* output, Desktop* desktop, LogWriter* log, bool enabled)
   : m_downloadFile(NULL), m_fileInputStream(NULL),

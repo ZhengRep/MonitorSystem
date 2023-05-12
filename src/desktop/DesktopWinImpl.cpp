@@ -6,8 +6,8 @@
 #include "WindowsInputBlocker.h"
 #include "desktop_ipc/UserInputClient.h"
 #include "WindowsUserInput.h"
-#include "winSystem/Environment.h"
-#include "winSystem/WindowsDisplays.h"
+#include "win_system/Environment.h"
+#include "win_system/WindowsDisplays.h"
 
 DesktopWinImpl::DesktopWinImpl(ClipboardListener* extClipListener,
   UpdateSendingListener* extUpdSendingListener,

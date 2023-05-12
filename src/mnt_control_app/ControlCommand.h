@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/Command.h"
+#include "utils/Command.h"
 #include "Notificator.h"
 
 class ControlCommand : public Command

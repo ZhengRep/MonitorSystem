@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/Command.h"
-#include "winSystem/DynamicLibrary.h"
+#include "utils/Command.h"
+#include "win_system/DynamicLibrary.h"
 
 class HookInstaller
 {

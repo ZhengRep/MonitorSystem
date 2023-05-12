@@ -4,7 +4,7 @@
 #include "gui/CheckBox.h"
 #include "gui/BalloonTip.h"
 #include "server_config_lib/IpAccessRule.h"
-#include "Utils/StringStorage.h"
+#include "utils/StringStorage.h"
 
 class EditIpAccessRuleDialog : public BaseDialog
 {

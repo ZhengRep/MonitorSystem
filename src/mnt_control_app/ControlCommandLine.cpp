@@ -1,9 +1,9 @@
 #include "ControlCommandLine.h"
 
-#include "Utils/CommonHeader.h"
-#include "Utils/CommandLine.h"
+#include "utils/CommonHeader.h"
+#include "utils/CommandLine.h"
 #include "region/RectSerializer.h"
-#include "Utils/StringParser.h"
+#include "utils/StringParser.h"
 #include "ConnectStringParser.h"
 
 const TCHAR ControlCommandLine::SET_CONTROL_PASSWORD[] = _T("-setservicecontrolpass");

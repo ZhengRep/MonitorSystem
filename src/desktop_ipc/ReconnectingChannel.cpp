@@ -1,7 +1,7 @@
 #include "ReconnectingChannel.h"
 #include "thread/AutoLock.h"
 #include "ReconnectException.h"
-#include "Utils/DateTime.h"
+#include "utils/DateTime.h"
 
 ReconnectingChannel::ReconnectingChannel(unsigned int timeOut, LogWriter* log)
   : m_timeOut(timeOut),

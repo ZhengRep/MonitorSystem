@@ -1,7 +1,7 @@
 #include "WinFile.h"
 #include "EOFException.h"
-#include "winSystem/Environment.h"
-#include "winSystem/SystemException.h"
+#include "win_system/Environment.h"
+#include "win_system/SystemException.h"
 
 WinFile::WinFile()
   :m_hFile(INVALID_HANDLE_VALUE)

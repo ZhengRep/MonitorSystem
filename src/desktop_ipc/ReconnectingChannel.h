@@ -1,7 +1,7 @@
 #pragma once
 #include "io_lib/Channel.h"
 #include "thread/LocalMutex.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "log_writer/LogWriter.h"
 
 class ReconnectingChannel: public Channel

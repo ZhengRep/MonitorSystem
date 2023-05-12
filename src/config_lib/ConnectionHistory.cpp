@@ -1,5 +1,5 @@
 #include "ConnectionHistory.h"
-#include "winSystem/Registry.h"
+#include "win_system/Registry.h"
 #include <crtdbg.h>
 
 ConnectionHistory::ConnectionHistory(RegistryKey* key, size_t limit)

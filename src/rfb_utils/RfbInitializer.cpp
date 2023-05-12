@@ -1,14 +1,14 @@
 #include "RfbInitializer.h"
-#include "vnc_server_app/NamingDefs.h"
-#include "winSystem/Environment.h"
+#include "mnt_server_app/NamingDefs.h"
+#include "win_system/Environment.h"
 #include <time.h>
-#include "Utils/AnsiStringStorage.h"
+#include "utils/AnsiStringStorage.h"
 #include "server_config_lib/ServerConfig.h"
 #include "server_config_lib/Configurator.h"
 #include "rfb/AuthDefs.h"
 #include "rfb/VendorDefs.h"
-#include "Utils/MntPassCrypt.h"
-#include "Utils/Macros.h"
+#include "utils/MntPassCrypt.h"
+#include "utils/Macros.h"
 
 RfbInitializer::RfbInitializer(Channel* stream, ClientAuthListener* extAuthListener, RfbClient* client, bool authAllowed)
   : m_shared(false),

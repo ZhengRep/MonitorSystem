@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/StringStorage.h"
-#include "Utils/inttypes.h"
+#include "utils/StringStorage.h"
+#include "utils/inttypes.h"
 #include "file_lib/File.h"
 
 class FileInfo

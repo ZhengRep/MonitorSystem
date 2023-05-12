@@ -1,5 +1,5 @@
 #include "ConnectStringParser.h"
-#include "Utils/StringParser.h"
+#include "utils/StringParser.h"
 
 ConnectStringParser::ConnectStringParser()
 {

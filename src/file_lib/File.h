@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/CommonHeader.h"
-#include "Utils/inttypes.h"
+#include "utils/CommonHeader.h"
+#include "utils/inttypes.h"
 
 class File
 {

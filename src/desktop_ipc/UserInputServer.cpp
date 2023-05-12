@@ -1,6 +1,6 @@
 #include "UserInputServer.h"
 #include "thread/AutoLock.h"
-#include "Utils/BrokenHandleException.h"
+#include "utils/BrokenHandleException.h"
 
 UserInputServer::UserInputServer(BlockingGate* forwGate,
   DesktopSrvDispatcher* dispatcher,

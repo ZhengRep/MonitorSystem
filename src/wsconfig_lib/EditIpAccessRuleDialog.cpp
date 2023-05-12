@@ -1,7 +1,7 @@
 #include "EditIpAccessRuleDialog.h"
 #include "EditIpAccessRuleDialog.h"
-#include "Utils/StringParser.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/StringParser.h"
+#include "utils/AnsiStringStorage.h"
 #include "mnt_server/resource.h"
 
 EditIpAccessRuleDialog::EditIpAccessRuleDialog()

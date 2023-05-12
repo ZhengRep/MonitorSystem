@@ -1,5 +1,5 @@
 #include "WindowsScreenGrabber.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 WindowsScreenGrabber::WindowsScreenGrabber(void)
   : m_destDC(NULL), m_screenDC(NULL), m_hbmDIB(NULL), m_hbmOld(NULL)

@@ -1,7 +1,7 @@
 #include "MntLogFilename.h"
 #include "file_lib/File.h"
-#include "winSystem/Environment.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "win_system/Environment.h"
+#include "mnt_server_app/NamingDefs.h"
 
 void MntLogFilename::queryLogFileDirectory(bool forService, bool shareToAll, StringStorage* logFileDirectory)
 {

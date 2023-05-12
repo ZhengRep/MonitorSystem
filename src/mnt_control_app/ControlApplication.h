@@ -1,9 +1,9 @@
 #pragma once
 #include "Transport.h"
 #include "TransportFactory.h"
-#include "Utils/CommonHeader.h"
-#include "Utils/ResourceLoader.h"
-#include "Utils/Command.h"
+#include "utils/CommonHeader.h"
+#include "utils/ResourceLoader.h"
+#include "utils/Command.h"
 #include "server_config_lib/Configurator.h"
 #include "log_writer/LogWriter.h"
 #include "thread/Thread.h"
@@ -12,7 +12,7 @@
 #include "ControlAuthException.h"
 #include "ControlProxy.h"
 #include "Notificator.h"
-#include "winSystem/WindowsApplication.h"
+#include "win_system/WindowsApplication.h"
 
 class ControlTrayIcon;
 

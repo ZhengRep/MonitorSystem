@@ -1,5 +1,5 @@
 #include "DesktopBaseImpl.h"
-#include "Utils/BrokenHandleException.h"
+#include "utils/BrokenHandleException.h"
 
 DesktopBaseImpl::DesktopBaseImpl(ClipboardListener* extClipListener, UpdateSendingListener* extUpdSendingListener, AbnormDeskTermListener* extDeskTermListener, LogWriter* log)
   : m_extUpdSendingListener(extUpdSendingListener),

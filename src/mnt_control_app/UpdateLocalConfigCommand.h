@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/Command.h"
+#include "utils/Command.h"
 #include "ControlProxy.h"
 
 //Command that copies current configuration of server

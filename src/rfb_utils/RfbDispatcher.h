@@ -1,8 +1,8 @@
 #pragma once
 #include "thread/Thread.h"
 #include "RfbDispatcherListener.h"
-#include "Utils/AnEventListener.h"
-#include "winSystem/WindowsEvent.h"
+#include "utils/AnEventListener.h"
+#include "win_system/WindowsEvent.h"
 #include<map>
 
 class RfbDispatcher: public Thread

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "rfb/FrameBuffer.h"
-#include "winSystem/DibSection.h"
+#include "win_system/DibSection.h"
 
 class DibFrameBuffer : public FrameBuffer
 {

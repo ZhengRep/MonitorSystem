@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include "network/RfbInputGate.h"
 #include "network/RfbOutputGate.h"
 #include "rfb_utils/RfbCodeRegistrator.h"

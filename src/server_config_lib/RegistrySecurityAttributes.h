@@ -1,6 +1,6 @@
 #pragma once
-#include "winSystem/security/SecurityIdentifier.h"
-#include "winSystem/security/SecurityDescriptor.h"
+#include "win_system/security/SecurityIdentifier.h"
+#include "win_system/security/SecurityDescriptor.h"
 
 #include <AccCtrl.h>
 #include <AclAPI.h>

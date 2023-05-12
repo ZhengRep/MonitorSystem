@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/Command.h"
+#include "utils/Command.h"
 #include "ControlProxy.h"
 
 class ShutdownCommand : public Command

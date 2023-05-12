@@ -1,5 +1,5 @@
 #pragma once
-#include "winSystem/LocalWindowsApplication.h"
+#include "win_system/LocalWindowsApplication.h"
 #include "ParentWatcher.h"
 
 class HookLoaderApplication: public WindowsApplication, private ParentEventsListener

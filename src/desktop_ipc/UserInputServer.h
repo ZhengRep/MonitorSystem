@@ -1,9 +1,9 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "DesktopServerProto.h"
 #include "ClientListener.h"
 #include "desktop/WindowsUserInput.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "DesktopSrvDispatcher.h"
 #include "log_writer/LogWriter.h"
 

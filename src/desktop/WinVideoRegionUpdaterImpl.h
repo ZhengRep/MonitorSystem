@@ -1,12 +1,12 @@
 #pragma once
-#include "Utils/DateTime.h"
+#include "utils/DateTime.h"
 #include "region/Region.h"
-#include "Utils/StringVector.h"
+#include "utils/StringVector.h"
 #include "ScreenDriver.h"
 #include "thread/LocalMutex.h"
 #include "log_writer/LogWriter.h"
 #include "thread/Thread.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 
 class WinVideoRegionUpdaterImpl : public ScreenDriver, Thread
 {

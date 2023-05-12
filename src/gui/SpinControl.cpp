@@ -1,5 +1,5 @@
 #include "SpinControl.h"
-#include "Utils/StringParser.h"
+#include "utils/StringParser.h"
 
 SpinControl::SpinControl()
 	:m_buddy(NULL),

@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "DesktopServerWatcher.h"
 #include "desktop_ipc/DesktopConfigClient.h"
 #include "desktop_ipc/ReconnectingChannel.h"
@@ -8,7 +8,7 @@
 #include "desktop_ipc/DesktopSrvDispatcher.h"
 #include "DesktopBaseImpl.h"
 #include "log_writer/LogWriter.h"
-#include "Utils/AnEventListener.h"
+#include "utils/AnEventListener.h"
 #include "desktop_ipc/ReconnectionListener.h"
 #include "UpdateListener.h"
 

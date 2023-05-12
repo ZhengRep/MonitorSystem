@@ -1,6 +1,6 @@
 #include "UpdateHandlerClient.h"
 #include "ReconnectException.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 UpdateHandlerClient::UpdateHandlerClient(BlockingGate* forwGate, DesktopSrvDispatcher* dispatcher, UpdateListener* externalUpdateListener, LogWriter* log)
   :DesktopServerProto(forwGate), m_externalUpdateListener(externalUpdateListener),

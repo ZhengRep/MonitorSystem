@@ -1,7 +1,7 @@
-#include "Utils/CommonHeader.h"
-#include "Utils/StringParser.h"
+#include "utils/CommonHeader.h"
+#include "utils/StringParser.h"
 #include "HookLoaderApplication.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "mnt_server_app/NamingDefs.h"
 
 int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)
 {

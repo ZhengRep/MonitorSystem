@@ -2,8 +2,8 @@
 #include "Thread/GuiThread.h"
 #include "BlockingGate.h"
 #include "ClientListener.h"
-#include "Utils/AnEventListener.h"
-#include "winSystem/WindowsEvent.h"
+#include "utils/AnEventListener.h"
+#include "win_system/WindowsEvent.h"
 #include "log_writer/LogWriter.h"
 #include <map>
 

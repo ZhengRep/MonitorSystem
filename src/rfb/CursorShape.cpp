@@ -1,5 +1,5 @@
 #include "CursorShape.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 CursorShape::~CursorShape()
 {

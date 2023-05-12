@@ -1,7 +1,7 @@
 #include "WallpaperUtil.h"
 #include "server_config_lib/Configurator.h"
-#include "winSystem/Impersonator.h"
-#include "winSystem/AutoImpersonator.h"
+#include "win_system/Impersonator.h"
+#include "win_system/AutoImpersonator.h"
 
 WallpaperUtil::WallpaperUtil(LogWriter* log)
   : m_wasDisabled(false),

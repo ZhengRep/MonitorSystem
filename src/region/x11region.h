@@ -1,6 +1,6 @@
 #pragma once
 #include<stdio.h>
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 
 /* Return values from RectIn() */
 #define rgnOUT 0

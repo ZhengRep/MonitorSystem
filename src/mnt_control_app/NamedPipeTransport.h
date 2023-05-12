@@ -1,7 +1,7 @@
 #pragma once
 #include "Transport.h"
-#include "winSystem/Pipe.h"
-#include "winSystem/PipeServer.h"
+#include "win_system/Pipe.h"
+#include "win_system/PipeServer.h"
 
 class NamedPipeTransport: public Transport
 {

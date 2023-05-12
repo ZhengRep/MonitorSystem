@@ -3,7 +3,7 @@
 #include "gui/CheckBox.h"
 #include "gui/TextBox.h"
 #include "gui/BalloonTip.h"
-#include "winSystem/RegistryKey.h"
+#include "win_system/RegistryKey.h"
 #include "config_lib/ConnectionHistory.h"
 
 // Set passwords dialog. Just allows user to set rfb and administrators

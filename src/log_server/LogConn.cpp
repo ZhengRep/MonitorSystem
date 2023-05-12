@@ -5,7 +5,7 @@
 #include "SecurityPipeServer.h"
 #include "io_lib/DataInputStream.h"
 #include "io_lib/DataOutputStream.h"
-#include "Utils/DateTime.h"
+#include "utils/DateTime.h"
 
 LogConn::LogConn(Channel* channel, LogConnAuthListener* extAuthListener,
   LogListener* extLogListener, unsigned char logLevel)

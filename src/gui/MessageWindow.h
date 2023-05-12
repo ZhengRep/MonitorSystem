@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "WindowMessageHandler.h"
 
 class MessageWindow

@@ -1,6 +1,6 @@
 #include "HextileEncoder.h"
 #include "HextileTile.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 HextileEncoder::HextileEncoder(PixelConverter* conv, DataOutputStream* output)
   :Encoder(conv, output)

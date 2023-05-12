@@ -1,5 +1,5 @@
 #include "PixelConverter.h"
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include <crtdbg.h>
 
 PixelConverter::PixelConverter(void)

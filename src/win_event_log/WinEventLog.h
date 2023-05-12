@@ -1,7 +1,7 @@
 #pragma once
 #include "thread/LocalMutex.h"
 #include "log_writer/LogWriter.h"
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include <vector>
 
 typedef std::vector<TCHAR*> StringContainer;

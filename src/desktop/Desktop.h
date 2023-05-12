@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/StringStorage.h"
+#include "utils/StringStorage.h"
 #include "region/Dimension.h"
 #include "region/Region.h"
 #include "rfb/PixelFormat.h"

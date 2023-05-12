@@ -1,6 +1,6 @@
 #include "DesktopServerProto.h"
 #include "server_config_lib/Configurator.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 
 DesktopServerProto::DesktopServerProto(BlockingGate* forwGate)
   :m_forwGate(forwGate)

@@ -1,8 +1,8 @@
 #pragma once
-#include "Utils/Exception.h"
-#include "Utils/Singleton.h"
+#include "utils/Exception.h"
+#include "utils/Singleton.h"
 #include "log_writer/LogWriter.h"
-#include "winSystem/Impersonator.h"
+#include "win_system/Impersonator.h"
 #include "desktop/Desktop.h"
 
 class FileTransferSecurity: private Impersonator

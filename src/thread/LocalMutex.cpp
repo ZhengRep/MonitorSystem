@@ -1,5 +1,5 @@
 #include "LocalMutex.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 
 LocalMutex::LocalMutex()
 {

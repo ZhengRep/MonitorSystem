@@ -1,5 +1,5 @@
 #include "CommonInputValidation.h"
-#include "Utils/StringParser.h"
+#include "utils/StringParser.h"
 #include "gui/BalloonTip.h"
 #include "mnt_server/resource.h"
 #include "UIDataAccess.h"

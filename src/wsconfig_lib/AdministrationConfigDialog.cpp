@@ -7,12 +7,12 @@
 #include "file_lib/File.h"
 #include "server_config_lib/ServerConfig.h"
 #include "server_config_lib/Configurator.h"
-#include "Utils/CommonHeader.h"
-#include "Utils/StringParser.h"
+#include "utils/CommonHeader.h"
+#include "utils/StringParser.h"
 #include "ChangePasswordDialog.h"
-#include "Utils/StringTable.h"
-#include "winSystem/Process.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "utils/StringTable.h"
+#include "win_system/Process.h"
+#include "mnt_server_app/NamingDefs.h"
 #include "mnt_server/resource.h"
 
 AdministrationConfigDialog::AdministrationConfigDialog()

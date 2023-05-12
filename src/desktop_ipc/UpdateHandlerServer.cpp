@@ -1,5 +1,5 @@
 #include "UpdateHandlerServer.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 UpdateHandlerServer::UpdateHandlerServer(BlockingGate* forwGate,
   DesktopSrvDispatcher* dispatcher,

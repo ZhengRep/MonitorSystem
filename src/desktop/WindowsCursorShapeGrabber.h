@@ -1,7 +1,7 @@
 #pragma once
 #include "CursorShapeGrabber.h"
-#include "Utils/CommonHeader.h"
-#include "winSystem/Screen.h"
+#include "utils/CommonHeader.h"
+#include "win_system/Screen.h"
 
 class WindowsCursorShapeGrabber : public CursorShapeGrabber
 {

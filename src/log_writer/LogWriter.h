@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Logger.h"
-#include "Utils/CharDefs.h"
+#include "utils/CharDefs.h"
 #include "ProfileLogger.h"
 
 class LogWriter

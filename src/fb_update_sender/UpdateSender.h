@@ -11,7 +11,7 @@
 #include "rfb_utils/JpegEncoder.h"
 #include "rfb_utils/EncoderStore.h"
 #include "rfb_utils/RfbCodeRegistrator.h"
-#include "Utils/DateTime.h"
+#include "utils/DateTime.h"
 #include "CursorUpdates.h"
 #include "SenderControlInformationInterface.h"
 #include "log_writer/LogWriter.h"

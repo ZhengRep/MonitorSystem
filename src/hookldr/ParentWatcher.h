@@ -1,8 +1,8 @@
 #pragma once
-#include "winSystem/ParentProcess.h"
+#include "win_system/ParentProcess.h"
 #include "ParentEventsListener.h"
-#include "winSystem/WindowsEvent.h"
-#include "Utils/CommonHeader.h"
+#include "win_system/WindowsEvent.h"
+#include "utils/CommonHeader.h"
 #include "thread/Thread.h"
 #include <TlHelp32.h>
 

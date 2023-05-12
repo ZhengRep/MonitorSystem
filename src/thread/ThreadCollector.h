@@ -1,7 +1,7 @@
 #pragma once
 #include "Thread.h"
 #include "LocalMutex.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include <list>
 
 using namespace std;

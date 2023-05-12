@@ -2,7 +2,7 @@
 #include "gui/BaseDialog.h"
 #include "gui/TextBox.h"
 #include "gui/BalloonTip.h"
-#include "Utils/StringStorage.h"
+#include "utils/StringStorage.h"
 
 class ChangePasswordDialog : public BaseDialog
 {

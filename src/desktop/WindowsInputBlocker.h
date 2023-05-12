@@ -1,9 +1,9 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "thread/GuiThread.h"
 #include "thread/LocalMutex.h"
-#include "winSystem/WindowsEvent.h"
-#include "winSystem/WinTimeMillis.h"
+#include "win_system/WindowsEvent.h"
+#include "win_system/WinTimeMillis.h"
 #include "InputBlocker.h"
 #include "log_writer/LogWriter.h"
 

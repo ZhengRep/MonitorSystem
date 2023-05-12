@@ -1,5 +1,5 @@
 #include "UpdateHandlerImpl.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 UpdateHandlerImpl::UpdateHandlerImpl(UpdateListener* externalUpdateListener, ScreenDriverFactory* scrDriverFactory,
   LogWriter* log)

@@ -1,10 +1,10 @@
 #pragma once
 #include "UserInput.h"
 #include "WindowsClipboard.h"
-#include "winSystem/WindowsDisplays.h"
-#include "winSystem/InputInjector.h"
+#include "win_system/WindowsDisplays.h"
+#include "win_system/InputInjector.h"
 #include "log_writer/LogWriter.h"
-#include "Utils/Keymap.h"
+#include "utils/Keymap.h"
 
 class WindowsUserInput: public UserInput
 {

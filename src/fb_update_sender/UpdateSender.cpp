@@ -3,10 +3,10 @@
 #include "rfb/MsgDefs.h"
 #include <vector>
 #include <algorithm>
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 #include "UpdSenderMsgDefs.h"
 #include "rfb_utils/ClipboardExchange.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 UpdateSender::UpdateSender(RfbCodeRegistrator* codeRegtor, UpdateRequestListener* updReqListener, SenderControlInformationInterface* senderControlInformation, RfbOutputGate* output, int id, Desktop* desktop, LogWriter* log)
   : m_updReqListener(updReqListener),

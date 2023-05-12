@@ -1,12 +1,12 @@
 #include "Configurator.h"
-#include "winSystem/Environment.h"
+#include "win_system/Environment.h"
 #include "wsconfig_lib/MntLogFilename.h"
 #include "config_lib/RegistrySettingsManager.h"
 
-#include "winSystem/RegistryKey.h"
-#include "winSystem/Registry.h"
+#include "win_system/RegistryKey.h"
+#include "win_system/Registry.h"
 
-#include "vnc_server_app/NamingDefs.h"
+#include "mnt_server_app/NamingDefs.h"
 #pragma warning(disable: 4996)
 
 Configurator* Configurator::s_instance = NULL;

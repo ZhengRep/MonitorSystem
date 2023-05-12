@@ -1,6 +1,6 @@
 #include "ControlPipeName.h"
-#include "vnc_server_app/NamingDefs.h"
-#include "winSystem/WTS.h"
+#include "mnt_server_app/NamingDefs.h"
+#include "win_system/WTS.h"
 
 void ControlPipeName::createPipeName(bool forService, StringStorage* pipeName, LogWriter* log)
 {

@@ -1,6 +1,6 @@
 #include "Thread.h"
 #include "AutoLock.h"
-#include "Utils/Exception.h"
+#include "utils/Exception.h"
 
 Thread::Thread()
     :m_terminated(false), m_active(false)

@@ -4,9 +4,9 @@
 #include "ControlProto.h"
 #include "server_config_lib/Configurator.h"
 #include "config_lib/RegistrySettingsManager.h"
-#include "Utils/MntPassCrypt.h"
-#include "Utils/AnsiStringStorage.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "utils/MntPassCrypt.h"
+#include "utils/AnsiStringStorage.h"
+#include "mnt_server_app/NamingDefs.h"
 #include "file_lib/WinFile.h"
 #include "mnt_server/resource.h"
 #include <crtdbg.h>

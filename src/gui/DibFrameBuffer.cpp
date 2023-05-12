@@ -1,5 +1,5 @@
 #include "DibFrameBuffer.h"
-#include "winSystem/SystemException.h"
+#include "win_system/SystemException.h"
 
 DibFrameBuffer::DibFrameBuffer()
   :m_dibSection(0)

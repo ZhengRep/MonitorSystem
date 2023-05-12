@@ -3,7 +3,7 @@
 #include "SocketException.h"
 #include "io_lib/Channel.h"
 #include "io_lib/IOException.h"
-#include "winSystem/WsaStartup.h"
+#include "win_system/WsaStartup.h"
 #include "thread/LocalMutex.h"
 
 class SocketIPv4

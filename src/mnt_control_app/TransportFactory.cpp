@@ -1,7 +1,7 @@
 #include "TransportFactory.h"
 #include "SocketIPv4Transport.h"
 #include "NamedPipeTransport.h"
-#include "winSystem/SecurityAttributes.h"
+#include "win_system/SecurityAttributes.h"
 
 Transport* TransportFactory::createSocketClientTransport(const TCHAR* connectHost,
   unsigned int connectPort)

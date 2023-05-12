@@ -1,4 +1,4 @@
-#include "winSystem/CurrentConsoleProcess.h"
+#include "win_system/CurrentConsoleProcess.h"
 
 int main() {
   /*LogWriter log;

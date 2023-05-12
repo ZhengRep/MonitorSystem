@@ -1,8 +1,8 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "desktop/UserInput.h"
 #include "desktop/ClipboardListener.h"
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include "DesktopServerProto.h"
 #include "DesktopSrvDispatcher.h"
 

@@ -1,6 +1,6 @@
 #pragma once
-#include "Utils/StringStorage.h"
-#include "winSystem/RegistryKey.h"
+#include "utils/StringStorage.h"
+#include "win_system/RegistryKey.h"
 #include "SettingsManager.h"
 
 class RegistrySettingsManager: public SettingsManager

@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/StringStorage.h"
+#include "utils/StringStorage.h"
 
 class WinFilePath: public StringStorage
 {

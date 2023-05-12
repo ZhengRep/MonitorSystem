@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/StringStorage.h"
+#include "utils/StringStorage.h"
 
 //Class contains information about
 //host access (allow, deny hosts etc)

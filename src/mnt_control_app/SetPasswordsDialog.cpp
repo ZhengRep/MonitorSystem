@@ -1,8 +1,8 @@
 #include "SetPasswordsDialog.h"
-#include "winSystem/Registry.h"
+#include "win_system/Registry.h"
 #include "SetPasswordsDialog.h"
 #include "mnt_server/resource.h"
-#include "Utils/AnsiStringStorage.h"
+#include "utils/AnsiStringStorage.h"
 
 SetPasswordsDialog::SetPasswordsDialog(bool initStateOfUseRfbAuth,
   bool initStateOfUseAdminAuth)

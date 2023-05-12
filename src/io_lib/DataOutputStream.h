@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include "OutputStream.h"
 #include "IOException.h"
 

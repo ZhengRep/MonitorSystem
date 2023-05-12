@@ -1,8 +1,8 @@
 #include "ViewPort.h"
 #include "thread/AutoLock.h"
 #include <crtdbg.h>
-#include "Utils/BrokenHandleException.h"
-#include "Utils/Macros.h"
+#include "utils/BrokenHandleException.h"
+#include "utils/Macros.h"
 
 ViewPort::ViewPort(LogWriter* log)
   :m_desktop(0),

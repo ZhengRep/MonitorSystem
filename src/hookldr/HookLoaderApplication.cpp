@@ -1,6 +1,6 @@
 #include "HookLoaderApplication.h"
-#include "Utils/StringParser.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "utils/StringParser.h"
+#include "mnt_server_app/NamingDefs.h"
 #include "desktop/HookInstaller.h"
 
 HookLoaderApplication::HookLoaderApplication(HINSTANCE appInstance, const TCHAR* windowClassName, const TCHAR* commandLine)

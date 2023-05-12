@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 
 #ifndef CAPTUREBLT
 #define CAPTUREBLT (DWORD)0x40000000 /*Include layered windows*/
@@ -8,9 +8,9 @@
 #include "ScreenGrabber.h"
 #include "region/Rect.h"
 #include "server_config_lib/Configurator.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "thread/GuiThread.h"
-#include "winSystem/Screen.h"
+#include "win_system/Screen.h"
 
 class WindowsScreenGrabber: public ScreenGrabber, public GuiThread
 {

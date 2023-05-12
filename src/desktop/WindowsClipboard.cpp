@@ -1,5 +1,5 @@
 #include "WindowsClipboard.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "mnt_server_app/NamingDefs.h"
 
 const HINSTANCE WindowsClipboard::m_hinst = GetModuleHandle(0);
 

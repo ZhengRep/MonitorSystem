@@ -1,5 +1,5 @@
 #include "Win32ScreenDriver.h"
-#include "Utils/Macros.h"
+#include "utils/Macros.h"
 
 Win32ScreenDriver::Win32ScreenDriver(UpdateKeeper* updateKeeper, UpdateListener* updateListener,
   FrameBuffer* fb, LocalMutex* fbLocalMutex, LogWriter* log)

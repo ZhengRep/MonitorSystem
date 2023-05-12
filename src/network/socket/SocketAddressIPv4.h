@@ -1,8 +1,8 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include "thread/LocalMutex.h"
 #include "SocketException.h"
-#include "winSystem/WsaStartup.h"
+#include "win_system/WsaStartup.h"
 
 void getLocalIPAddrString(char* buffer, int buflen);
 

@@ -1,6 +1,6 @@
 #include "HooksUpdateDetector.h"
-#include "vnc_server_app/NamingDefs.h"
-#include "winSystem/Environment.h"
+#include "mnt_server_app/NamingDefs.h"
+#include "win_system/Environment.h"
 
 HooksUpdateDetector::HooksUpdateDetector(UpdateKeeper* updateKeeper,
   UpdateListener* updateListener, LogWriter* log)

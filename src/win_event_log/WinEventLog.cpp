@@ -1,8 +1,8 @@
 #include "WinEventLog.h"
-#include "winSystem/RegistryKey.h"
-#include "winSystem/Environment.h"
-#include "Utils/Exception.h"
-#include "vnc_server_app/NamingDefs.h"
+#include "win_system/RegistryKey.h"
+#include "win_system/Environment.h"
+#include "utils/Exception.h"
+#include "mnt_server_app/NamingDefs.h"
 #include "thread/AutoLock.h"
 
 WinEventLog::WinEventLog(LogWriter* log)

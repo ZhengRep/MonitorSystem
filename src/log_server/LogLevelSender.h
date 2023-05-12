@@ -1,6 +1,6 @@
 #pragma once
 #include "thread/Thread.h"
-#include "winSystem/WindowsEvent.h"
+#include "win_system/WindowsEvent.h"
 #include "io_lib/DataOutputStream.h"
 
 class LogLevelSender : public Thread

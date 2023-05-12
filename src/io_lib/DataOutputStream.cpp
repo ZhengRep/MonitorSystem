@@ -1,5 +1,5 @@
 #include "DataOutputStream.h"
-#include "Utils/Utf8StringStorage.h"
+#include "utils/Utf8StringStorage.h"
 #include <vector>
 
 #define GETBYTE(x, n) (((x) >> ((n) * 8)) & 0xFF)

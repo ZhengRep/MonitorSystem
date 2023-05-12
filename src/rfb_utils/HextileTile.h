@@ -1,7 +1,7 @@
 #pragma once
 
 #include "TightPalette.h"
-#include "Utils/inttypes.h"
+#include "utils/inttypes.h"
 #include <crtdbg.h>
 
 template<class PIXEL_T> class HextileTile

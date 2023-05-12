@@ -1,2 +1,2 @@
-#include "vnc_server_app/MntServerApplication.h"
+#include "mnt_server_app/MntServerApplication.h"
 

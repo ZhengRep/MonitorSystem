@@ -1,7 +1,7 @@
 #pragma once
 #include "Encoder.h"
 #include "TightPalette.h"
-#include "Utils/Deflater.h"
+#include "utils/Deflater.h"
 
 
 class ZrleEncoder: public Encoder

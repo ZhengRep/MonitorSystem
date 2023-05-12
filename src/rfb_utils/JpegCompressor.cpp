@@ -1,6 +1,6 @@
 #include "JpegCompressor.h"
-#include "Utils/AnsiStringStorage.h"
-#include "Utils/Exception.h"
+#include "utils/AnsiStringStorage.h"
+#include "utils/Exception.h"
 
 const int StandardJpegCompressor::ALLOC_CHUNK_SIZE = 65536;
 const int StandardJpegCompressor::DEFAULT_JPEG_QUALITY = 75;

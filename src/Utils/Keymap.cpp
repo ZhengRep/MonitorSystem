@@ -1,7 +1,7 @@
 #include "Keymap.h"
-#include "Utils/winhdr.h"
-#include "winSystem/InputInjector.h"
-#include "winSystem/Keyboard.h"
+#include "utils/winhdr.h"
+#include "win_system/InputInjector.h"
+#include "win_system/Keyboard.h"
 #include <crtdbg.h>
 
 #define XK_MISCELLANY

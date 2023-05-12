@@ -1,7 +1,7 @@
 #pragma once
-#include "Utils/CommonHeader.h"
+#include "utils/CommonHeader.h"
 #include<vector>
-#include "Utils/StringVector.h"
+#include "utils/StringVector.h"
 
 class WindowFinder
 {
